@@ -1,9 +1,11 @@
 # DeekeBiz Product Catalog
 
+This catalog is the source of truth for the public product hub. Only products marked **Published / Show on homepage** should appear on the live site.
+
 ## Featured Products
 
 ### Client Delivery OS — Notion Template
-Status: Published
+Status: Published / Show on homepage
 Category: Client Delivery / Service Business Operations
 Audience: Freelancers, agencies, consultants, and service providers
 Price: $29
@@ -13,7 +15,7 @@ What It Does: Helps service providers manage client work in a structured system 
 Site Role: Featured premium product
 
 ### Event Agency Command Center — Notion Event Planning System
-Status: Published
+Status: Published / Show on homepage
 Category: Event Planning / Agency Operations
 Audience: Event planners, event agencies, organizers, and teams managing structured events
 Price: $19
@@ -23,22 +25,21 @@ What It Does: Gives event planners a central workspace for managing event detail
 Site Role: Featured planning product
 
 ### Brand Activation Production OS — Notion Production Workflow System
-Status: Published
+Status: Published / Show on homepage
 Category: Brand Production / Marketing Operations
-Audience: brand teams, creators, marketers, campaign operators, and production teams
+Audience: Brand teams, creators, marketers, campaign operators, and production teams
 Price: $24
 Gumroad Link: https://deekebiz.gumroad.com/l/brand-activation-production-os
 Main Promise: Manage brand activation and production workflows from planning to execution.
 What It Does: Organizes campaign assets, production tasks, workflow stages, and brand activation delivery.
 Site Role: Featured business operations product
 
-
 ## Business, Workflow & AI Systems
 
 ### Workflow Builder Bundle
-Status: Published
+Status: Published / Show on homepage
 Category: Workflow Systems / AI Operations
-Audience: operators, creators, consultants, business owners, and system builders
+Audience: Operators, creators, consultants, business owners, and system builders
 Price: $79
 Gumroad Link: https://deekebiz.gumroad.com/l/ai-ready-workflow-builder-bundle
 Main Promise: Build and organize AI-ready workflows faster with a complete system bundle.
@@ -46,9 +47,9 @@ What It Does: Bundles workflow-building resources for people creating structured
 Site Role: Premium bundle
 
 ### Workflow Builder OS
-Status: Published
+Status: Published / Show on homepage
 Category: Workflow Systems / Operations
-Audience: operators, creators, consultants, business owners, and people building repeatable workflows
+Audience: Operators, creators, consultants, business owners, and people building repeatable workflows
 Price: $49
 Gumroad Link: https://deekebiz.gumroad.com/l/ai-ready-workflow-builder-os
 Main Promise: Build, organize, and manage workflows inside a structured operating system.
@@ -56,9 +57,9 @@ What It Does: Helps users turn scattered processes into organized, repeatable wo
 Site Role: Core systems product
 
 ### Workflow SOP & AI Guide
-Status: Published
+Status: Published / Show on homepage
 Category: SOPs / AI Workflow Education
-Audience: operators, creators, business owners, and consultants
+Audience: Operators, creators, business owners, and consultants
 Price: $19+
 Gumroad Link: https://deekebiz.gumroad.com/l/how-to-turn-workflows-to-ai-ready-systems
 Main Promise: Learn how to turn workflows into SOPs and AI-ready systems.
@@ -66,7 +67,7 @@ What It Does: A guide for documenting processes and preparing workflows for AI-s
 Site Role: Educational guide
 
 ### AI Operations Architect
-Status: Published
+Status: Published / Show on homepage
 Category: AI Operations / Business Systems
 Audience: AI users, operators, consultants, creators, and business owners
 Price: $29+
@@ -76,9 +77,9 @@ What It Does: Helps users structure AI usage into a repeatable operational syste
 Site Role: Advanced AI/business product
 
 ### AI Prompt Vault
-Status: Published
+Status: Published / Show on homepage
 Category: AI Prompts / Productivity
-Audience: creators, solopreneurs, operators, students, and AI users
+Audience: Creators, solopreneurs, operators, students, and AI users
 Price: $15
 Gumroad Link: https://deekebiz.gumroad.com/l/ai-prompt-vault
 Main Promise: Keep reusable AI prompts organized in one practical vault.
@@ -86,9 +87,9 @@ What It Does: Stores and organizes prompt ideas, reusable prompt structures, and
 Site Role: Utility product
 
 ### Compliance Architect
-Status: Published
+Status: Published / Show on homepage
 Category: Compliance / Operations
-Audience: operators, consultants, regulated teams, and businesses that need structured compliance tracking
+Audience: Operators, consultants, regulated teams, and businesses that need structured compliance tracking
 Price: $19+
 Gumroad Link: https://deekebiz.gumroad.com/l/compliance-architect
 Main Promise: Organize compliance requirements, tasks, documentation, and review workflows.
@@ -96,22 +97,21 @@ What It Does: Creates a structured workspace for managing compliance-related wor
 Site Role: Specialized business product
 
 ### Document Intake System
-Status: Published
+Status: Published / Show on homepage
 Category: Document Intake / Admin Operations
-Audience: service providers, admin teams, consultants, agencies, and document-heavy businesses
+Audience: Service providers, admin teams, consultants, agencies, and document-heavy businesses
 Price: $9+
 Gumroad Link: https://deekebiz.gumroad.com/l/document-intake-system
 Main Promise: Collect, track, and organize submitted documents in one clear intake system.
 What It Does: Helps manage incoming documents, statuses, and follow-ups.
 Site Role: Operations utility
 
-
 ## Freelancer, Admin & Recovery Tools
 
 ### Freelancer Tax Desk
-Status: Published
+Status: Published / Show on homepage
 Category: Freelancer Admin / Taxes
-Audience: freelancers, contractors, solo business owners, and self-employed workers
+Audience: Freelancers, contractors, solo business owners, and self-employed workers
 Price: $19
 Gumroad Link: https://deekebiz.gumroad.com/l/freelancer-tax-desk
 Main Promise: Organize freelancer tax prep, income, expenses, and admin details in one workspace.
@@ -119,9 +119,9 @@ What It Does: Helps freelancers keep tax-related information cleaner and easier 
 Site Role: Admin/finance product
 
 ### Overdue Payments Agent Bundle
-Status: Published
+Status: Published / Show on homepage
 Category: Payment Follow-Up / Client Admin
-Audience: freelancers, agencies, consultants, and service businesses dealing with late payments
+Audience: Freelancers, agencies, consultants, and service businesses dealing with late payments
 Price: $29
 Gumroad Link: https://deekebiz.gumroad.com/l/overdue-payments-agent-bundle
 Main Promise: Follow up on overdue payments professionally with structured scripts and workflows.
@@ -129,9 +129,9 @@ What It Does: Provides payment-chasing resources for service providers who need 
 Site Role: Revenue recovery product
 
 ### The 7-Day Life Admin Reset
-Status: Published
+Status: Published / Show on homepage
 Category: Life Admin / Personal Organization
-Audience: busy individuals, productivity users, overwhelmed people, and people who need a short reset system
+Audience: Busy individuals, productivity users, overwhelmed people, and people who need a short reset system
 Price: $7
 Gumroad Link: https://deekebiz.gumroad.com/l/7-day-life-admin-reset
 Main Promise: Reset your personal admin in 7 days with a simple structured system.
@@ -139,9 +139,9 @@ What It Does: Helps users organize life admin, tasks, documents, and overdue per
 Site Role: Low-ticket entry product
 
 ### The Recovery Desk
-Status: Published
+Status: Published / Show on homepage
 Category: Personal Reset / Life Organization
-Audience: overwhelmed people, productivity buyers, people recovering from chaos or backlog
+Audience: Overwhelmed people, productivity buyers, people recovering from chaos or backlog
 Price: $15
 Gumroad Link: https://deekebiz.gumroad.com/l/the-recovery-desk
 Main Promise: Get life, admin, and work back under control from one recovery workspace.
@@ -149,44 +149,39 @@ What It Does: Provides a structured reset space for people who feel behind or ov
 Site Role: Low-ticket recovery product
 
 ### Weekly Reset Tracker
-Status: Published
+Status: Published / Show on homepage
 Category: Weekly Planning / Productivity
-Audience: productivity users, students, solopreneurs, creators, and people who plan weekly
+Audience: Productivity users, students, solopreneurs, creators, and people who plan weekly
 Price: $9+
 Gumroad Link: https://deekebiz.gumroad.com/l/weekly-reset-tracker
 Main Promise: Reset and plan your week with a simple tracker.
 What It Does: Helps users review, organize, and plan their week.
 Site Role: Entry product
 
+## Archived / Unpublished Products
 
-## Real Estate Tools
+These products are intentionally hidden from the live homepage until republished.
 
 ### Rental Deal Quick Analyzer
-Status: Published
+Status: Unpublished / Hidden
 Category: Real Estate / Rental Analysis
-Audience: beginner real estate investors, rental property researchers, and deal screeners
+Audience: Beginner real estate investors, rental property researchers, and deal screeners
 Price: $0+
 Gumroad Link: https://deekebiz.gumroad.com/l/free-rental-deal-quick-analyzer
-Main Promise: Quickly screen rental deals before doing deeper analysis.
-What It Does: Gives users a fast way to check whether a rental property is worth looking into.
-Site Role: Free/low-ticket lead product
+Site Role: Do not show on homepage
 
 ### Rental Deal Analyzer Core
-Status: Published
+Status: Unpublished / Hidden
 Category: Real Estate / Rental Analysis
-Audience: real estate investors and rental property buyers
+Audience: Real estate investors and rental property buyers
 Price: $19+
 Gumroad Link: https://deekebiz.gumroad.com/l/rental-deal-analyzer-3-step
-Main Promise: Analyze rental deals with a structured core calculator.
-What It Does: Helps investors review rental property numbers in a more organized way.
-Site Role: Core real estate product
+Site Role: Do not show on homepage
 
 ### Rental Deal Analyzer Pro
-Status: Published
+Status: Unpublished / Hidden
 Category: Real Estate / Rental Analysis
-Audience: real estate investors who want a more complete rental deal analysis tool
+Audience: Real estate investors who want a more complete rental deal analysis tool
 Price: $49+
 Gumroad Link: https://deekebiz.gumroad.com/l/rental-deal-analyzer-pro
-Main Promise: Analyze rental property deals with a more complete pro-level system.
-What It Does: Provides deeper rental deal review than the quick or core versions.
-Site Role: Premium real estate product
+Site Role: Do not show on homepage
