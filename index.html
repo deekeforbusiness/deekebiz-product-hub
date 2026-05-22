@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>DeekeBiz | Notion Templates, Workflow Systems & Digital Tools</title>
+  <meta name="description" content="DeekeBiz creates Notion templates, workflow systems, AI operation tools, client delivery dashboards, event planning systems, and digital business tools." />
+
+  <style>
+    :root {
+      --bg: #f7f1e8;
+      --surface: #ffffff;
+      --ink: #1f1f1f;
+      --muted: #67615c;
+      --line: #e4d8c8;
+      --accent: #d88a4f;
+      --accent-dark: #8f4d25;
+      --soft: #fff8ee;
+      --shadow: 0 24px 70px rgba(50, 34, 18, 0.10);
+      --radius: 28px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(216, 138, 79, 0.22), transparent 34%),
+        linear-gradient(180deg, #fbf5eb 0%, #f7f1e8 45%, #f3eadf 100%);
+      color: var(--ink);
+      line-height: 1.55;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .wrap {
+      width: min(1160px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    header {
+      padding: 28px 0 70px;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: rgba(255,255,255,0.76);
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 16px 20px;
+      backdrop-filter: blur(14px);
+    }
+
+    .brand {
+      font-weight: 900;
+      letter-spacing: -0.04em;
+      font-size: 20px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 20px;
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 650;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 90px 0 40px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.68);
+      color: var(--accent-dark);
+      padding: 8px 13px;
+      border-radius: 999px;
+      font-weight: 850;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 12px;
+    }
+
+    h1 {
+      max-width: 980px;
+      margin: 20px auto 24px;
+      font-size: clamp(44px, 8vw, 94px);
+      line-height: 0.94;
+      letter-spacing: -0.08em;
+    }
+
+    .hero p {
+      max-width: 760px;
+      margin: 0 auto 34px;
+      font-size: 20px;
+      color: var(--muted);
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 20px;
+      border-radius: 999px;
+      font-weight: 850;
+      font-size: 14px;
+      border: 1px solid transparent;
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn.primary {
+      background: var(--ink);
+      color: white;
+      box-shadow: 0 12px 28px rgba(0,0,0,0.16);
+    }
+
+    .btn.secondary {
+      background: white;
+      color: var(--ink);
+      border-color: var(--line);
+    }
+
+    section {
+      padding: 42px 0;
+    }
+
+    .section-head {
+      margin-bottom: 24px;
+    }
+
+    .section-head h2 {
+      margin: 0 0 10px;
+      font-size: clamp(30px, 5vw, 56px);
+      letter-spacing: -0.06em;
+      line-height: 1;
+    }
+
+    .section-head p {
+      margin: 0;
+      color: var(--muted);
+      max-width: 720px;
+      font-size: 18px;
+    }
+
+    .featured-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .featured-card,
+    .product-card,
+    .note-card,
+    .faq-item {
+      background: rgba(255,255,255,0.86);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .featured-card {
+      padding: 26px;
+      min-height: 360px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .category-pill {
+      width: fit-content;
+      padding: 7px 10px;
+      border-radius: 999px;
+      background: var(--soft);
+      color: var(--accent-dark);
+      border: 1px solid var(--line);
+      font-size: 12px;
+      font-weight: 850;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .featured-card h3 {
+      margin: 18px 0 10px;
+      font-size: 30px;
+      line-height: 1;
+      letter-spacing: -0.055em;
+    }
+
+    .featured-card p,
+    .product-card p,
+    .note-card p,
+    .faq-item p {
+      color: var(--muted);
+    }
+
+    .price {
+      font-weight: 900;
+      color: var(--ink);
+      margin-top: 14px;
+    }
+
+    .product-section {
+      margin-top: 18px;
+    }
+
+    .product-section-title {
+      margin: 42px 0 16px;
+      font-size: 26px;
+      letter-spacing: -0.04em;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .product-card {
+      padding: 22px;
+      min-height: 280px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .product-card h3 {
+      margin: 14px 0 8px;
+      font-size: 23px;
+      line-height: 1.08;
+      letter-spacing: -0.045em;
+    }
+
+    .product-card p {
+      margin: 0;
+      font-size: 15px;
+    }
+
+    .card-footer {
+      margin-top: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .small-link {
+      color: var(--accent-dark);
+      font-weight: 900;
+      font-size: 14px;
+    }
+
+    .note-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+
+    .note-card {
+      padding: 28px;
+    }
+
+    .note-card h3 {
+      margin: 0 0 10px;
+      font-size: 30px;
+      line-height: 1;
+      letter-spacing: -0.055em;
+    }
+
+    .faq {
+      display: grid;
+      gap: 12px;
+    }
+
+    .faq-item {
+      padding: 24px;
+    }
+
+    .faq-item h3 {
+      margin: 0 0 8px;
+      font-size: 20px;
+    }
+
+    footer {
+      padding: 50px 0 70px;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    @media (max-width: 920px) {
+      .featured-grid,
+      .product-grid,
+      .note-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .nav {
+        border-radius: 24px;
+        align-items: flex-start;
+        gap: 14px;
+        flex-direction: column;
+      }
+
+      .nav-links {
+        flex-wrap: wrap;
+      }
+
+      .hero {
+        padding-top: 62px;
+      }
+
+      .buttons {
+        flex-direction: column;
+      }
+
+      .btn {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="wrap">
+      <nav class="nav">
+        <div class="brand">DeekeBiz</div>
+        <div class="nav-links">
+          <a href="#featured">Featured</a>
+          <a href="#catalog">Catalog</a>
+          <a href="#faq">FAQ</a>
+          <a href="https://deekebiz.gumroad.com/">Gumroad</a>
+        </div>
+      </nav>
+
+      <div class="hero">
+        <span class="eyebrow">Notion Templates · Workflow Systems · Digital Tools</span>
+        <h1>Clean systems for messy work, admin, planning, and operations.</h1>
+        <p>
+          DeekeBiz builds practical Notion templates and digital tools for client delivery,
+          event planning, AI operations, workflow building, admin cleanup, and rental deal analysis.
+        </p>
+        <div class="buttons">
+          <a class="btn primary" href="#featured">Start with featured systems</a>
+          <a class="btn secondary" href="https://deekebiz.gumroad.com/">View Gumroad store</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="featured">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Featured systems</h2>
+          <p>Start here. These are the strongest products to position the store around.</p>
+        </div>
+
+        <div class="featured-grid">
+          <article class="featured-card">
+            <div>
+              <span class="category-pill">Client Operations</span>
+              <h3>Client Delivery OS</h3>
+              <p>Run client onboarding, project delivery, SOPs, reviews, and rollout from one clean Notion workspace.</p>
+              <p class="price">$29</p>
+            </div>
+            <a class="btn primary" href="https://deekebiz.gumroad.com/l/client-delivery-os">View product</a>
+          </article>
+
+          <article class="featured-card">
+            <div>
+              <span class="category-pill">Event Planning</span>
+              <h3>Event Agency Command Center</h3>
+              <p>Plan events with tasks, vendors, budget, timeline, and delivery details in one organized Notion command center.</p>
+              <p class="price">$19</p>
+            </div>
+            <a class="btn primary" href="https://deekebiz.gumroad.com/l/event-agency-command-center">View product</a>
+          </article>
+
+          <article class="featured-card">
+            <div>
+              <span class="category-pill">Brand Production</span>
+              <h3>Brand Activation Production OS</h3>
+              <p>Manage brand activation and production workflows from planning to execution.</p>
+              <p class="price">$24</p>
+            </div>
+            <a class="btn primary" href="https://deekebiz.gumroad.com/l/brand-activation-production-os">View product</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="catalog">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Full product catalog</h2>
+          <p>Browse systems by category. The homepage leads with the strongest products, then gives buyers a clean way to explore the rest.</p>
+        </div>
+
+        <div class="product-section">
+          <h3 class="product-section-title">Business, Workflow & AI Systems</h3>
+
+          <div class="product-grid">
+            <article class="product-card">
+              <div>
+                <span class="category-pill">Bundle</span>
+                <h3>Workflow Builder Bundle</h3>
+                <p>Build and organize AI-ready workflows faster with a complete system bundle.</p>
+              </div>
+              <div class="card-footer"><strong>$79</strong><a class="small-link" href="https://deekebiz.gumroad.com/l/ai-ready-workflow-builder-bundle">View</a></div>
+            </article>
+
+            <article class="product-card">
+              <div>
+                <span class="category-pill">Workflow OS</span>
+                <h3>Workflow Builder OS</h3>
+                <p>Build, organize, and manage workflows inside a structured operating system.</p>
+              </div>
+              <div class="card-footer"><strong>$49</strong><a class="small-link" href="https://deekebiz.gumroad.com/l/ai-ready-workflow-builder-os">View</a></div>
+            </article>
+
+            <article class="product-card">
+              <div>
+                <span class="category-pill">Guide</span>
+                <h3>Workflow SOP & AI Guide</h3>
+                <p>Learn how to turn workflows into SOPs and AI-ready systems.</p>
+              </div>
+              <div class="card-footer"><strong>$19+</strong><a class="small-link" href="https://deekebiz.gumroad.com/l/how-to-turn-workflows-to-ai-ready-systems">View</a></div>
+            </article>
+
+            <article class="product-card">
+              <div>
+                <span class="category-pill">AI Ops</span>
+                <h3>AI Operations Architect</h3>
+                <p>Organize AI operations, workflows, prompts, and implementation systems.</p>
+              </div>
+              <div class="card-footer"><strong>$29+</strong><a class="small-link" href="https://deekebiz.gumroad.com/l/ai-operation-architect">View</a></div>
+            </article>
+
+            <article class="product-card">
+              <div>
+                <span class="category-pill">Prompts</span>
+                <h3>AI Prompt Vault</h3>
+                <p>Keep reusable AI prompts organized in one practical vault.</p>
+              </div>
+              <div class="card-footer"><strong>$15</strong><a class="small-link" href="https://deekebiz.gumroad.com/l/ai-prompt-vault">View</a></div>
+            </article>
+
+            <article class="product-card">
+              <div>
+                <span class="category-pill">Compliance</span>
+                <h3>Compliance Architect</h3>
+                <p>Organize compliance requirements, tasks, documentation, and review workflows.</p>
+              </div>
+              <div class="card-footer"><strong>$19+</strong><a class="small-link" href="https://deekebiz.gumroad.com/l/compliance-architect">View</a></div>
+            </article>
+
+            <article class="product-card">
+              <div>
+                <span class="category-pill">Documents</span>
+                <h3>Document Intake System</h3>
+                <p>Collect, track, and organize submitted documents in one clear intake system.</p>
+              </div>
+              <div class="card-footer"><strong>$9+</strong><a class="small-link" href="https://deekebiz.gumroad.com/l/document-intake-system">View</a></div>
+            </article>
+          </div>
+        </div>
+
+        <div class="product-section">
+          <h3 class="product-section-title">Freelancer, Admin & Recovery Tools</h3>
+
+          <div class="product-grid">
+            <article class="product-card">
+              <div>
+                <span class="category-pill">Tax Admin</span>
+                <h3>Freelancer Tax Desk</h3>
+                <p>Organize freelancer tax prep, income, expenses, and admin details in one workspace.</p>
+              </div>
+              <div class="card-footer"><strong>$19</strong><a class="small-link" href="https://deekebiz.gumroad.com/l/freelancer-tax-desk">View</a></div>
+            </article>
+
+            <article class="product-card">
+              <div>
+                <span class="category-pill">Payments</span>
+                <h3>Overdue Payments Agent Bundle</h3>
+                <p>Follow up on overdue payments professionally with structured scripts and workflows.</p>
+              </div>
+              <div class="card-footer"><strong>$29</strong><a class="small-link" href="https://deekebiz.gumroad.com/l/overdue-payments-agent-bundle">View</a></div>
+            </article>
+
+            <article class="product-card">
+              <div>
+                <span class="category-pill">Life Admin</span>
+                <h3>The 7-Day Life Admin Reset</h3>
+                <p>Reset your personal admin in 7 days with a simple structured system.</p>
+              </div>
+              <div class="card-footer"><strong>$7</strong><a class="small-link" href="https://deekebiz.gumroad.com/l/7-day-life-admin-reset">View</a></div>
+            </article>
+
+            <article class="product-card">
+              <div>
+                <span class="category-pill">Recovery</span>
+                <h3>The Recovery Desk</h3>
+                <p>Get life, admin, and work back under control from one recovery workspace.</p>
+              </div>
+              <div class="card-footer"><strong>$15</strong><a class="small-link" href="https://deekebiz.gumroad.com/l/the-recovery-desk">View</a></div>
+            </article>
+
+            <article class="product-card">
+              <div>
+                <span class="category-pill">Weekly Planning</span>
+                <h3>Weekly Reset Tracker</h3>
+                <p>Reset and plan your week with a simple tracker.</p>
+              </div>
+              <div class="card-footer"><strong>$9+</strong><a class="small-link" href="https://deekebiz.gumroad.com/l/weekly-reset-tracker">View</a></div>
+            </article>
+          </div>
+        </div>
+
+        <div class="product-section">
+          <h3 class="product-section-title">Real Estate Tools</h3>
+
+          <div class="product-grid">
+            <article class="product-card">
+              <div>
+                <span class="category-pill">Free / Entry</span>
+                <h3>Rental Deal Quick Analyzer</h3>
+                <p>Quickly screen rental deals before doing deeper analysis.</p>
+              </div>
+              <div class="card-footer"><strong>$0+</strong><a class="small-link" href="https://deekebiz.gumroad.com/l/free-rental-deal-quick-analyzer">View</a></div>
+            </article>
+
+            <article class="product-card">
+              <div>
+                <span class="category-pill">Core</span>
+                <h3>Rental Deal Analyzer Core</h3>
+                <p>Analyze rental deals with a structured core calculator.</p>
+              </div>
+              <div class="card-footer"><strong>$19+</strong><a class="small-link" href="https://deekebiz.gumroad.com/l/rental-deal-analyzer-3-step">View</a></div>
+            </article>
+
+            <article class="product-card">
+              <div>
+                <span class="category-pill">Pro</span>
+                <h3>Rental Deal Analyzer Pro</h3>
+                <p>Analyze rental property deals with a more complete pro-level system.</p>
+              </div>
+              <div class="card-footer"><strong>$49+</strong><a class="small-link" href="https://deekebiz.gumroad.com/l/rental-deal-analyzer-pro">View</a></div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="note-grid">
+          <article class="note-card">
+            <h3>Built for clarity, not clutter.</h3>
+            <p>Each product is designed around a specific workflow problem instead of being another generic productivity dashboard.</p>
+          </article>
+
+          <article class="note-card">
+            <h3>Start with the system that matches your problem.</h3>
+            <p>Client delivery, event planning, admin recovery, AI operations, workflow building, and rental analysis are separated so buyers can find the right tool faster.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>FAQ</h2>
+          <p>Simple answers before visitors click through to Gumroad.</p>
+        </div>
+
+        <div class="faq">
+          <div class="faq-item">
+            <h3>Are these official Notion products?</h3>
+            <p>No. These are independent templates and digital tools created by DeekeBiz.</p>
+          </div>
+
+          <div class="faq-item">
+            <h3>Where do I buy?</h3>
+            <p>Each product links to its Gumroad page. Some products may also be listed on Notion Marketplace when approved.</p>
+          </div>
+
+          <div class="faq-item">
+            <h3>Can I customize the templates?</h3>
+            <p>Yes. Notion templates can be duplicated and adjusted to fit your workflow.</p>
+          </div>
+
+          <div class="faq-item">
+            <h3>Which product should I start with?</h3>
+            <p>For business operations, start with Client Delivery OS. For planning, start with Event Agency Command Center. For workflows, start with Workflow Builder OS or the bundle.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <p>© DeekeBiz. Independent Notion templates, workflow systems, and digital tools.</p>
+    </div>
+  </footer>
+</body>
+</html>
