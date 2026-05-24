@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://deekeforbusiness.github.io/deekebiz-product-hub/sitemap.xml
