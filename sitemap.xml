@@ -20,4 +20,24 @@
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
+  <url>
+    <loc>https://deekeforbusiness.github.io/deekebiz-product-hub/workflow-builder-bundle/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://deekeforbusiness.github.io/deekebiz-product-hub/compliance-architect/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://deekeforbusiness.github.io/deekebiz-product-hub/overdue-payments-agent-bundle/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://deekeforbusiness.github.io/deekebiz-product-hub/brand-activation-production-os/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
 </urlset>
