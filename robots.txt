@@ -2,6 +2,3 @@ User-agent: *
 Allow: /
 
 Sitemap: https://deekeforbusiness.github.io/deekebiz-product-hub/sitemap.xml
-Sitemap: https://deekeforbusiness.github.io/deekebiz-product-hub/sitemap-guides-a.xml
-Sitemap: https://deekeforbusiness.github.io/deekebiz-product-hub/sitemap-guides-b.xml
-Sitemap: https://deekeforbusiness.github.io/deekebiz-product-hub/sitemap-guides-c.xml
