@@ -17,10 +17,7 @@ https://deekeforbusiness.github.io/deekebiz-product-hub/freelancer-tax-desk/
 https://deekeforbusiness.github.io/deekebiz-product-hub/guides/
 https://deekeforbusiness.github.io/deekebiz-product-hub/guides/track-permits-renewals-notion/
 https://deekeforbusiness.github.io/deekebiz-product-hub/guides/compliance-document-tracker/
-https://deekeforbusiness.github.io/deekebiz-product-hub/guides/organize-chatgpt-prompts-notion/
-https://deekeforbusiness.github.io/deekebiz-product-hub/guides/ai-prompt-library-categories/
 https://deekeforbusiness.github.io/deekebiz-product-hub/guides/follow-up-overdue-invoices-politely/
-https://deekeforbusiness.github.io/deekebiz-product-hub/guides/overdue-invoice-reminder-email-examples/
 https://deekeforbusiness.github.io/deekebiz-product-hub/guides/brand-activation-production-workflow/
 https://deekeforbusiness.github.io/deekebiz-product-hub/guides/overdue-invoice-follow-up-system/
 https://deekeforbusiness.github.io/deekebiz-product-hub/guides/notion-ai-prompt-library/
