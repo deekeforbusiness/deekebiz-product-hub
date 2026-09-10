@@ -1,4 +1,16 @@
 https://deekeforbusiness.github.io/deekebiz-product-hub/
+https://deekeforbusiness.github.io/deekebiz-product-hub/claritypack10/
+https://deekeforbusiness.github.io/deekebiz-product-hub/claritypack10/privacy/
+https://deekeforbusiness.github.io/deekebiz-product-hub/claritypack10/tools/contractor-quote-comparison/
+https://deekeforbusiness.github.io/deekebiz-product-hub/claritypack10/tools/used-car-evidence-pack/
+https://deekeforbusiness.github.io/deekebiz-product-hub/claritypack10/tools/caregiver-handoff-builder/
+https://deekeforbusiness.github.io/deekebiz-product-hub/claritypack10/tools/renter-move-in-condition-report/
+https://deekeforbusiness.github.io/deekebiz-product-hub/claritypack10/tools/digital-emergency-map/
+https://deekeforbusiness.github.io/deekebiz-product-hub/claritypack10/tools/freelancer-scope-creep-checker/
+https://deekeforbusiness.github.io/deekebiz-product-hub/claritypack10/tools/insurance-claim-inventory/
+https://deekeforbusiness.github.io/deekebiz-product-hub/claritypack10/tools/home-repair-decision-log/
+https://deekeforbusiness.github.io/deekebiz-product-hub/claritypack10/tools/subscription-cancellation-record/
+https://deekeforbusiness.github.io/deekebiz-product-hub/claritypack10/tools/moving-quote-comparison/
 https://deekeforbusiness.github.io/deekebiz-product-hub/client-delivery-os/
 https://deekeforbusiness.github.io/deekebiz-product-hub/ai-operations-architect/
 https://deekeforbusiness.github.io/deekebiz-product-hub/event-agency-command-center/
