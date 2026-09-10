@@ -12,7 +12,7 @@
   function load(){try{const data=JSON.parse(localStorage.getItem(key)||'{}');Object.entries(data).forEach(([k,v])=>{if(form.elements[k])form.elements[k].value=v});if(Object.keys(data).length)status.textContent='Previous draft restored from this device'}catch(e){localStorage.removeItem(key)}}
   form.addEventListener('submit',e=>{e.preventDefault();render();output.scrollIntoView({behavior:'smooth',block:'start'})});
   form.addEventListener('input',()=>{clearTimeout(window.cpTimer);window.cpTimer=setTimeout(save,350)});
-  document.querySelector('[data-sample]').addEventListener('click',()=>{Array.from(form.elements).filter(el=>el.name).forEach(el=>{el.value=el.dataset.sample||''});render()});
+  document.querySelector('button[data-sample]').addEventListener('click',()=>{Array.from(form.elements).filter(el=>el.name).forEach(el=>{el.value=el.dataset.sample||''});render()});
   document.querySelector('[data-clear]').addEventListener('click',()=>{if(!confirm('Clear this draft from this device?'))return;form.reset();localStorage.removeItem(key);output.classList.remove('active');empty.hidden=false;status.textContent='Draft cleared'});
   document.querySelector('[data-print]').addEventListener('click',()=>window.print());
   load();
