@@ -20,7 +20,7 @@ const width=document.getElementById('width');
 const result=document.getElementById('result');
 function measure(){try{const root=frame.contentDocument.documentElement;result.textContent='Layout: '+root.clientWidth+' px · '+(root.scrollWidth>root.clientWidth?'Horizontal overflow: '+(root.scrollWidth-root.clientWidth)+' px':'No horizontal overflow');}catch{result.textContent='Open the homepage to review this viewport.';}}
 frame.addEventListener('load',measure);
-width.addEventListener('change',()=>{frame.style.width=width.value+'px';requestAnimationFrame(()=>requestAnimationFrame(measure));});
+width.addEventListener('change',()=>{frame.style.width=width.value+'px';measure();});
 </script>
 </body>
 </html>
