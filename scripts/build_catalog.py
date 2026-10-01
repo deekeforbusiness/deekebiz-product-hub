@@ -47,7 +47,7 @@ def offer(p):
     if p['id'] == 'ai-ready-workflow-builder-bundle':
         extra = '<p>Guide ($15 minimum) + workspace ($39 minimum) = $54 separately. The $49 bundle saves $5 at the current minimum prices.</p>'
     if p['id'] == 'overdue-payments-agent-bundle':
-        extra = '<p class="db-muted">Notion Custom Agents use Notion credits, billed separately by Notion. <a href="https://www.notion.com/help/custom-agent-pricing">Check current Notion requirements and pricing</a>.</p>'
+        extra = '<p class="db-muted">Notion Custom Agents use Notion credits, billed separately by Notion. <a href="https://www.notion.com/help/buy-and-track-notion-credits-for-custom-agents">Check current Notion requirements and pricing</a>.</p>'
     contents = ''.join(f'<li>{esc(v)}</li>' for v in p['contents'])
     return f'''<section class="section cp-section"><div class="wrap cp-wrap"><div class="db-offer" data-product="{esc(p['id'])}">
 <p class="db-product-meta">{esc(p['format'])}</p><h2>What you receive</h2><ul>{contents}</ul>
@@ -59,7 +59,7 @@ def offer(p):
 
 def catalog():
     categories = {'Client work': 'client-work', 'Business admin': 'business-admin', 'AI workflows': 'ai-workflows', 'Life admin': 'life-admin', 'Decision kits': 'decision-kits'}
-    featured = ['client-delivery-os', 'weekly-reset-tracker', 'claritypack10-pro-bundle']
+    featured = CATALOG['featuredProducts']
     covers = {
         '7-day-life-admin-reset': 'life-admin-reset-7-day.webp',
         'ai-operations-architect': 'ai-operations-architect.webp',
@@ -122,6 +122,33 @@ def rewrite_link(match, page):
     return prefix + esc(urlunsplit((parsed.scheme,parsed.netloc,parsed.path,urlencode(query),parsed.fragment))) + suffix
 
 
+def product_sharing(text, p):
+    """Keep product share cards consistent, with crawler-safe absolute URLs."""
+    def meta(attribute, key, value):
+        nonlocal text
+        tag = f'<meta {attribute}="{key}" content="{esc(value)}">'
+        pattern = rf'<meta\b[^>]*\b{attribute}="{re.escape(key)}"[^>]*>'
+        if re.search(pattern, text):
+            text = re.sub(pattern, lambda _: tag, text)
+        else:
+            text = text.replace('</head>', tag + '\n</head>', 1)
+    image = re.search(r'<meta\b[^>]*property="og:image"[^>]*content="([^"]+)"', text)
+    if not image and p['path'] == 'claritypack10':
+        image_url = BASE + 'assets/contractor-kit-preview.png'
+    elif not image:
+        raise ValueError(f'Missing product share image: {p["path"]}')
+    else:
+        image_url = urljoin(BASE + p['path'] + '/', html.unescape(image.group(1)))
+    for key, value in {'og:type': 'website', 'og:url': canonical_url(p['path']),
+                       'og:title': p['name'], 'og:description': p['summary'],
+                       'og:image': image_url}.items():
+        meta('property', key, value)
+    for key, value in {'twitter:card': 'summary_large_image', 'twitter:title': p['name'],
+                       'twitter:description': p['summary'], 'twitter:image': image_url}.items():
+        meta('name', key, value)
+    return text
+
+
 for page in sorted(ROOT.rglob('*.html')):
     text = page.read_text()
     path = page.parent.relative_to(ROOT).as_posix()
@@ -137,6 +164,7 @@ for page in sorted(ROOT.rglob('*.html')):
                     node['offers'].update(price=str(p['price']), priceCurrency=p['currency'], url=p['url'])
             return '<script type="application/ld+json">' + json.dumps(data,ensure_ascii=False,separators=(',', ':')) + '</script>'
         text = re.sub(r'<script type="application/ld\+json">(.*?)</script>', schema, text, flags=re.S)
+        text = product_sharing(text, p)
     if path == '.':
         text = block(text, 'catalog', catalog())
     if 'assets/commerce.css' not in text:

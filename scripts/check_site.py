@@ -12,10 +12,12 @@ ROOT=Path(__file__).resolve().parents[1]
 BASE='https://deekeforbusiness.github.io/deekebiz-product-hub/'
 class Page(HTMLParser):
     def __init__(self,text):
-        super().__init__();self.ids=[];self.links=[];self.assets=[];self.schemas=[];self.canonical=[];self.robots='';self.refresh=[];self.h1=0;self.in_schema=False;self.schema='';self.feed(text)
+        super().__init__();self.ids=[];self.links=[];self.assets=[];self.schemas=[];self.canonical=[];self.meta={};self.featured=[];self.robots='';self.refresh=[];self.h1=0;self.in_schema=False;self.schema='';self.feed(text)
     def handle_starttag(self,tag,attributes):
         a=dict(attributes)
         if a.get('id'):self.ids.append(a['id'])
+        if a.get('data-featured')=='true':self.featured.append(a['data-product'])
+        if tag=='meta':self.meta[a.get('property',a.get('name',''))]=a.get('content','')
         if tag=='h1':self.h1+=1
         if tag=='a' and a.get('href'):self.links.append(a['href'])
         if tag in ['img','script'] and a.get('src'):self.assets.append(a['src'])
@@ -61,12 +63,20 @@ if set(sitemap_urls)!=expected_urls:errors.append(f'sitemap: missing {sorted(exp
 for entry in sitemap:
     lastmod=entry.findtext('s:lastmod','',namespace)
     if lastmod and not re.fullmatch(r'\d{4}-\d{2}-\d{2}',lastmod):errors.append('sitemap: invalid lastmod date')
-catalog=json.loads((ROOT/'products/catalog.json').read_text())['products']
+catalog_data=json.loads((ROOT/'products/catalog.json').read_text())
+catalog=catalog_data['products']
 assert len(catalog)==16
+if pages[ROOT/'index.html'].featured!=catalog_data['featuredProducts']:errors.append('homepage: featured products do not match catalog configuration')
 for p in catalog:
     text=(ROOT/p['path']/'index.html').read_text()
     if text.count('generated:offer:start')!=1:errors.append(f'{p["path"]}: missing/duplicate offer')
     if f'data-product="{p["id"]}"' not in (ROOT/'index.html').read_text():errors.append(f'{p["id"]}: absent from homepage catalog')
+    meta=pages[ROOT/p['path']/'index.html'].meta
+    if meta.get('og:url')!=canonical_url(p['path']):errors.append(f'{p["id"]}: inconsistent share URL')
+    if meta.get('og:title')!=p['name'] or meta.get('twitter:title')!=p['name']:errors.append(f'{p["id"]}: inconsistent share title')
+    image=meta.get('og:image','')
+    if not image.startswith(BASE) or meta.get('twitter:image')!=image:errors.append(f'{p["id"]}: missing/relative share image')
+    elif not (ROOT/unquote(urlsplit(image).path.removeprefix('/deekebiz-product-hub/'))).is_file():errors.append(f'{p["id"]}: missing share image asset')
     nodes=[]
     for data in pages[ROOT/p['path']/'index.html'].schemas:nodes.extend(data.get('@graph',[data]))
     for node in nodes:

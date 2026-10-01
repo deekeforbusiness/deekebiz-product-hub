@@ -62,14 +62,14 @@
       "price": 49,
       "currency": "USD",
       "payWhatYouWant": false,
-      "format": "Mini-course + Notion workspace",
+      "format": "PDF course + Notion workspace",
       "category": "AI workflows",
       "summary": "Learn the workflow method, then apply it in the companion workspace.",
       "contents": [
-        "Workflow SOP & AI Guide mini-course",
-        "Workflow Builder OS Notion workspace"
+        "Workflow SOP & AI Guide: PDF course + Notion reading version",
+        "Workflow Builder OS: Notion workspace"
       ],
-      "requirements": "A Notion account is required for the workspace. The course and workspace document a workflow; they do not install automations.",
+      "requirements": "Read the course PDF without Notion. A Notion account is required for the workspace and course reading version. This bundle documents workflows; external AI services and automation software are not included.",
       "url": "https://deekebiz.gumroad.com/l/ai-ready-workflow-builder-bundle"
     },
     {
@@ -123,7 +123,7 @@
         "Evidence checklists, question prompts, scripts, and follow-up trackers",
         "Separate editable Word document with communication scripts"
       ],
-      "requirements": "No Notion account, subscription, or software installation required. Open the PDFs on your device or print them.",
+      "requirements": "Unzip the download and open the PDFs on your device or print them. No Notion account or subscription required. The optional editable scripts need a compatible Word processor.",
       "url": "https://deekebiz.gumroad.com/l/claritypack10-pro-bundle"
     },
     {
@@ -224,15 +224,15 @@
       "price": 15,
       "currency": "USD",
       "payWhatYouWant": true,
-      "format": "Mini-course",
+      "format": "PDF course + Notion reading version",
       "category": "AI workflows",
       "summary": "Learn to document one real workflow, write its SOP, and prepare a controlled pilot.",
       "contents": [
+        "12-module PDF course with a Notion reading version",
         "Workflow selection, mapping, and SOP method",
-        "AI suitability, task specs, prompts, and quality checks",
-        "Pilot and maintenance guidance"
+        "AI task specs, prompts, quality checks, and pilot guidance"
       ],
-      "requirements": "This purchase is the mini-course. The companion Notion workspace is sold separately or in the bundle.",
+      "requirements": "Read the PDF without Notion. A Notion account is needed for the optional reading version. Workflow Builder OS is sold separately or in the bundle; external AI services and automation tools are not included.",
       "url": "https://deekebiz.gumroad.com/l/how-to-turn-workflows-to-ai-ready-systems"
     },
     {
@@ -250,7 +250,7 @@
         "Matching custom agent link",
         "Setup instructions"
       ],
-      "requirements": "Requires Notion. Custom Agents currently require a Business or Enterprise plan and use Notion credits. These Notion costs are separate from this product purchase.",
+      "requirements": "A Notion account is needed for the template. Custom Agents require a Business or Enterprise plan and Notion credits, billed separately by Notion. Check eligibility before buying, test with sample data, and review reminders before sending.",
       "url": "https://deekebiz.gumroad.com/l/overdue-payments-agent-bundle"
     },
     {
@@ -289,5 +289,10 @@
       "requirements": "Requires a Notion account. The workspace is designed for a lightweight weekly review.",
       "url": "https://deekebiz.gumroad.com/l/weekly-reset-tracker"
     }
+  ],
+  "featuredProducts": [
+    "client-delivery-os",
+    "brand-activation-production-os",
+    "claritypack10-pro-bundle"
   ]
 }

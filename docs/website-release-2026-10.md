@@ -30,11 +30,11 @@ Browser acceptance is performed on the existing public GitHub Pages deployment. 
 
 - Outbound Gumroad product links carry `utm_source=deekebiz_site`, `utm_medium=website`, `utm_campaign=existing_products_2026_10`, plus placement labels. They never contain tool answers.
 - UTM labels alone do not create a site analytics collector. No aggregate visits, completions, or purchases are available from this repository.
-- With Gumroad account access, create tracked links under Analytics → Links for the campaign, and install the exact website view snippet supplied by Widgets → Analytics on commercial pages. Preserve the no-report-transmission promise of the browser tools.
+- Gumroad native tracking links are now configured for all sixteen products, plus the three featured products on YouTube, Pinterest, and Instagram. Existing website UTM placements remain in use. No additional website analytics collector was installed; preserve the no-report-transmission promise of the browser tools.
 - Current sales and traffic must be read from the account. Do not infer sales from ratings or manufacture testimonial/revenue claims.
 - Check that the live Gumroad ZIP is the reviewed bundle version, and test delivery of the live Client Delivery OS duplication access. The available product descriptions and local paid kit do not prove checkout delivery.
 - Replace promotional artwork with real workspace screenshots when actual Client Delivery OS access is available. Keep the illustrative example clearly labeled.
-- In the Gumroad Recovery Desk description, remove the literal editing label “Closing line:” and separate the concatenated final sentences.
+- The Gumroad Recovery Desk editing label and concatenated closing sentences have been repaired.
 
 ## First test
 
@@ -46,7 +46,7 @@ Update `products/catalog.json`, regenerate with `scripts/build_catalog.py`, and 
 
 ## Visual storefront update
 
-The homepage now opens with concise copy and three selectable, clearly labeled illustrative workflows. Five situation cards lead into a filterable visual product collection. The default selection offers Client Delivery OS, Weekly Reset Tracker, and ClarityPack10 as starting points; “All 16” and five category filters expose the full catalog. Direct links to `#catalog` show every product. Category selections have shareable anchors and follow browser back/forward navigation.
+The homepage now opens with concise copy and three selectable, clearly labeled illustrative workflows. Five situation cards lead into a filterable visual product collection. The default selection offers Client Delivery OS, Brand Activation Production OS, and ClarityPack10 as starting points; “All 16” and five category filters expose the full catalog. Direct links to `#catalog` show every product. Category selections have shareable anchors and follow browser back/forward navigation.
 
 Catalog prices and formats are still generated from the canonical catalog. Existing cover artwork is labeled as artwork, and the ClarityPack10 preview is the actual contractor checklist page. The homepage shows that PDF sample at full page proportions and links to its full-size image. The lengthy repeated AI sections are replaced by shorter free-tool, guide, setup, and FAQ sections. Existing `#featured`, `#guides`, `#systems`, and `#catalog` anchors continue to resolve.
 
@@ -63,3 +63,11 @@ The invoice guide has a shorter, descriptive title, matching article metadata, s
 The sitemap includes the previously omitted freelancer finance guide and accurate modification dates for the substantive October release. Validation now rejects missing sitemap entries, redirect aliases or noindex pages in the sitemap, links through legacy aliases, and incorrect redirect canonicals.
 
 Evaluate changes with Search Console query and page exports for the last 28 days versus the previous 28 days. Separate ordinary search queries from `site:` diagnostics and compare position as well as clicks, impressions, and CTR. Query totals alone do not identify which landing page ranked. Page inspections and indexing requests require Search Console account access; this repository does not submit them. Publishing changes is not evidence of improved rankings or sales.
+
+## GitHub/Gumroad alignment pass — October 1
+
+The homepage now features the same three offers as Gumroad: Client Delivery OS, Brand Activation Production OS, and ClarityPack10. Prices are unchanged. The course is identified as a PDF course with a Notion reading version, and the bundle as the course plus a Notion workspace. ClarityPack10 explains unzipping and its optional editable-script software. The custom-agent offer emphasizes separate Notion plan/credit requirements and review before sending.
+
+All sixteen product pages have consistent Open Graph/Twitter titles, descriptions, canonical share URLs, and absolute share-image URLs. Six relative image URLs were corrected, and the ClarityPack10 share card uses its genuine PDF sample. The catalog generator maintains these fields. The site checker verifies the featured selection, share titles, URLs, and image assets alongside the existing route/schema checks.
+
+The unlisted responsive-review page now supports the homepage and all sixteen product landing pages. Browser width checks are layout checks in Chromium, not certification of actual mobile devices. Google Search Console inspection and current Google indexing are still account-dependent work; a sitemap and valid metadata do not prove ranking.
