@@ -35,3 +35,8 @@ Missing / still needed if you want every product to have a unique image:
 Naming notes:
 - I mapped “Operations Architect Dashboard” to `ai-operations-architect.webp` to match the Gumroad product name.
 - I mapped “Build One AI-Ready Workflow Package” to `workflow-builder-os.webp`. If this image is actually for a different product, rename it before uploading.
+
+## Website repair, October 2026
+
+- `ChatGPT Image May 21, 2026, 11_44_50 PM (1).png`: existing Client Delivery OS promotional artwork, labeled as artwork rather than a live screenshot.
+- `contractor-kit-preview.png`: one page rendered from the actual Contractor Quote Decision Kit (page 4), supplied in ClarityPack10-Pro-Bundle.zip version 2. This is the only paid-kit page published as a sample. The ZIP, full PDF kits, and editable Word script document are excluded from this repository.
