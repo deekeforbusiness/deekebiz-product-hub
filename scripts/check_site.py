@@ -1,15 +1,18 @@
 #!/usr/bin/env python3
 """Check static deployment routes, anchors, structured data and public catalog."""
 import json
+import re
+import xml.etree.ElementTree as ET
 from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import urljoin,urlsplit,unquote
+from site_routes import canonical_url, REDIRECTS
 
 ROOT=Path(__file__).resolve().parents[1]
 BASE='https://deekeforbusiness.github.io/deekebiz-product-hub/'
 class Page(HTMLParser):
     def __init__(self,text):
-        super().__init__();self.ids=[];self.links=[];self.assets=[];self.schemas=[];self.canonical=[];self.h1=0;self.in_schema=False;self.schema='';self.feed(text)
+        super().__init__();self.ids=[];self.links=[];self.assets=[];self.schemas=[];self.canonical=[];self.robots='';self.refresh=[];self.h1=0;self.in_schema=False;self.schema='';self.feed(text)
     def handle_starttag(self,tag,attributes):
         a=dict(attributes)
         if a.get('id'):self.ids.append(a['id'])
@@ -18,6 +21,8 @@ class Page(HTMLParser):
         if tag in ['img','script'] and a.get('src'):self.assets.append(a['src'])
         if tag=='link' and a.get('rel')=='stylesheet':self.assets.append(a['href'])
         if tag=='link' and a.get('rel')=='canonical':self.canonical.append(a['href'])
+        if tag=='meta' and a.get('name','').lower()=='robots':self.robots=a.get('content','').lower()
+        if tag=='meta' and a.get('http-equiv','').lower()=='refresh':self.refresh.append(a.get('content',''))
         if tag=='script' and a.get('type')=='application/ld+json':self.in_schema=True;self.schema=''
     def handle_data(self,data):
         if self.in_schema:self.schema+=data
@@ -31,7 +36,11 @@ for path,page in pages.items():
     relative=path.parent.relative_to(ROOT).as_posix();url=BASE+('' if relative=='.' else relative+'/')
     if len(page.ids)!=len(set(page.ids)):errors.append(f'{relative}: duplicate ids')
     if page.h1!=1:errors.append(f'{relative}: expected one h1')
-    if page.canonical!=[url]:errors.append(f'{relative}: incorrect canonical {page.canonical}')
+    if page.canonical!=[canonical_url(relative)]:errors.append(f'{relative}: incorrect canonical {page.canonical}')
+    if relative in REDIRECTS:
+        if page.refresh!=['0; url='+BASE+REDIRECTS[relative]]:errors.append(f'{relative}: incorrect permanent meta redirect')
+        if 'noindex' in page.robots:errors.append(f'{relative}: noindex conflicts with guide consolidation')
+    elif page.refresh:errors.append(f'{relative}: unregistered redirect')
     for target in page.links+page.assets:
         u=urlsplit(urljoin(url,target))
         if u.netloc!='deekeforbusiness.github.io':continue
@@ -40,6 +49,18 @@ for path,page in pages.items():
         checked+=1
         if not local.is_file():errors.append(f'{relative}: missing route/asset {target}')
         elif u.fragment and local in pages and unquote(u.fragment) not in pages[local].ids:errors.append(f'{relative}: missing anchor {target}')
+        if local in pages and local.parent.relative_to(ROOT).as_posix() in REDIRECTS:errors.append(f'{relative}: internal link uses legacy redirect {target}')
+
+namespace={'s':'http://www.sitemaps.org/schemas/sitemap/0.9'}
+sitemap=ET.parse(ROOT/'sitemap.xml').getroot()
+sitemap_urls=[entry.find('s:loc',namespace).text for entry in sitemap]
+expected_urls={canonical_url(path.parent.relative_to(ROOT).as_posix()) for path,page in pages.items()
+               if path.name=='index.html' and not page.refresh and 'noindex' not in page.robots}
+if len(sitemap_urls)!=len(set(sitemap_urls)):errors.append('sitemap: duplicate URLs')
+if set(sitemap_urls)!=expected_urls:errors.append(f'sitemap: missing {sorted(expected_urls-set(sitemap_urls))}; unexpected {sorted(set(sitemap_urls)-expected_urls)}')
+for entry in sitemap:
+    lastmod=entry.findtext('s:lastmod','',namespace)
+    if lastmod and not re.fullmatch(r'\d{4}-\d{2}-\d{2}',lastmod):errors.append('sitemap: invalid lastmod date')
 catalog=json.loads((ROOT/'products/catalog.json').read_text())['products']
 assert len(catalog)==16
 for p in catalog:
@@ -55,4 +76,4 @@ for tool in (ROOT/'claritypack10/tools').glob('*/index.html'):
     if 'data-result-upgrade' not in text or 'cp-report-credit' not in text:errors.append(f'{tool.parent.name}: missing contextual result path or attribution')
 if errors:
     print('\n'.join(errors));raise SystemExit(1)
-print(f'PASS: {len(pages)-1} pages, {checked} internal links/assets/anchors, 16 catalog offers and 10 tool result paths.')
+print(f'PASS: {len(pages)-1} pages, {checked} internal links/assets/anchors, {len(sitemap_urls)} canonical sitemap URLs, 3 guide redirects, 16 catalog offers and 10 tool result paths.')

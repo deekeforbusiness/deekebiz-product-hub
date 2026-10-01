@@ -53,3 +53,13 @@ Catalog prices and formats are still generated from the canonical catalog. Exist
 The homepage has its own CSS and progressive enhancement script. Without JavaScript, all sixteen products remain available, ordinary anchors work, and the first illustrative workflow remains visible. No analytics collector or transmission of tool answers was added. Prices were not changed.
 
 `review/` is an unlisted, noindex layout-review page. It renders the real homepage inside an iframe at 320, 375, 390, 768, 1024, or 1160 CSS pixels and reports horizontal overflow. It is not part of the commercial navigation. Use this to check the real responsive CSS when browser viewport resizing is unavailable; it does not certify a physical phone or another browser engine.
+
+## Search and invoice guide update
+
+The three consolidated guide aliases now identify their destination as canonical, without a fragment or conflicting noindex tag. Immediate meta refresh redirects remain in place because this is a static GitHub Pages deployment; these are not server-side HTTP 301 redirects. The catalog generator uses the shared route mapping, so rebuilding cannot revert the fix. The AI workflow hub links directly to the prompt guide's categories section.
+
+The invoice guide has a shorter, descriptive title, matching article metadata, seven visible subject-and-message examples, stage anchors, and copy buttons. Copy confirmation is shown only after the clipboard write succeeds. If clipboard access is absent or denied, the examples remain available for manual copying. The script copies public placeholder text only and makes no network calls. The associated paid listing states its Notion format, $19 price, and separate Custom Agent software costs prominently. Product prices have not changed.
+
+The sitemap includes the previously omitted freelancer finance guide and accurate modification dates for the substantive October release. Validation now rejects missing sitemap entries, redirect aliases or noindex pages in the sitemap, links through legacy aliases, and incorrect redirect canonicals.
+
+Evaluate changes with Search Console query and page exports for the last 28 days versus the previous 28 days. Separate ordinary search queries from `site:` diagnostics and compare position as well as clicks, impressions, and CTR. Query totals alone do not identify which landing page ranked. Page inspections and indexing requests require Search Console account access; this repository does not submit them. Publishing changes is not evidence of improved rankings or sales.

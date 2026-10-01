@@ -11,6 +11,7 @@ import os
 import re
 from pathlib import Path
 from urllib.parse import parse_qsl, urlencode, urljoin, urlsplit, urlunsplit, unquote
+from site_routes import canonical_url
 
 ROOT = Path(__file__).resolve().parents[1]
 BASE = 'https://deekeforbusiness.github.io/deekebiz-product-hub/'
@@ -141,7 +142,7 @@ for page in sorted(ROOT.rglob('*.html')):
     if 'assets/commerce.css' not in text:
         text = text.replace('</head>', f'<link rel="stylesheet" href="{BASE}assets/commerce.css">\n</head>')
     text = re.sub(r'(href|src)=([\"\'])(.*?)\2', lambda m: localize_match(m,page), text)
-    canonical = BASE + ('' if path == '.' else path + '/')
+    canonical = canonical_url(path)
     text = re.sub(r'(<link\b[^>]*rel="canonical"[^>]*href=")(.*?)(")', lambda m: m.group(1) + canonical + m.group(3), text)
     text = re.sub(r'(<a\b[^>]*\bhref=")(.*?)(")', lambda m: rewrite_link(m,page), text)
     if path == 'weekly-reset-tracker':
