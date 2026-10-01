@@ -65,6 +65,7 @@ def catalog():
         'ai-ready-workflow-builder-os': 'workflow-builder-os.webp',
         'client-delivery-os': 'ChatGPT Image May 21, 2026, 11_44_50 PM (1).png',
         'claritypack10': 'contractor-kit-preview.png',
+        'the-recovery-desk': 'recovery-desk.webp',
     }
     cards = []
     ordered = sorted(PRODUCTS, key=lambda p: (featured.index(p['id']) if p['id'] in featured else 3, PRODUCTS.index(p)))
@@ -76,8 +77,10 @@ def catalog():
         elif (ROOT / 'assets' / cover).is_file():
             width, height = (1672, 941) if p['path'] == 'client-delivery-os' else (1600, 1000)
             visual = f'<figure class="store-product-visual"><img src="{BASE}assets/{esc(cover)}" width="{width}" height="{height}" loading="lazy" alt=""><figcaption>Product cover artwork</figcaption></figure>'
-        else:
+        elif p['id'] == 'overdue-payments-agent-bundle':
             visual = '<figure class="store-product-visual invoice"><div><span>INVOICE FOLLOW-UP</span><strong>One reminder.<br>A clear next step.</strong><small>Draft → Review → Follow up</small></div><figcaption>Illustrative workflow</figcaption></figure>'
+        else:
+            raise ValueError(f"Missing product artwork for {p['id']}: assets/{cover}")
         title = p['name'].split(' — ')[0]
         cards.append(f'''<article class="db-product" data-product="{esc(p['id'])}" data-category="{key}" data-featured="{'true' if p['id'] in featured else 'false'}"><a class="store-product-link" href="{BASE}{p['path']}/" aria-labelledby="name-{p['id']}">{visual}<div class="store-product-copy"><p class="db-product-meta">{esc(p['format'])}</p><h3 id="name-{p['id']}">{esc(title)}</h3><p>{esc(p['summary'])}</p><div class="store-product-footer"><p class="db-price">{price(p)}</p><span>See contents <span aria-hidden="true">↗</span></span></div></div></a></article>''')
     filters = ['<a href="#featured" class="store-filter" data-category-link="featured" aria-controls="product-grid">Start here</a>', '<a href="#catalog" class="store-filter" data-category-link="all" aria-controls="product-grid">All 16</a>']

@@ -38,7 +38,7 @@
   }));
   const sync = () => { const key = keyFromHash(); if (key) filter(key); };
   window.addEventListener('hashchange', sync);
-  window.addEventListener('popstate', sync);
+  window.addEventListener('popstate', () => filter(keyFromHash() || 'featured'));
 
   const tabs = [...document.querySelectorAll('[data-preview-tab]')];
   const panels = [...document.querySelectorAll('.store-preview-panel')];

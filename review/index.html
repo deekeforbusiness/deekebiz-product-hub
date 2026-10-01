@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://deekeforbusiness.github.io/deekebiz-product-hub/review/">
+<title>Responsive Layout Review | DeekeBiz</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#eee7df;color:#211f1d;font:14px system-ui,sans-serif}header{padding:15px 22px;background:#fffaf4;border-bottom:1px solid #d7c5b4;display:flex;gap:20px;align-items:center;flex-wrap:wrap}h1{font-size:16px;margin:0}label{font-size:12px}select{padding:6px;margin-left:8px;font:inherit}output{font-size:12px;color:#5b4c40}a{color:inherit;font-size:12px;margin-left:auto}main{padding:18px;overflow:auto}iframe{width:375px;height:812px;border:1px solid #d7c5b4;border-radius:12px;background:#fffaf4;display:block;margin:auto;box-shadow:0 10px 40px #39231218}
+</style>
+<link rel="stylesheet" href="../assets/commerce.css?v=74f4860230">
+</head>
+<body>
+<header><h1>Responsive layout review</h1><label for="width">Preview width<select id="width"><option value="320">320 px</option><option value="375" selected>375 px</option><option value="390">390 px</option><option value="768">768 px</option><option value="1024">1024 px</option><option value="1160">1160 px</option></select></label><output id="result" aria-live="polite">Loading homepage…</output><a href="../">Open the homepage</a></header>
+<main><iframe src="../" title="Homepage at a narrow viewport" id="frame"></iframe></main>
+<script>
+const frame=document.getElementById('frame');
+const width=document.getElementById('width');
+const result=document.getElementById('result');
+function measure(){try{const root=frame.contentDocument.documentElement;result.textContent='Layout: '+root.clientWidth+' px · '+(root.scrollWidth>root.clientWidth?'Horizontal overflow: '+(root.scrollWidth-root.clientWidth)+' px':'No horizontal overflow');}catch{result.textContent='Open the homepage to review this viewport.';}}
+frame.addEventListener('load',measure);
+width.addEventListener('change',()=>{frame.style.width=width.value+'px';requestAnimationFrame(()=>requestAnimationFrame(measure));});
+</script>
+</body>
+</html>
