@@ -1,0 +1,293 @@
+{
+  "verifiedAt": "2026-10-01",
+  "products": [
+    {
+      "id": "7-day-life-admin-reset",
+      "path": "7-day-life-admin-reset",
+      "name": "The 7-Day Life Admin Reset",
+      "price": 7,
+      "currency": "USD",
+      "payWhatYouWant": false,
+      "format": "PDF guide",
+      "category": "Life admin",
+      "summary": "Work through overdue paperwork, bills, reminders, and loose ends over seven days.",
+      "contents": [
+        "One premium PDF guide",
+        "Day-by-day reset structure",
+        "Practical prompts, scripts, and action steps"
+      ],
+      "requirements": "No Notion account required. Open the PDF on your device or print it.",
+      "url": "https://deekebiz.gumroad.com/l/7-day-life-admin-reset"
+    },
+    {
+      "id": "ai-operation-architect",
+      "path": "ai-operations-architect",
+      "name": "AI Operations Architect",
+      "price": 24,
+      "currency": "USD",
+      "payWhatYouWant": true,
+      "format": "Notion workspace",
+      "category": "AI workflows",
+      "summary": "Map business functions, workflows, SOPs, roles, and improvement opportunities.",
+      "contents": [
+        "Functions, workflows, SOPs, and roles",
+        "Diagnostics and KPI tracking",
+        "Built-in AI prompt engine"
+      ],
+      "requirements": "Requires a Notion account. AI prompts use the AI service you choose; its limits and fees apply separately.",
+      "url": "https://deekebiz.gumroad.com/l/ai-operation-architect"
+    },
+    {
+      "id": "ai-prompt-vault",
+      "path": "ai-prompt-vault",
+      "name": "AI Prompt Vault",
+      "price": 9,
+      "currency": "USD",
+      "payWhatYouWant": true,
+      "format": "Notion workspace",
+      "category": "AI workflows",
+      "summary": "Organize reusable prompts, workflow packs, and AI playbooks for recurring work.",
+      "contents": [
+        "Prompt Library and Workflow Packs",
+        "AI Playbooks and My Custom Prompts",
+        "Start Here and Quick Wins guide"
+      ],
+      "requirements": "Requires a Notion account. AI prompts use the AI service you choose; its limits and fees apply separately.",
+      "url": "https://deekebiz.gumroad.com/l/ai-prompt-vault"
+    },
+    {
+      "id": "ai-ready-workflow-builder-bundle",
+      "path": "workflow-builder-bundle",
+      "name": "Workflow Builder Bundle",
+      "price": 49,
+      "currency": "USD",
+      "payWhatYouWant": false,
+      "format": "Mini-course + Notion workspace",
+      "category": "AI workflows",
+      "summary": "Learn the workflow method, then apply it in the companion workspace.",
+      "contents": [
+        "Workflow SOP & AI Guide mini-course",
+        "Workflow Builder OS Notion workspace"
+      ],
+      "requirements": "A Notion account is required for the workspace. The course and workspace document a workflow; they do not install automations.",
+      "url": "https://deekebiz.gumroad.com/l/ai-ready-workflow-builder-bundle"
+    },
+    {
+      "id": "ai-ready-workflow-builder-os",
+      "path": "ai-ready-workflow-builder-os",
+      "name": "Workflow Builder OS",
+      "price": 39,
+      "currency": "USD",
+      "payWhatYouWant": true,
+      "format": "Notion workspace",
+      "category": "AI workflows",
+      "summary": "Build one workflow package from selection and SOPs to quality checks and pilot.",
+      "contents": [
+        "Workflow package, step map, and SOP",
+        "AI task specs, prompts, and QC checkpoints",
+        "Pilot, exception, and maintenance records"
+      ],
+      "requirements": "Requires a Notion account. Companion mini-course is sold separately or in the bundle. Automation software is not included.",
+      "url": "https://deekebiz.gumroad.com/l/ai-ready-workflow-builder-os"
+    },
+    {
+      "id": "brand-activation-production-os",
+      "path": "brand-activation-production-os",
+      "name": "Brand Activation Production OS — Notion Production Workflow System",
+      "price": 24,
+      "currency": "USD",
+      "payWhatYouWant": false,
+      "format": "Notion workspace",
+      "category": "Client work",
+      "summary": "Organize production jobs from client brief to proof approvals and delivery.",
+      "contents": [
+        "Client jobs and production workflow",
+        "Supplier, material, cost, and delivery tracking"
+      ],
+      "requirements": "Requires a Notion account. Customize the workspace to match your production process.",
+      "url": "https://deekebiz.gumroad.com/l/brand-activation-production-os"
+    },
+    {
+      "id": "claritypack10-pro-bundle",
+      "path": "claritypack10",
+      "name": "ClarityPack10 Pro Bundle",
+      "price": 19,
+      "currency": "USD",
+      "payWhatYouWant": false,
+      "format": "10 PDF kits + master guide",
+      "category": "Decision kits",
+      "summary": "Use evidence checklists, questions, communication scripts, and follow-up records.",
+      "contents": [
+        "One ZIP with ten printable PDF kits",
+        "Master start guide",
+        "Evidence checklists, question prompts, scripts, and follow-up trackers",
+        "Separate editable Word document with communication scripts"
+      ],
+      "requirements": "No Notion account, subscription, or software installation required. Open the PDFs on your device or print them.",
+      "url": "https://deekebiz.gumroad.com/l/claritypack10-pro-bundle"
+    },
+    {
+      "id": "client-delivery-os",
+      "path": "client-delivery-os",
+      "name": "Client Delivery OS — Notion Template",
+      "price": 19,
+      "currency": "USD",
+      "payWhatYouWant": true,
+      "format": "Notion workspace",
+      "category": "Client work",
+      "summary": "Keep client pipeline, projects, requests, approvals, meetings, and follow-ups together.",
+      "contents": [
+        "Home command center and pipeline dashboard",
+        "Clients, projects, requests, approvals, and meetings",
+        "Finance & renewals, SOPs & assets, and archive",
+        "Start Here guide, setup checklist, and database templates"
+      ],
+      "requirements": "Requires your own Notion account. Purchase provides access to duplicate the workspace. This is a self-serve template; setup and customization are yours.",
+      "url": "https://deekebiz.gumroad.com/l/client-delivery-os"
+    },
+    {
+      "id": "compliance-architect",
+      "path": "compliance-architect",
+      "name": "Compliance Architect",
+      "price": 15,
+      "currency": "USD",
+      "payWhatYouWant": true,
+      "format": "Notion workspace",
+      "category": "Business admin",
+      "summary": "Track permits, renewals, supporting documents, and next actions.",
+      "contents": [
+        "Compliance command center and requirements",
+        "Documents, tasks, follow-ups, and weekly review",
+        "AI prompt engine and sample scenario"
+      ],
+      "requirements": "Requires a Notion account. Confirm requirements with the relevant agency. Optional AI services have their own limits and costs.",
+      "url": "https://deekebiz.gumroad.com/l/compliance-architect"
+    },
+    {
+      "id": "document-intake-system",
+      "path": "document-intake-system",
+      "name": "Document Intake System",
+      "price": 9,
+      "currency": "USD",
+      "payWhatYouWant": true,
+      "format": "Notion workspace",
+      "category": "Business admin",
+      "summary": "Track incoming documents through review, missing items, follow-up, and closeout.",
+      "contents": [
+        "Intake tracking and review workflow",
+        "Follow-up management and document records",
+        "Sample scenario and optional AI prompts"
+      ],
+      "requirements": "Requires a Notion account. Optional AI prompts use your chosen AI service.",
+      "url": "https://deekebiz.gumroad.com/l/document-intake-system"
+    },
+    {
+      "id": "event-agency-command-center",
+      "path": "event-agency-command-center",
+      "name": "Event Agency Command Center — Notion Event Planning System",
+      "price": 15,
+      "currency": "USD",
+      "payWhatYouWant": false,
+      "format": "Notion workspace",
+      "category": "Client work",
+      "summary": "Keep event tasks, bookings, vendors, payments, materials, and run sheets together.",
+      "contents": [
+        "Event dashboard, events, and tasks",
+        "Clients, bookings, vendors, and budget",
+        "Run sheet, materials, deliveries, and promo assets",
+        "Sample event and how-to-use guide"
+      ],
+      "requirements": "Requires a Notion account. Customize the workspace for your event process.",
+      "url": "https://deekebiz.gumroad.com/l/event-agency-command-center"
+    },
+    {
+      "id": "freelancer-tax-desk",
+      "path": "freelancer-tax-desk",
+      "name": "Freelancer Tax Desk",
+      "price": 15,
+      "currency": "USD",
+      "payWhatYouWant": false,
+      "format": "Notion workspace",
+      "category": "Business admin",
+      "summary": "Organize income, expenses, quarterly planning, and tax-prep notes.",
+      "contents": [
+        "Dashboard, Income Log, and Expense Log",
+        "Quarterly Tax Planner and Tax Prep Notes"
+      ],
+      "requirements": "Requires a Notion account. This is an organization tool; confirm tax decisions with a qualified professional.",
+      "url": "https://deekebiz.gumroad.com/l/freelancer-tax-desk"
+    },
+    {
+      "id": "how-to-turn-workflows-to-ai-ready-systems",
+      "path": "workflow-sop-ai-guide",
+      "name": "Workflow SOP & AI Guide",
+      "price": 15,
+      "currency": "USD",
+      "payWhatYouWant": true,
+      "format": "Mini-course",
+      "category": "AI workflows",
+      "summary": "Learn to document one real workflow, write its SOP, and prepare a controlled pilot.",
+      "contents": [
+        "Workflow selection, mapping, and SOP method",
+        "AI suitability, task specs, prompts, and quality checks",
+        "Pilot and maintenance guidance"
+      ],
+      "requirements": "This purchase is the mini-course. The companion Notion workspace is sold separately or in the bundle.",
+      "url": "https://deekebiz.gumroad.com/l/how-to-turn-workflows-to-ai-ready-systems"
+    },
+    {
+      "id": "overdue-payments-agent-bundle",
+      "path": "overdue-payments-agent-bundle",
+      "name": "Overdue Payments Agent",
+      "price": 19,
+      "currency": "USD",
+      "payWhatYouWant": false,
+      "format": "Notion template + custom agent link",
+      "category": "Business admin",
+      "summary": "Track overdue invoices and organize reminder drafts and run history.",
+      "contents": [
+        "Notion template link",
+        "Matching custom agent link",
+        "Setup instructions"
+      ],
+      "requirements": "Requires Notion. Custom Agents currently require a Business or Enterprise plan and use Notion credits. These Notion costs are separate from this product purchase.",
+      "url": "https://deekebiz.gumroad.com/l/overdue-payments-agent-bundle"
+    },
+    {
+      "id": "the-recovery-desk",
+      "path": "the-recovery-desk",
+      "name": "The Recovery Desk",
+      "price": 12,
+      "currency": "USD",
+      "payWhatYouWant": false,
+      "format": "Notion workspace",
+      "category": "Life admin",
+      "summary": "Capture overdue life admin and choose a calm next step.",
+      "contents": [
+        "Home dashboard, Start Here, and Recovery Reset",
+        "Inbox, Fix Next, Due Soon, and Overdue views",
+        "Areas for common life-admin categories"
+      ],
+      "requirements": "Requires a Notion account. Start with one small area and adapt it to your routine.",
+      "url": "https://deekebiz.gumroad.com/l/the-recovery-desk"
+    },
+    {
+      "id": "weekly-reset-tracker",
+      "path": "weekly-reset-tracker",
+      "name": "Weekly Reset Tracker",
+      "price": 7,
+      "currency": "USD",
+      "payWhatYouWant": true,
+      "format": "Notion workspace",
+      "category": "Life admin",
+      "summary": "Capture loose thoughts, choose one to three priorities, and reset your week.",
+      "contents": [
+        "Top priorities, brain dump, and weekly tasks",
+        "Important items, bills, payments, and reset checklist",
+        "Reflections and past weeks"
+      ],
+      "requirements": "Requires a Notion account. The workspace is designed for a lightweight weekly review.",
+      "url": "https://deekebiz.gumroad.com/l/weekly-reset-tracker"
+    }
+  ]
+}
