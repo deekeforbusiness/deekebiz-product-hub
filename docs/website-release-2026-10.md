@@ -43,3 +43,11 @@ Keep current prices steady. Direct the next relevant client-work content to the 
 ## Maintaining the catalog
 
 Update `products/catalog.json`, regenerate with `scripts/build_catalog.py`, and run the checks before publishing. Review explanatory copy too when contents, requirements, names, or prices change. No archived rental analyzers are published in the catalog.
+
+## Visual storefront update
+
+The homepage now opens with concise copy and three selectable, clearly labeled illustrative workflows. Five situation cards lead into a filterable visual product collection. The default selection offers Client Delivery OS, Weekly Reset Tracker, and ClarityPack10 as starting points; “All 16” and five category filters expose the full catalog. Direct links to `#catalog` show every product. Category selections have shareable anchors and follow browser back/forward navigation.
+
+Catalog prices and formats are still generated from the canonical catalog. Existing cover artwork is labeled as artwork, and the ClarityPack10 preview is the actual contractor checklist page. The homepage shows that PDF sample at full page proportions and links to its full-size image. The lengthy repeated AI sections are replaced by shorter free-tool, guide, setup, and FAQ sections. Existing `#featured`, `#guides`, `#systems`, and `#catalog` anchors continue to resolve.
+
+The homepage has its own CSS and progressive enhancement script. Without JavaScript, all sixteen products remain available, ordinary anchors work, and the first illustrative workflow remains visible. No analytics collector or transmission of tool answers was added. Prices were not changed.

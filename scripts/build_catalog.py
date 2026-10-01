@@ -57,15 +57,35 @@ def offer(p):
 
 
 def catalog():
-    groups = []
-    for category in ['Client work', 'Business admin', 'AI workflows', 'Life admin', 'Decision kits']:
-        cards = []
-        for p in PRODUCTS:
-            if p['category'] != category:
-                continue
-            cards.append(f'''<article class="db-product" data-product="{esc(p['id'])}"><p class="db-product-meta">{esc(p['format'])}</p><h3>{esc(p['name'].split(' — ')[0])}</h3><p>{esc(p['summary'])}</p><p class="db-price">{price(p)}</p><div class="db-actions"><a class="db-link" href="{BASE}{p['path']}/">See what’s included</a></div></article>''')
-        groups.append(f'<h3 class="db-category">{category}</h3><div class="db-products">' + '\n'.join(cards) + '</div>')
-    return '<section id="catalog" class="section"><div class="wrap"><span class="kicker">All 16 published products</span><h2>Choose by the work you need to organize.</h2><p class="lead">See the format, price, and contents before checkout. A “+” means you can pay more than the listed minimum; it is not a subscription.</p>' + '\n'.join(groups) + '</div></section>'
+    categories = {'Client work': 'client-work', 'Business admin': 'business-admin', 'AI workflows': 'ai-workflows', 'Life admin': 'life-admin', 'Decision kits': 'decision-kits'}
+    featured = ['client-delivery-os', 'weekly-reset-tracker', 'claritypack10-pro-bundle']
+    covers = {
+        '7-day-life-admin-reset': 'life-admin-reset-7-day.webp',
+        'ai-operations-architect': 'ai-operations-architect.webp',
+        'ai-ready-workflow-builder-os': 'workflow-builder-os.webp',
+        'client-delivery-os': 'ChatGPT Image May 21, 2026, 11_44_50 PM (1).png',
+        'claritypack10': 'contractor-kit-preview.png',
+    }
+    cards = []
+    ordered = sorted(PRODUCTS, key=lambda p: (featured.index(p['id']) if p['id'] in featured else 3, PRODUCTS.index(p)))
+    for p in ordered:
+        key = categories[p['category']]
+        cover = covers.get(p['path'], p['path'] + '.webp')
+        if p['path'] == 'claritypack10':
+            visual = f'<figure class="store-product-visual pdf"><img src="{BASE}assets/{cover}" width="990" height="1400" loading="lazy" alt=""><figcaption>Real PDF sample</figcaption></figure>'
+        elif (ROOT / 'assets' / cover).is_file():
+            width, height = (1672, 941) if p['path'] == 'client-delivery-os' else (1600, 1000)
+            visual = f'<figure class="store-product-visual"><img src="{BASE}assets/{esc(cover)}" width="{width}" height="{height}" loading="lazy" alt=""><figcaption>Product cover artwork</figcaption></figure>'
+        else:
+            visual = '<figure class="store-product-visual invoice"><div><span>INVOICE FOLLOW-UP</span><strong>One reminder.<br>A clear next step.</strong><small>Draft → Review → Follow up</small></div><figcaption>Illustrative workflow</figcaption></figure>'
+        title = p['name'].split(' — ')[0]
+        cards.append(f'''<article class="db-product" data-product="{esc(p['id'])}" data-category="{key}" data-featured="{'true' if p['id'] in featured else 'false'}"><a class="store-product-link" href="{BASE}{p['path']}/" aria-labelledby="name-{p['id']}">{visual}<div class="store-product-copy"><p class="db-product-meta">{esc(p['format'])}</p><h3 id="name-{p['id']}">{esc(title)}</h3><p>{esc(p['summary'])}</p><div class="store-product-footer"><p class="db-price">{price(p)}</p><span>See contents <span aria-hidden="true">↗</span></span></div></div></a></article>''')
+    filters = ['<a href="#featured" class="store-filter" data-category-link="featured" aria-controls="product-grid">Start here</a>', '<a href="#catalog" class="store-filter" data-category-link="all" aria-controls="product-grid">All 16</a>']
+    for label, key in categories.items():
+        count = sum(p['category'] == label for p in PRODUCTS)
+        filters.append(f'<a href="#catalog-{key}" class="store-filter" data-category-link="{key}" aria-controls="product-grid">{label} <span>{count}</span></a>')
+    markers = ''.join(f'<span id="catalog-{key}" class="store-anchor" aria-hidden="true"></span>' for key in categories.values())
+    return f'''<section id="catalog" class="section store-catalog"><div class="wrap"><span id="featured" class="store-anchor" aria-hidden="true"></span>{markers}<div class="store-section-heading"><div><span class="kicker">Find your fit</span><h2>One useful system.<br>A clearer next step.</h2></div><p>Start with the problem you have.<br>See the contents before you choose.</p></div><nav class="store-filters" aria-label="Filter products">{''.join(filters)}</nav><p class="store-count" data-product-count role="status" aria-live="polite">16 products · prices in USD</p><div id="product-grid" class="db-products">{''.join(cards)}</div><div class="store-catalog-note"><p>“+” means you may pay more than the listed minimum. All products are one-time purchases; software requirements are listed on each product page.</p><p>Cover images are promotional artwork. The ClarityPack10 preview is a real page from the paid PDF kit.</p></div><noscript><p>All 16 products are shown. Select a product to see its contents and requirements.</p></noscript></div></section>'''
 
 
 def localize_match(match, page):
