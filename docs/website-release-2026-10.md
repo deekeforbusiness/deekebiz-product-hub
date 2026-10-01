@@ -17,7 +17,7 @@ Run:
 ```
 python scripts/build_catalog.py
 python scripts/check_site.py
-node --test tests/quote-comparison.test.cjs
+node --test tests/*.test.cjs
 node --check assets/claritypack.js
 node --check assets/quote-comparison.js
 ```

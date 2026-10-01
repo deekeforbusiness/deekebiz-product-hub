@@ -5,11 +5,12 @@ Run from any directory: python scripts/build_catalog.py
 No paid product files, analytics credentials, or browser answers belong here.
 """
 import html
+import hashlib
 import json
 import os
 import re
 from pathlib import Path
-from urllib.parse import parse_qsl, urlencode, urljoin, urlsplit, urlunsplit
+from urllib.parse import parse_qsl, urlencode, urljoin, urlsplit, urlunsplit, unquote
 
 ROOT = Path(__file__).resolve().parents[1]
 BASE = 'https://deekeforbusiness.github.io/deekebiz-product-hub/'
@@ -76,6 +77,13 @@ def localize_match(match, page):
         if parsed.path.endswith('/'):
             rel = './' if rel == '.' else rel.rstrip('/') + '/'
         value = urlunsplit(('', '', rel, parsed.query, parsed.fragment))
+    parsed = urlsplit(value)
+    if not parsed.netloc and parsed.path.endswith(('.css', '.js')):
+        asset = (page.parent / unquote(parsed.path)).resolve()
+        if asset.is_file() and asset.is_relative_to(ROOT):
+            query = dict(parse_qsl(parsed.query))
+            query['v'] = hashlib.sha256(asset.read_bytes()).hexdigest()[:10]
+            value = urlunsplit(('', '', parsed.path, urlencode(query), parsed.fragment))
     return attr + '=' + quote + esc(value) + quote
 
 

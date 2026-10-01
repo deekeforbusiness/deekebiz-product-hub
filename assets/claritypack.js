@@ -46,7 +46,7 @@
   }
   form.addEventListener('input', edited);
   form.addEventListener('change', edited);
-  document.querySelector('[data-sample]').addEventListener('click', () => {
+  document.querySelector('button[data-sample]').addEventListener('click', () => {
     if (Array.from(form.elements).some(el => el.name && el.value.trim() && el.value !== (el.tagName === 'SELECT' ? (Array.from(el.options).find(option => option.defaultSelected) || el.options[0]).value : el.defaultValue)) && !confirm('Replace the current draft with the example?')) return;
     clearTimeout(saveTimer);
     Array.from(form.elements).filter(el => el.name).forEach(el => {el.value = el.dataset.sample || el.defaultValue || '';});
