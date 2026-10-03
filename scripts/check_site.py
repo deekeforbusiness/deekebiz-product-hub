@@ -59,6 +59,8 @@ sitemap_urls=[entry.find('s:loc',namespace).text for entry in sitemap]
 expected_urls={canonical_url(path.parent.relative_to(ROOT).as_posix()) for path,page in pages.items()
                if path.name=='index.html' and not page.refresh and 'noindex' not in page.robots}
 if len(sitemap_urls)!=len(set(sitemap_urls)):errors.append('sitemap: duplicate URLs')
+text_sitemap_urls=(ROOT/'sitemap.txt').read_text().splitlines()
+if text_sitemap_urls!=sitemap_urls:errors.append('text sitemap: does not match canonical XML sitemap')
 if set(sitemap_urls)!=expected_urls:errors.append(f'sitemap: missing {sorted(expected_urls-set(sitemap_urls))}; unexpected {sorted(set(sitemap_urls)-expected_urls)}')
 for entry in sitemap:
     lastmod=entry.findtext('s:lastmod','',namespace)

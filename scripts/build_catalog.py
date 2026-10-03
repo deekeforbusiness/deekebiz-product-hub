@@ -182,4 +182,9 @@ for page in sorted(ROOT.rglob('*.html')):
         text = text.replace('3–5', '1–3').replace('3-5', '1–3')
     page.write_text(text)
 
-print(f'Updated {len(PRODUCTS)} static offers, homepage catalog, local assets, and Gumroad campaign links.')
+# Keep the plain-text sitemap aligned with the canonical XML source.
+import xml.etree.ElementTree as ET
+urls = [element.text for element in ET.parse(ROOT / 'sitemap.xml').iter('{http://www.sitemaps.org/schemas/sitemap/0.9}loc')]
+(ROOT / 'sitemap.txt').write_text('\n'.join(urls) + '\n')
+
+print(f'Updated {len(PRODUCTS)} static offers, homepage catalog, local assets, Gumroad campaign links, and text sitemap.')
