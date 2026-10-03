@@ -29,7 +29,8 @@ Canonicals, sitemap coverage and structured metadata are checked locally. Google
 
 - Static site check: internal routes/assets/anchors, 53 canonical sitemap URLs, 16 catalog offers and ten report purchase paths.
 - Fifteen automated tests cover money/cost gaps, injection escaping, draft state, storage failures, empty reports, partial reports, sample notices and a missing calculation engine.
-- Browser acceptance after publication is recorded below.
+- Live browser acceptance: examples generated in all ten tools; nine generic record reports displayed the dated metadata and sample warning. The contractor template omission was found and corrected in this follow-up. A partial cancellation record showed 4 of 5 sections and the unanswered follow-up, and empty input was blocked.
+- All ten generated reports and the landing page had zero horizontal document overflow in a 320-pixel preview frame (303 pixels of content after borders/scrollbar). This is a responsive browser test, not a physical-device certification. QA example drafts were cleared.
 
 ## References
 
