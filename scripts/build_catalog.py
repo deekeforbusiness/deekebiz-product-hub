@@ -30,6 +30,8 @@ def price(p):
 
 
 def buy_url(p, content):
+    if p.get('trackingUrl'):
+        return p['trackingUrl']
     return p['url'] + '?' + urlencode(dict(utm_source='deekebiz_site', utm_medium='website', utm_campaign=CAMPAIGN, utm_content=content))
 
 
@@ -116,6 +118,9 @@ def rewrite_link(match, page):
     parsed = urlsplit(value)
     if parsed.netloc != 'deekebiz.gumroad.com' or not parsed.path.startswith('/l/'):
         return match.group(0)
+    product = next((p for p in PRODUCTS if urlsplit(p['url']).path == parsed.path), None)
+    if product and product.get('trackingUrl'):
+        return prefix + esc(product['trackingUrl']) + suffix
     query = dict(parse_qsl(parsed.query))
     query.update(utm_source='deekebiz_site', utm_medium='website', utm_campaign=CAMPAIGN)
     query.setdefault('utm_content', page.parent.relative_to(ROOT).as_posix().replace('/', '_').replace('.', 'home'))
