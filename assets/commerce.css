@@ -1,4 +1,6 @@
 img{max-width:100%;height:auto}
+.hero>*,.cd-hero>*,.grid>*{min-width:0}
+.eyebrow,.tag{max-width:100%;white-space:normal}
 .db-cover-caption{font-size:13px;margin:0;padding:12px 18px;color:#6d635b;background:#fffaf4;text-align:center}
 .db-offer,.db-recommendation{margin:24px 0;padding:24px;border:1px solid #e4d4c5;border-radius:24px;background:#fffaf4;color:#211f1d;line-height:1.6}
 .db-offer h2,.db-recommendation h2{font-size:clamp(25px,4vw,36px);line-height:1.1;margin:0 0 12px;letter-spacing:-.04em}
