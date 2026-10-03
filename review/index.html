@@ -21,7 +21,7 @@ const page=document.getElementById('page');
 const result=document.getElementById('result');
 function measure(){try{const root=frame.contentDocument.documentElement;result.textContent='Layout: '+root.clientWidth+' px · '+(root.scrollWidth>root.clientWidth?'Horizontal overflow: '+(root.scrollWidth-root.clientWidth)+' px':'No horizontal overflow');}catch{result.textContent='Open the homepage to review this viewport.';}}
 frame.addEventListener('load',measure);
-page.addEventListener('change',()=>{result.textContent='Loading page…';frame.title=page.selectedOptions[0].text+' at the selected viewport';frame.src=page.value;});
+page.addEventListener('change',()=>{result.textContent='Loading page…';frame.title=page.selectedOptions[0].text+' at the selected viewport';frame.src=page.value+'?layout-review='+Date.now();});
 width.addEventListener('change',()=>{frame.style.width=width.value+'px';measure();});
 </script>
 </body>
