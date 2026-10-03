@@ -65,6 +65,17 @@ if set(sitemap_urls)!=expected_urls:errors.append(f'sitemap: missing {sorted(exp
 for entry in sitemap:
     lastmod=entry.findtext('s:lastmod','',namespace)
     if lastmod and not re.fullmatch(r'\d{4}-\d{2}-\d{2}',lastmod):errors.append('sitemap: invalid lastmod date')
+public_titles={};public_descriptions={}
+for path,page in pages.items():
+    if path.name!='index.html' or page.refresh or 'noindex' in page.robots:continue
+    text=path.read_text();relative=path.parent.relative_to(ROOT).as_posix()
+    title=re.search(r'<title>(.*?)</title>',text,re.S)
+    title=title.group(1).strip() if title else ''
+    description=page.meta.get('description','').strip()
+    for value,seen,label in [(title,public_titles,'title'),(description,public_descriptions,'description')]:
+        if not value:errors.append(f'{relative}: missing {label}')
+        elif value in seen:errors.append(f'{relative}: duplicate {label} with {seen[value]}')
+        else:seen[value]=relative
 catalog_data=json.loads((ROOT/'products/catalog.json').read_text())
 catalog=catalog_data['products']
 assert len(catalog)==16
