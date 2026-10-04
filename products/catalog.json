@@ -17,7 +17,14 @@
         "Practical prompts, scripts, and action steps"
       ],
       "requirements": "No Notion account required. Open the PDF on your device or print it.",
-      "url": "https://deekebiz.gumroad.com/l/7-day-life-admin-reset"
+      "url": "https://deekebiz.gumroad.com/l/7-day-life-admin-reset",
+      "customization": {
+        "heading": "Use it your way",
+        "paragraphs": [
+          "Follow the seven days at your own pace, repeat the sections you need, and print the pages that help you most.",
+          "This product is a PDF guide for reading and printing. An editable source document is not included; keep your own notes alongside the exercises."
+        ]
+      }
     },
     {
       "id": "ai-operation-architect",
@@ -35,7 +42,14 @@
         "Built-in AI prompt engine"
       ],
       "requirements": "Requires a Notion account. AI prompts use the AI service you choose; its limits and fees apply separately.",
-      "url": "https://deekebiz.gumroad.com/l/ai-operation-architect"
+      "url": "https://deekebiz.gumroad.com/l/ai-operation-architect",
+      "customization": {
+        "heading": "Make it your own",
+        "paragraphs": [
+          "After duplicating this template into your own Notion workspace, you can edit the text, replace sample records, and adjust views and properties to suit your workflow.",
+          "Keep an unchanged copy as a backup. If you change formulas or database relations, test the result before using it for live work."
+        ]
+      }
     },
     {
       "id": "ai-prompt-vault",
@@ -53,7 +67,14 @@
         "Start Here and Quick Wins guide"
       ],
       "requirements": "Requires a Notion account. AI prompts use the AI service you choose; its limits and fees apply separately.",
-      "url": "https://deekebiz.gumroad.com/l/ai-prompt-vault"
+      "url": "https://deekebiz.gumroad.com/l/ai-prompt-vault",
+      "customization": {
+        "heading": "Make it your own",
+        "paragraphs": [
+          "After duplicating the vault into your own Notion workspace, you can edit the prompts, add your own versions, and organize the categories and views around your work.",
+          "Try adapted prompts with sample information first and review the output before using it. Your separate AI service is not included."
+        ]
+      }
     },
     {
       "id": "ai-ready-workflow-builder-bundle",
@@ -70,7 +91,14 @@
         "Workflow Builder OS: Notion workspace"
       ],
       "requirements": "Read the course PDF without Notion. A Notion account is required for the workspace and course reading version. This bundle documents workflows; external AI services and automation software are not included.",
-      "url": "https://deekebiz.gumroad.com/l/ai-ready-workflow-builder-bundle"
+      "url": "https://deekebiz.gumroad.com/l/ai-ready-workflow-builder-bundle",
+      "customization": {
+        "heading": "Make it your own",
+        "paragraphs": [
+          "Duplicate Workflow Builder OS into your own Notion workspace, then edit the text, replace sample records, and adjust views and properties to fit your workflow. Keep an unchanged copy and test changes to formulas or database relations before using them for live work.",
+          "The included course PDF is designed for reading and printing; an editable source document is not included. Apply its frameworks to the workflow documents you build in the OS."
+        ]
+      }
     },
     {
       "id": "ai-ready-workflow-builder-os",
@@ -88,7 +116,14 @@
         "Pilot, exception, and maintenance records"
       ],
       "requirements": "Requires a Notion account. Companion mini-course is sold separately or in the bundle. Automation software is not included.",
-      "url": "https://deekebiz.gumroad.com/l/ai-ready-workflow-builder-os"
+      "url": "https://deekebiz.gumroad.com/l/ai-ready-workflow-builder-os",
+      "customization": {
+        "heading": "Make it your own",
+        "paragraphs": [
+          "After duplicating this template into your own Notion workspace, you can edit the text, replace sample records, and adjust views and properties to suit your workflow.",
+          "Keep an unchanged copy as a backup. If you change formulas or database relations, test the result before using it for live work."
+        ]
+      }
     },
     {
       "id": "brand-activation-production-os",
@@ -105,7 +140,14 @@
         "Supplier, material, cost, and delivery tracking"
       ],
       "requirements": "Requires a Notion account. Customize the workspace to match your production process.",
-      "url": "https://deekebiz.gumroad.com/l/brand-activation-production-os"
+      "url": "https://deekebiz.gumroad.com/l/brand-activation-production-os",
+      "customization": {
+        "heading": "Make it your own",
+        "paragraphs": [
+          "After duplicating this template into your own Notion workspace, you can edit the text, replace sample records, and adjust views and properties to suit your workflow.",
+          "Keep an unchanged copy as a backup. If you change formulas or database relations, test the result before using it for live work."
+        ]
+      }
     },
     {
       "id": "claritypack10-pro-bundle",
@@ -125,7 +167,14 @@
       ],
       "requirements": "Unzip the download and open the PDFs on your device or print them. No Notion account or subscription required. The optional editable scripts need a compatible Word processor.",
       "url": "https://deekebiz.gumroad.com/l/claritypack10-pro-bundle",
-      "trackingUrl": "https://gum.co/u/4nzgeqce"
+      "trackingUrl": "https://gum.co/u/4nzgeqce",
+      "customization": {
+        "heading": "Make it your own",
+        "paragraphs": [
+          "Personalize the included Editable-Communication-Scripts.docx in a compatible word processor: change the names, details, tone, and wording to fit your situation.",
+          "The PDF kits and master guide are designed for reading and printing. Editable PDF source files are not included; complete printed trackers by hand or use your own notes alongside the checklists."
+        ]
+      }
     },
     {
       "id": "client-delivery-os",
@@ -144,7 +193,14 @@
         "Start Here guide, setup checklist, and database templates"
       ],
       "requirements": "Requires your own Notion account. Purchase provides access to duplicate the workspace. This is a self-serve template; setup and customization are yours.",
-      "url": "https://deekebiz.gumroad.com/l/client-delivery-os"
+      "url": "https://deekebiz.gumroad.com/l/client-delivery-os",
+      "customization": {
+        "heading": "Make it your own",
+        "paragraphs": [
+          "After duplicating this template into your own Notion workspace, you can edit the text, replace sample records, and adjust views and properties to suit your workflow.",
+          "Keep an unchanged copy as a backup. If you change formulas or database relations, test the result before using it for live work."
+        ]
+      }
     },
     {
       "id": "compliance-architect",
@@ -162,7 +218,14 @@
         "AI prompt engine and sample scenario"
       ],
       "requirements": "Requires a Notion account. Confirm requirements with the relevant agency. Optional AI services have their own limits and costs.",
-      "url": "https://deekebiz.gumroad.com/l/compliance-architect"
+      "url": "https://deekebiz.gumroad.com/l/compliance-architect",
+      "customization": {
+        "heading": "Make it your own",
+        "paragraphs": [
+          "After duplicating this template into your own Notion workspace, you can edit the text, replace sample records, and adjust views and properties to suit your workflow.",
+          "Keep an unchanged copy as a backup. If you change formulas or database relations, test the result before using it for live work."
+        ]
+      }
     },
     {
       "id": "document-intake-system",
@@ -180,7 +243,14 @@
         "Sample scenario and optional AI prompts"
       ],
       "requirements": "Requires a Notion account. Optional AI prompts use your chosen AI service.",
-      "url": "https://deekebiz.gumroad.com/l/document-intake-system"
+      "url": "https://deekebiz.gumroad.com/l/document-intake-system",
+      "customization": {
+        "heading": "Make it your own",
+        "paragraphs": [
+          "After duplicating this template into your own Notion workspace, you can edit the text, replace sample records, and adjust views and properties to suit your workflow.",
+          "Keep an unchanged copy as a backup. If you change formulas or database relations, test the result before using it for live work."
+        ]
+      }
     },
     {
       "id": "event-agency-command-center",
@@ -199,7 +269,14 @@
         "Sample event and how-to-use guide"
       ],
       "requirements": "Requires a Notion account. Customize the workspace for your event process.",
-      "url": "https://deekebiz.gumroad.com/l/event-agency-command-center"
+      "url": "https://deekebiz.gumroad.com/l/event-agency-command-center",
+      "customization": {
+        "heading": "Make it your own",
+        "paragraphs": [
+          "After duplicating this template into your own Notion workspace, you can edit the text, replace sample records, and adjust views and properties to suit your workflow.",
+          "Keep an unchanged copy as a backup. If you change formulas or database relations, test the result before using it for live work."
+        ]
+      }
     },
     {
       "id": "freelancer-tax-desk",
@@ -216,7 +293,14 @@
         "Quarterly Tax Planner and Tax Prep Notes"
       ],
       "requirements": "Requires a Notion account. This is an organization tool; confirm tax decisions with a qualified professional.",
-      "url": "https://deekebiz.gumroad.com/l/freelancer-tax-desk"
+      "url": "https://deekebiz.gumroad.com/l/freelancer-tax-desk",
+      "customization": {
+        "heading": "Make it your own",
+        "paragraphs": [
+          "After duplicating this template into your own Notion workspace, you can edit the text, replace sample records, and adjust views and properties to suit your workflow.",
+          "Keep an unchanged copy as a backup. If you change formulas or database relations, test the result before using it for live work."
+        ]
+      }
     },
     {
       "id": "how-to-turn-workflows-to-ai-ready-systems",
@@ -234,7 +318,14 @@
         "AI task specs, prompts, quality checks, and pilot guidance"
       ],
       "requirements": "Read the PDF without Notion. A Notion account is needed for the optional reading version. Workflow Builder OS is sold separately or in the bundle; external AI services and automation tools are not included.",
-      "url": "https://deekebiz.gumroad.com/l/how-to-turn-workflows-to-ai-ready-systems"
+      "url": "https://deekebiz.gumroad.com/l/how-to-turn-workflows-to-ai-ready-systems",
+      "customization": {
+        "heading": "Apply the method to your work",
+        "paragraphs": [
+          "Use the frameworks, exercises, and examples to create your own SOPs, prompts, review checklists, and workflow documents.",
+          "The course PDF is designed for reading and printing; an editable source document is not included. The Notion reading version is provided for access to the course, and Workflow Builder OS is sold separately."
+        ]
+      }
     },
     {
       "id": "overdue-payments-agent-bundle",
@@ -252,7 +343,14 @@
         "Setup instructions"
       ],
       "requirements": "A Notion account is needed for the template. Custom Agents require a Business or Enterprise plan and Notion credits, billed separately by Notion. Check eligibility before buying, test with sample data, and review reminders before sending.",
-      "url": "https://deekebiz.gumroad.com/l/overdue-payments-agent-bundle"
+      "url": "https://deekebiz.gumroad.com/l/overdue-payments-agent-bundle",
+      "customization": {
+        "heading": "Make it your own",
+        "paragraphs": [
+          "You can adapt invoice records, views, and follow-up notes in your duplicated Notion template to fit your process.",
+          "Changes to the Custom Agent’s instructions, triggers, or database connections require separate setup and testing in Notion. Test with sample records and review reminder drafts before sending them."
+        ]
+      }
     },
     {
       "id": "the-recovery-desk",
@@ -270,7 +368,14 @@
         "Areas for common life-admin categories"
       ],
       "requirements": "Requires a Notion account. Start with one small area and adapt it to your routine.",
-      "url": "https://deekebiz.gumroad.com/l/the-recovery-desk"
+      "url": "https://deekebiz.gumroad.com/l/the-recovery-desk",
+      "customization": {
+        "heading": "Make it your own",
+        "paragraphs": [
+          "After duplicating this template into your own Notion workspace, you can edit the text, replace sample records, and adjust views and properties to suit your workflow.",
+          "Keep an unchanged copy as a backup. If you change formulas or database relations, test the result before using it for live work."
+        ]
+      }
     },
     {
       "id": "weekly-reset-tracker",
@@ -288,7 +393,14 @@
         "Reflections and past weeks"
       ],
       "requirements": "Requires a Notion account. The workspace is designed for a lightweight weekly review.",
-      "url": "https://deekebiz.gumroad.com/l/weekly-reset-tracker"
+      "url": "https://deekebiz.gumroad.com/l/weekly-reset-tracker",
+      "customization": {
+        "heading": "Make it your own",
+        "paragraphs": [
+          "After duplicating this template into your own Notion workspace, you can edit the text, replace sample records, and adjust views and properties to suit your workflow.",
+          "Keep an unchanged copy as a backup. If you change formulas or database relations, test the result before using it for live work."
+        ]
+      }
     }
   ],
   "featuredProducts": [

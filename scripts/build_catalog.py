@@ -51,10 +51,16 @@ def offer(p):
     if p['id'] == 'overdue-payments-agent-bundle':
         extra = '<p class="db-muted">Notion Custom Agents use Notion credits, billed separately by Notion. <a href="https://www.notion.com/help/buy-and-track-notion-credits-for-custom-agents">Check current Notion requirements and pricing</a>.</p>'
     contents = ''.join(f'<li>{esc(v)}</li>' for v in p['contents'])
+    customization = p.get('customization')
+    customization_html = ''
+    if customization:
+        customization_html = f'<h3>{esc(customization["heading"])}</h3>' + ''.join(
+            f'<p>{esc(paragraph)}</p>' for paragraph in customization['paragraphs'])
     return f'''<section class="section cp-section"><div class="wrap cp-wrap"><div class="db-offer" data-product="{esc(p['id'])}">
 <p class="db-product-meta">{esc(p['format'])}</p><h2>What you receive</h2><ul>{contents}</ul>
 <p class="db-price">{price(p)}</p><p>{pricing} Checkout may add applicable taxes.</p>{extra}
 <p class="db-muted">{esc(p['requirements'])}</p>
+{customization_html}
 <div class="db-actions"><a class="db-link primary" href="{esc(buy_url(p,p['path']+'_offer'))}">Get {esc(p['name'].split(' — ')[0])} — {price(p)}</a><a class="db-link" href="{BASE}#catalog">Compare all products</a></div>
 </div></div></section>'''
 
