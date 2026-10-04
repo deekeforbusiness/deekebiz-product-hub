@@ -7,7 +7,7 @@ img{max-width:100%;height:auto}
 .db-offer p,.db-offer li,.db-recommendation p{font-size:16px}
 .db-price{font-size:28px!important;font-weight:900;margin:10px 0}
 .db-muted{color:#6d635b;font-size:14px!important}
-.db-link{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;border:1px solid #e4d4c5;border-radius:999px;padding:12px 18px;font-size:14px;font-weight:850;color:#211f1d;background:white}
+.db-link{box-sizing:border-box;max-width:100%;display:inline-flex;align-items:center;justify-content:center;text-decoration:none;border:1px solid #e4d4c5;border-radius:999px;padding:12px 18px;font-size:14px;font-weight:850;color:#211f1d;background:white}
 .db-link.primary{background:#16120f;color:white;border-color:#16120f}
 .db-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:18px}
 .db-products{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin:24px 0}
