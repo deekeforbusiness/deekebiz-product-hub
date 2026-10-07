@@ -83,6 +83,15 @@ if pages[ROOT/'index.html'].featured!=catalog_data['featuredProducts']:errors.ap
 for p in catalog:
     text=(ROOT/p['path']/'index.html').read_text()
     if text.count('generated:offer:start')!=1:errors.append(f'{p["path"]}: missing/duplicate offer')
+    previews=p.get('previewImages',[])
+    if len(previews)!=3:errors.append(f'{p["id"]}: expected three actual product previews')
+    if 'id="product-previews"' not in text:errors.append(f'{p["id"]}: missing preview section')
+    for preview in previews:
+        source=preview.get('src','')
+        if not source.startswith('assets/product-previews/') or not (ROOT/source).is_file():errors.append(f'{p["id"]}: missing actual preview asset {source}')
+        if source.removeprefix('assets/') not in text:errors.append(f'{p["id"]}: unused preview asset {source}')
+        if preview.get('width',0)<=0 or preview.get('height',0)<=0 or not preview.get('caption'):errors.append(f'{p["id"]}: incomplete preview metadata')
+    if not p.get('audience') or len(p.get('benefits',[]))!=3 or len(p.get('setupSteps',[]))!=3:errors.append(f'{p["id"]}: incomplete buyer information')
     if f'data-product="{p["id"]}"' not in (ROOT/'index.html').read_text():errors.append(f'{p["id"]}: absent from homepage catalog')
     meta=pages[ROOT/p['path']/'index.html'].meta
     if meta.get('og:url')!=canonical_url(p['path']):errors.append(f'{p["id"]}: inconsistent share URL')
