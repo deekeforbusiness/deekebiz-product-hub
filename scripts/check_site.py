@@ -79,7 +79,7 @@ for path,page in pages.items():
         else:seen[value]=relative
 catalog_data=json.loads((ROOT/'products/catalog.json').read_text())
 catalog=catalog_data['products']
-assert len(catalog)==16
+assert catalog and len({p['id'] for p in catalog}) == len(catalog), 'Catalog IDs must be unique'
 if pages[ROOT/'index.html'].featured!=catalog_data['featuredProducts']:errors.append('homepage: featured products do not match catalog configuration')
 for p in catalog:
     text=(ROOT/p['path']/'index.html').read_text()
@@ -119,4 +119,4 @@ for tool in (ROOT/'claritypack10/tools').glob('*/index.html'):
     if 'data-result-upgrade' not in text or 'cp-report-credit' not in text:errors.append(f'{tool.parent.name}: missing contextual result path or attribution')
 if errors:
     print('\n'.join(errors));raise SystemExit(1)
-print(f'PASS: {len(pages)-1} pages, {checked} internal links/assets/anchors, {len(sitemap_urls)} canonical sitemap URLs, 3 guide redirects, 16 catalog offers and 10 tool result paths.')
+print(f'PASS: {len(pages)-1} pages, {checked} internal links/assets/anchors, {len(sitemap_urls)} canonical sitemap URLs, 3 guide redirects, {len(catalog)} catalog offers and 10 tool result paths.')

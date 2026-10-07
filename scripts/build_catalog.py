@@ -81,6 +81,8 @@ def product_page(p):
     steps = ''.join(f'<li>{esc(value)}</li>' for value in p['setupSteps'])
     customization = p['customization']
     custom = ''.join(f'<p>{esc(value)}</p>' for value in customization['paragraphs'])
+    more_info = (f'<p>Browse the actual previews above and read the related free guide. Preview sample records illustrate the workflow.</p><a class="db-link" href="{BASE}{p["guidePath"]}">Read the free guide</a>'
+                 if p.get('guidePath') else '<p>Browse the actual workspace previews above and review the listed contents, requirements and model limits. The Gumroad listing contains the same purchase details.</p>')
     price_note = 'One-time purchase · minimum price · pay more if you choose' if p['payWhatYouWant'] else 'One-time purchase · digital product'
     extras = ''
     if p['id'] == 'ai-ready-workflow-builder-bundle':
@@ -113,7 +115,7 @@ def product_page(p):
 <!-- generated:offer:end -->
 <section class="section" id="setup"><div class="wrap"><span class="db-kicker">Get started</span><h2>Your first three steps.</h2><ol class="db-setup-list">{steps}</ol></div></section>
 {example}
-<section class="section"><div class="wrap db-faq-grid"><div><span class="db-kicker">A clear choice</span><h2>A few useful answers.</h2><p class="db-preview-note">See the included format and requirements before choosing.</p></div><div><details><summary>Is this a subscription?</summary><p>This is a one-time digital product purchase. Any software plan or usage costs in the requirements are separate.</p></details><details><summary>{esc(customization['heading'])}</summary>{custom}</details><details><summary>Can I learn more before buying?</summary><p>Browse the actual previews above and read the related free guide. Preview sample records illustrate the workflow.</p><a class="db-link" href="{BASE}{p['guidePath']}">Read the free guide</a></details></div></div></section></main>
+<section class="section"><div class="wrap db-faq-grid"><div><span class="db-kicker">A clear choice</span><h2>A few useful answers.</h2><p class="db-preview-note">See the included format and requirements before choosing.</p></div><div><details><summary>Is this a subscription?</summary><p>This is a one-time digital product purchase. Any software plan or usage costs in the requirements are separate.</p></details><details><summary>{esc(customization['heading'])}</summary>{custom}</details><details><summary>Can I learn more before buying?</summary>{more_info}</details></div></div></section></main>
 <footer><div class="wrap"><span>© DEEKE · Practical systems for work and life</span><nav aria-label="Footer navigation"><a href="{BASE}#catalog">All products</a><a href="{BASE}claritypack10/#tools">Free tools</a><a href="https://deekebiz.gumroad.com/subscribe">Product updates</a></nav></div></footer></body></html>'''
 
 
@@ -130,12 +132,12 @@ def catalog():
         visual = f'<figure class="store-product-visual"><img src="{BASE}{esc(image["src"])}" width="{image["width"]}" height="{image["height"]}" loading="lazy" decoding="async" alt="{esc(p["name"].split(" — ")[0])} actual product preview"><figcaption>Actual product preview</figcaption></figure>'
         title = p['name'].split(' — ')[0]
         cards.append(f'''<article class="db-product" data-product="{esc(p['id'])}" data-category="{key}" data-featured="{'true' if p['id'] in featured else 'false'}"><a class="store-product-link" href="{BASE}{p['path']}/" aria-labelledby="name-{p['id']}">{visual}<div class="store-product-copy"><p class="db-product-meta">{esc(p['format'])}</p><h3 id="name-{p['id']}">{esc(title)}</h3><p>{esc(p['summary'])}</p><div class="store-product-footer"><p class="db-price">{price(p)}</p><span>See contents <span aria-hidden="true">↗</span></span></div></div></a></article>''')
-    filters = ['<a href="#featured" class="store-filter" data-category-link="featured" aria-controls="product-grid">Start here</a>', '<a href="#catalog" class="store-filter" data-category-link="all" aria-controls="product-grid">All 16</a>']
+    filters = ['<a href="#featured" class="store-filter" data-category-link="featured" aria-controls="product-grid">Start here</a>', f'<a href="#catalog" class="store-filter" data-category-link="all" aria-controls="product-grid">All {len(PRODUCTS)}</a>']
     for label, key in categories.items():
         count = sum(p['category'] == label for p in PRODUCTS)
         filters.append(f'<a href="#catalog-{key}" class="store-filter" data-category-link="{key}" aria-controls="product-grid">{label} <span>{count}</span></a>')
     markers = ''.join(f'<span id="catalog-{key}" class="store-anchor" aria-hidden="true"></span>' for key in categories.values())
-    return f'''<section id="catalog" class="section store-catalog"><div class="wrap"><span id="featured" class="store-anchor" aria-hidden="true"></span>{markers}<div class="store-section-heading"><div><span class="kicker">Find your fit</span><h2>Find the system<br>for the work in front of you.</h2></div><p>See the actual product.<br>Compare contents, requirements and price.</p></div><nav class="store-filters" aria-label="Filter products">{''.join(filters)}</nav><div class="store-catalog-search" data-product-search-wrap hidden><label for="product-search">Find a product</label><input id="product-search" type="search" placeholder="Try invoices, clients, prompts or weekly" data-product-search autocomplete="off"></div><p class="store-count" data-product-count role="status" aria-live="polite">16 products · prices in USD</p><div id="product-grid" class="db-products">{''.join(cards)}</div><p class="store-empty" data-product-empty hidden>No products match that search. Clear the search or choose All 16 to see more.</p><div class="store-catalog-note"><p>“+” means you may pay more than the listed minimum. All products are one-time purchases; software requirements are listed on each product page.</p><p>Images show included Notion workspaces or PDF pages in DEEKE frames. Sample records are illustrative. Open a product to see its three full-size previews.</p></div><noscript><p>All 16 products are shown. Select a product to see its contents and requirements.</p></noscript></div></section>'''
+    return f'''<section id="catalog" class="section store-catalog"><div class="wrap"><span id="featured" class="store-anchor" aria-hidden="true"></span>{markers}<div class="store-section-heading"><div><span class="kicker">Find your fit</span><h2>Find the system<br>for the work in front of you.</h2></div><p>See the actual product.<br>Compare contents, requirements and price.</p></div><nav class="store-filters" aria-label="Filter products">{''.join(filters)}</nav><div class="store-catalog-search" data-product-search-wrap hidden><label for="product-search">Find a product</label><input id="product-search" type="search" placeholder="Try invoices, clients, prompts or weekly" data-product-search autocomplete="off"></div><p class="store-count" data-product-count role="status" aria-live="polite">{len(PRODUCTS)} products · prices in USD</p><div id="product-grid" class="db-products">{''.join(cards)}</div><p class="store-empty" data-product-empty hidden>No products match that search. Clear the search or choose All {len(PRODUCTS)} to see more.</p><div class="store-catalog-note"><p>“+” means you may pay more than the listed minimum. All products are one-time purchases; software requirements are listed on each product page.</p><p>Images show included Notion workspaces or PDF pages in DEEKE frames. Sample records are illustrative. Open a product to see its three full-size previews.</p></div><noscript><p>All {len(PRODUCTS)} products are shown. Select a product to see its contents and requirements.</p></noscript></div></section>'''
 
 
 def localize_match(match, page):
@@ -216,6 +218,16 @@ for page in sorted(ROOT.rglob('*.html')):
         text = product_sharing(text, p)
     if path == '.':
         text = block(text, 'catalog', catalog())
+        text = re.sub(r'Compare \d+ digital products', f'Compare {len(PRODUCTS)} digital products', text)
+        def homepage_schema(match):
+            data = json.loads(match.group(1))
+            for node in data.get('@graph', [data]):
+                if node.get('@type') == 'ItemList':
+                    node['itemListElement'] = [
+                        {'@type':'ListItem', 'position':i, 'name':p['name'], 'url':canonical_url(p['path'])}
+                        for i,p in enumerate(PRODUCTS,1)]
+            return '<script type="application/ld+json">' + json.dumps(data,ensure_ascii=False,separators=(',',':')) + '</script>'
+        text = re.sub(r'<script type="application/ld\+json">(.*?)</script>', homepage_schema, text, flags=re.S)
     if path != 'review' and not page.name.startswith('google'):
         if 'assets/deeke-brand.css' not in text:
             text = text.replace('</head>', f'<link rel="stylesheet" href="{BASE}assets/deeke-brand.css">\n</head>', 1)
