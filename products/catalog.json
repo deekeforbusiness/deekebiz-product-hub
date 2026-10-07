@@ -948,6 +948,68 @@
       ],
       "seoTitle": "Weekly Reset Template for Notion | Priorities, Planning & Life Admin",
       "shareImage": "https://deekeforbusiness.github.io/deekebiz-product-hub/weekly-reset-tracker.webp"
+    },
+    {
+      "id": "holiday-sale-profit-planner",
+      "path": "holiday-sale-profit-planner",
+      "name": "Holiday Sale Profit Planner — Notion Template",
+      "price": 9,
+      "currency": "USD",
+      "payWhatYouWant": false,
+      "format": "Notion workspace",
+      "category": "Business admin",
+      "summary": "Compare discounted offers after direct costs and selling fees, then plan a campaign around your chosen scenario.",
+      "contents": [
+        "Two linked databases: Offer Lab and Campaigns",
+        "Editable offer inputs and eight calculated results or checks",
+        "Sale price, unit profit, margin and profit forecast after setup costs",
+        "Conservative target price floor and maximum discount estimates",
+        "Input validation and clear loss or missed-target warnings",
+        "Separate entry and comparison views, quick-start guide and three fictional examples"
+      ],
+      "requirements": "Requires your own Notion account. Manual inputs and one currency per analysis. Assumes one unit per order. No Notion AI, paid automation, platform connection or automatic fee update is included. Forecast units are assumptions; contribution excludes tax and unentered expenses.",
+      "url": "https://deekebiz.gumroad.com/l/holiday-sale-profit-planner",
+      "customization": {
+        "heading": "Make it your own",
+        "paragraphs": [
+          "Duplicate the entire page into your own workspace, keep an unchanged backup, and replace the fictional examples with your own offers. Enter percentage inputs as 20 for 20%, then review the fields and check Inputs Reviewed.",
+          "Customize text, records and views for your business. Test any formula or relation changes before using them for live decisions."
+        ]
+      },
+      "audience": "Small sellers planning holiday promotions or comparing everyday discounted offers.",
+      "benefits": [
+        "See the estimated contribution left after the discount, direct costs and entered fees.",
+        "Compare offer scenarios with margin targets and warnings before choosing one.",
+        "Keep campaign dates, stage, audience and linked offers together."
+      ],
+      "guidePath": null,
+      "previewImages": [
+        {
+          "src": "assets/product-previews/holiday-sale-profit-planner-1.svg",
+          "width": 1800,
+          "height": 1200,
+          "caption": "Actual Offer Lab comparison view with fictional examples."
+        },
+        {
+          "src": "assets/product-previews/holiday-sale-profit-planner-2.svg",
+          "width": 1800,
+          "height": 1200,
+          "caption": "Actual offer-entry view; scroll for additional cost and campaign fields."
+        },
+        {
+          "src": "assets/product-previews/holiday-sale-profit-planner-3.svg",
+          "width": 1800,
+          "height": 1200,
+          "caption": "Actual Campaigns record: fictional dates, stage and three linked example offers."
+        }
+      ],
+      "setupSteps": [
+        "Purchase through Gumroad and open the template link in your purchase content.",
+        "Sign in to your own Notion account and duplicate the entire planner page.",
+        "Replace examples, enter and review one offer, then compare results and link it to a campaign."
+      ],
+      "seoTitle": "Holiday Sale Profit Planner | Notion Discount & Margin Calculator | DEEKE",
+      "shareImage": "https://deekeforbusiness.github.io/deekebiz-product-hub/assets/holiday-sale-profit-planner.webp"
     }
   ],
   "featuredProducts": [
