@@ -4,6 +4,9 @@
   const cards = [...document.querySelectorAll('#product-grid [data-product]')];
   const count = document.querySelector('[data-product-count]');
   const links = [...document.querySelectorAll('[data-category-link]')];
+  const search = document.querySelector('[data-product-search]');
+  const empty = document.querySelector('[data-product-empty]');
+  let activeCategory = 'all';
   const allowed = new Set(['all', 'featured', ...cards.map(card => card.dataset.category)]);
   const hashFor = key => key === 'featured' ? '#featured' : key === 'all' ? '#catalog' : '#catalog-' + key;
   const keyFromHash = () => {
@@ -17,20 +20,28 @@
   };
   const filter = key => {
     if (!allowed.has(key) || !cards.length) return;
+    activeCategory = key;
+    const query = (search?.value || '').trim().toLocaleLowerCase();
     let visible = 0;
     cards.forEach(card => {
-      const matches = key === 'all' || (key === 'featured' ? card.dataset.featured === 'true' : card.dataset.category === key);
+      const categoryMatches = key === 'all' || (key === 'featured' ? card.dataset.featured === 'true' : card.dataset.category === key);
+      const matches = categoryMatches && (!query || card.textContent.toLocaleLowerCase().includes(query));
       card.hidden = !matches;
       if (matches) visible += 1;
     });
     links.forEach(link => link.setAttribute('aria-current', String(link.dataset.categoryLink === key)));
     if (count) count.textContent = key === 'featured' ? visible + ' starting points · prices in USD' : visible + (visible === 1 ? ' product' : ' products') + ' · prices in USD';
+    if (empty) empty.hidden = visible !== 0;
   };
-  filter(keyFromHash() || 'featured');
+  filter(keyFromHash() || 'all');
+  search?.addEventListener('input', () => filter(activeCategory));
+  const searchWrap = document.querySelector('[data-product-search-wrap]');
+  if (searchWrap && cards.length) searchWrap.hidden = false;
   links.forEach(link => link.addEventListener('click', event => {
     const key = link.dataset.categoryLink;
     if (!allowed.has(key)) return;
     event.preventDefault();
+    if (search) search.value = '';
     filter(key);
     const hash = hashFor(key);
     if (location.hash !== hash) history.pushState(null, '', hash);
@@ -38,7 +49,7 @@
   }));
   const sync = () => { const key = keyFromHash(); if (key) filter(key); };
   window.addEventListener('hashchange', sync);
-  window.addEventListener('popstate', () => filter(keyFromHash() || 'featured'));
+  window.addEventListener('popstate', () => filter(keyFromHash() || 'all'));
 
   const tabs = [...document.querySelectorAll('[data-preview-tab]')];
   const panels = [...document.querySelectorAll('.store-preview-panel')];

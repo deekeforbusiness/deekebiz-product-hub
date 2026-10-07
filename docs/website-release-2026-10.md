@@ -1,5 +1,19 @@
 # Website repair and first-sales test
 
+## DEEKE catalog and sales presentation October 7
+
+The public catalog contains the sixteen published Gumroad products. The three rental analyzers remain unpublished and are excluded from public catalog cards and offers. All existing base prices, pay-what-you-want flags, purchase destinations, tracking links and canonical page paths are retained.
+
+Every published product has three actual workspace or PDF previews sourced from the verified Gumroad gallery assets. Forty-eight self-contained SVG previews embed compressed WebP images; the embedded raster data totals about 2.82 MiB. Individual preview images open at full size. Sample records remain labelled illustrative; complete paid files and private duplication URLs are not included in the repository.
+
+Fifteen product pages now share a concise sales layout: audience, practical benefits, actual previews, contents, price, software requirements, three setup steps, customization guidance and Gumroad purchase buttons. The ClarityPack10 page retains its ten functioning free tools and existing PDF sample while adding the same three-image product gallery. The Client Delivery scope-change example and its free tool route are retained.
+
+The homepage shows all sixteen products by default. Visitors can narrow by category, use the three starting-point recommendations, or search the visible product titles and summaries. Filtering is local and does not transmit search terms or browser-tool answers. Without JavaScript, all product cards and ordinary navigation links remain available. The homepage preview tabs now show actual Client Delivery, Brand Activation and ClarityPack10 previews.
+
+The DEEKE navy and ivory presentation is shared across the site. Existing raster social images are retained for crawler compatibility; visible catalog cards, product heroes and galleries use the actual previews. Prompt Vault lists 30 prompts, eight manual workflow packs, six playbooks and three illustrative sample records. Payments distinguishes the manual invoice tracker from optional Custom Agent setup and sample testing, with separate Notion plan/credit requirements and no automatic email sending or scheduled reminder service.
+
+Validation before publication: repeatable catalog generation; 57 pages, 992 internal links/assets/anchors, 53 canonical sitemap URLs, three guide redirects, sixteen catalog offers and ten tool result routes pass the site checker. All fifteen existing tool tests pass, and storefront JavaScript passes its syntax check. Live responsive and interaction checks follow publication; these local results do not establish a new purchase, sales lift or search ranking.
+
 ## Published behavior
 
 The hub now exposes all 16 published products with current USD prices and formats. Featured, Catalog, Guides, and Systems anchors resolve. Client Delivery OS has visible $19+ pricing, confirmed workspace contents, a worked project example, setup steps, and a route to the free scope-change tool.

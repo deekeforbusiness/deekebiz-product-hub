@@ -1,5 +1,5 @@
 {
-  "verifiedAt": "2026-10-01",
+  "verifiedAt": "2026-10-07",
   "products": [
     {
       "id": "7-day-life-admin-reset",
@@ -12,7 +12,7 @@
       "category": "Life admin",
       "summary": "Work through overdue paperwork, bills, reminders, and loose ends over seven days.",
       "contents": [
-        "One premium PDF guide",
+        "One 33-page PDF guide",
         "Day-by-day reset structure",
         "Practical prompts, scripts, and action steps"
       ],
@@ -24,7 +24,41 @@
           "Follow the seven days at your own pace, repeat the sections you need, and print the pages that help you most.",
           "This product is a PDF guide for reading and printing. An editable source document is not included; keep your own notes alongside the exercises."
         ]
-      }
+      },
+      "audience": "Anyone with paperwork, bills and follow-ups piling up who wants a manageable place to start.",
+      "benefits": [
+        "Choose one area of life admin each day and follow a practical action plan.",
+        "Use included prompts and scripts to decide what to do next.",
+        "Read on your device or print the pages you want to work through."
+      ],
+      "guidePath": "guides/7-day-life-admin-reset-plan/",
+      "previewImages": [
+        {
+          "src": "assets/product-previews/7-day-life-admin-reset-1.svg",
+          "width": 1800,
+          "height": 1200,
+          "caption": "Pages 7 and 8 from the included 33-page PDF guide."
+        },
+        {
+          "src": "assets/product-previews/7-day-life-admin-reset-2.svg",
+          "width": 1800,
+          "height": 1200,
+          "caption": "Pages 15 and 16 from the included 33-page PDF guide."
+        },
+        {
+          "src": "assets/product-previews/7-day-life-admin-reset-3.svg",
+          "width": 1800,
+          "height": 1200,
+          "caption": "Pages 29 and 30 from the included 33-page PDF guide."
+        }
+      ],
+      "setupSteps": [
+        "Purchase through Gumroad and open your purchase content.",
+        "Download the PDF and read it on your device or print the pages you need.",
+        "Follow the exercises at your own pace and keep notes alongside the guide."
+      ],
+      "seoTitle": "7-Day Life Admin Reset | Life Admin Checklist Guide | DeekeBiz",
+      "shareImage": "https://deekeforbusiness.github.io/deekebiz-product-hub/life-admin-reset-7-day.webp"
     },
     {
       "id": "ai-operation-architect",
@@ -39,7 +73,7 @@
       "contents": [
         "Functions, workflows, SOPs, and roles",
         "Diagnostics and KPI tracking",
-        "Built-in AI prompt engine"
+        "Seven command-library prompts for manual use in your chosen AI service"
       ],
       "requirements": "Requires a Notion account. AI prompts use the AI service you choose; its limits and fees apply separately.",
       "url": "https://deekebiz.gumroad.com/l/ai-operation-architect",
@@ -49,7 +83,41 @@
           "After duplicating this template into your own Notion workspace, you can edit the text, replace sample records, and adjust views and properties to suit your workflow.",
           "Keep an unchanged copy as a backup. If you change formulas or database relations, test the result before using it for live work."
         ]
-      }
+      },
+      "audience": "Founders and operators who want to document how their business works before improving it.",
+      "benefits": [
+        "Connect functions, roles, workflows and SOPs in one workspace.",
+        "Use diagnostics and manually maintained KPI records to identify improvement opportunities.",
+        "Adapt seven command-library prompts in your chosen AI service, then review the output."
+      ],
+      "guidePath": "guides/ai-operations-workflow-system/",
+      "previewImages": [
+        {
+          "src": "assets/product-previews/ai-operations-architect-1.svg",
+          "width": 1800,
+          "height": 1200,
+          "caption": "Included Notion workspace: structure, setup and operating-system modules."
+        },
+        {
+          "src": "assets/product-previews/ai-operations-architect-2.svg",
+          "width": 1800,
+          "height": 1200,
+          "caption": "Included Workflow Lab with sample workflows."
+        },
+        {
+          "src": "assets/product-previews/ai-operations-architect-3.svg",
+          "width": 1800,
+          "height": 1200,
+          "caption": "Included prompt library; run prompts in your chosen AI app and review outputs."
+        }
+      ],
+      "setupSteps": [
+        "Purchase through Gumroad and open the supplied workspace access link.",
+        "Sign in to your own Notion account and duplicate the template.",
+        "Read the included setup guide, replace sample records and start with one workflow."
+      ],
+      "seoTitle": "AI Operations System Template for SOPs, Roles & Workflow Design",
+      "shareImage": "https://deekeforbusiness.github.io/deekebiz-product-hub/ai-operations-architect.webp"
     },
     {
       "id": "ai-prompt-vault",
@@ -62,11 +130,14 @@
       "category": "AI workflows",
       "summary": "Organize reusable prompts, workflow packs, and AI playbooks for recurring work.",
       "contents": [
-        "Prompt Library and Workflow Packs",
-        "AI Playbooks and My Custom Prompts",
-        "Start Here and Quick Wins guide"
+        "30 reusable prompts with worked examples",
+        "8 manual workflow packs",
+        "6 practical AI playbooks",
+        "My Custom Prompts area with 3 illustrative sample records",
+        "Start Here onboarding",
+        "Quick Wins / Beginner Guide and Lead Magnet Lite reference page"
       ],
-      "requirements": "Requires a Notion account. AI prompts use the AI service you choose; its limits and fees apply separately.",
+      "requirements": "Requires your own Notion account. Copy prompts into your chosen AI service and review the result between steps. Its access and usage costs are separate. Worked outputs are illustrations, not a guarantee of AI accuracy; external automation is not included.",
       "url": "https://deekebiz.gumroad.com/l/ai-prompt-vault",
       "customization": {
         "heading": "Make it your own",
@@ -74,7 +145,41 @@
           "After duplicating the vault into your own Notion workspace, you can edit the prompts, add your own versions, and organize the categories and views around your work.",
           "Try adapted prompts with sample information first and review the output before using it. Your separate AI service is not included."
         ]
-      }
+      },
+      "audience": "Founders, operators, consultants and freelancers who repeatedly draft business documents with AI.",
+      "benefits": [
+        "Start from an included prompt and supply the facts it needs.",
+        "Follow a manual workflow pack with review between each prompt.",
+        "Save adapted prompts and notes instead of rebuilding them from chat history."
+      ],
+      "guidePath": "guides/notion-ai-prompt-library/",
+      "previewImages": [
+        {
+          "src": "assets/product-previews/ai-prompt-vault-1.svg",
+          "width": 1800,
+          "height": 1200,
+          "caption": "Actual workspace setup: copy prompts into your chosen AI app and review the results."
+        },
+        {
+          "src": "assets/product-previews/ai-prompt-vault-2.svg",
+          "width": 1800,
+          "height": 1200,
+          "caption": "The eight included workflow packs."
+        },
+        {
+          "src": "assets/product-previews/ai-prompt-vault-3.svg",
+          "width": 1800,
+          "height": 1200,
+          "caption": "The six included AI playbooks."
+        }
+      ],
+      "setupSteps": [
+        "Purchase through Gumroad and open the supplied workspace access link.",
+        "Sign in to your own Notion account and duplicate the template.",
+        "Read the included setup guide, replace sample records and start with one workflow."
+      ],
+      "seoTitle": "AI Prompt Library Notion Template for Reusable ChatGPT Workflows | DeekeBiz",
+      "shareImage": "https://deekeforbusiness.github.io/deekebiz-product-hub/ChatGPT%20Image%20May%2022%2C%202026%2C%2005_01_36%20PM%20%286%29.png"
     },
     {
       "id": "ai-ready-workflow-builder-bundle",
@@ -98,7 +203,41 @@
           "Duplicate Workflow Builder OS into your own Notion workspace, then edit the text, replace sample records, and adjust views and properties to fit your workflow. Keep an unchanged copy and test changes to formulas or database relations before using them for live work.",
           "The included course PDF is designed for reading and printing; an editable source document is not included. Apply its frameworks to the workflow documents you build in the OS."
         ]
-      }
+      },
+      "audience": "Small teams and independent operators who want the method and the companion workspace together.",
+      "benefits": [
+        "Learn the documentation method in a 12-module course.",
+        "Apply the method in Workflow Builder OS, from selection to a controlled pilot plan.",
+        "Get the $15+ Guide and $39+ OS together for $49, saving $5 at their minimum prices."
+      ],
+      "guidePath": "guides/workflow-sop-ai-ready-system/",
+      "previewImages": [
+        {
+          "src": "assets/product-previews/workflow-builder-bundle-1.svg",
+          "width": 1800,
+          "height": 1200,
+          "caption": "Included Workflow Builder OS: overview and setup."
+        },
+        {
+          "src": "assets/product-previews/workflow-builder-bundle-2.svg",
+          "width": 1800,
+          "height": 1200,
+          "caption": "Included Workflow Builder OS: workflow package with a worked example."
+        },
+        {
+          "src": "assets/product-previews/workflow-builder-bundle-3.svg",
+          "width": 1800,
+          "height": 1200,
+          "caption": "Pages 14 and 15 from the included 36-page Workflow SOP & AI Guide."
+        }
+      ],
+      "setupSteps": [
+        "Purchase through Gumroad and open the supplied workspace access link.",
+        "Sign in to your own Notion account and duplicate the template.",
+        "Read the included setup guide, replace sample records and start with one workflow."
+      ],
+      "seoTitle": "AI-Ready Workflow Builder Bundle | SOP & Notion Workflow System",
+      "shareImage": "https://deekeforbusiness.github.io/deekebiz-product-hub/workflow-builder-bundle.webp"
     },
     {
       "id": "ai-ready-workflow-builder-os",
@@ -123,7 +262,41 @@
           "After duplicating this template into your own Notion workspace, you can edit the text, replace sample records, and adjust views and properties to suit your workflow.",
           "Keep an unchanged copy as a backup. If you change formulas or database relations, test the result before using it for live work."
         ]
-      }
+      },
+      "audience": "Operators who already have a workflow to document and want a structured place to build the package.",
+      "benefits": [
+        "Select a workflow and connect its steps, SOP and required inputs.",
+        "Document AI task specifications, prompts and human review checkpoints.",
+        "Plan a pilot and maintain exception and improvement records."
+      ],
+      "guidePath": "guides/ai-ready-workflow-package/",
+      "previewImages": [
+        {
+          "src": "assets/product-previews/ai-ready-workflow-builder-os-1.svg",
+          "width": 1800,
+          "height": 1200,
+          "caption": "Included Notion workspace: from workflow selection through pilot planning."
+        },
+        {
+          "src": "assets/product-previews/ai-ready-workflow-builder-os-2.svg",
+          "width": 1800,
+          "height": 1200,
+          "caption": "Included workflow-package database with a worked example."
+        },
+        {
+          "src": "assets/product-previews/ai-ready-workflow-builder-os-3.svg",
+          "width": 1800,
+          "height": 1200,
+          "caption": "Included workflow-selection database with a worked example."
+        }
+      ],
+      "setupSteps": [
+        "Purchase through Gumroad and open the supplied workspace access link.",
+        "Sign in to your own Notion account and duplicate the template.",
+        "Read the included setup guide, replace sample records and start with one workflow."
+      ],
+      "seoTitle": "Workflow Builder OS | Notion Workflow Template | DeekeBiz",
+      "shareImage": "https://deekeforbusiness.github.io/deekebiz-product-hub/workflow-builder-os.webp"
     },
     {
       "id": "brand-activation-production-os",
@@ -147,7 +320,41 @@
           "After duplicating this template into your own Notion workspace, you can edit the text, replace sample records, and adjust views and properties to suit your workflow.",
           "Keep an unchanged copy as a backup. If you change formulas or database relations, test the result before using it for live work."
         ]
-      }
+      },
+      "audience": "Production teams and coordinators handling client jobs, suppliers, approvals and delivery.",
+      "benefits": [
+        "Keep each client brief, production project and next task connected.",
+        "Record suppliers, materials, costs, payments and delivery work.",
+        "Track design files and approval status with the relevant job."
+      ],
+      "guidePath": "guides/brand-activation-production-workflow/",
+      "previewImages": [
+        {
+          "src": "assets/product-previews/brand-activation-production-os-1.svg",
+          "width": 1800,
+          "height": 1200,
+          "caption": "Included Notion workspace: overview and setup."
+        },
+        {
+          "src": "assets/product-previews/brand-activation-production-os-2.svg",
+          "width": 1800,
+          "height": 1200,
+          "caption": "Included production task database with sample records."
+        },
+        {
+          "src": "assets/product-previews/brand-activation-production-os-3.svg",
+          "width": 1800,
+          "height": 1200,
+          "caption": "Included quotes, costs and payments database with sample records."
+        }
+      ],
+      "setupSteps": [
+        "Purchase through Gumroad and open the supplied workspace access link.",
+        "Sign in to your own Notion account and duplicate the template.",
+        "Read the included setup guide, replace sample records and start with one workflow."
+      ],
+      "seoTitle": "Brand Activation Production OS | Notion Production Workflow Template",
+      "shareImage": "https://deekeforbusiness.github.io/deekebiz-product-hub/assets/brand-activation-production-os.webp"
     },
     {
       "id": "claritypack10-pro-bundle",
@@ -174,7 +381,41 @@
           "Personalize the included Editable-Communication-Scripts.docx in a compatible word processor: change the names, details, tone, and wording to fit your situation.",
           "The PDF kits and master guide are designed for reading and printing. Editable PDF source files are not included; complete printed trackers by hand or use your own notes alongside the checklists."
         ]
-      }
+      },
+      "audience": "People who want printable checklists and records for everyday decisions, without learning Notion.",
+      "benefits": [
+        "Gather evidence and questions using ten practical PDF kits.",
+        "Keep follow-up records with the original documents and photographs.",
+        "Personalize the included Word communication scripts for your situation."
+      ],
+      "guidePath": "claritypack10/#tools",
+      "previewImages": [
+        {
+          "src": "assets/product-previews/claritypack10-1.svg",
+          "width": 1005,
+          "height": 670,
+          "caption": "Included PDF pages preview 1"
+        },
+        {
+          "src": "assets/product-previews/claritypack10-2.svg",
+          "width": 1005,
+          "height": 670,
+          "caption": "Included PDF pages preview 2"
+        },
+        {
+          "src": "assets/product-previews/claritypack10-3.svg",
+          "width": 1005,
+          "height": 670,
+          "caption": "Included PDF pages preview 3"
+        }
+      ],
+      "setupSteps": [
+        "Purchase through Gumroad and open your purchase content.",
+        "Download the PDF and read it on your device or print the pages you need.",
+        "Follow the exercises at your own pace and keep notes alongside the guide."
+      ],
+      "seoTitle": "Free Decision & Evidence Tools | ClarityPack10",
+      "shareImage": "https://deekeforbusiness.github.io/deekebiz-product-hub/assets/contractor-kit-preview.png"
     },
     {
       "id": "client-delivery-os",
@@ -200,7 +441,41 @@
           "After duplicating this template into your own Notion workspace, you can edit the text, replace sample records, and adjust views and properties to suit your workflow.",
           "Keep an unchanged copy as a backup. If you change formulas or database relations, test the result before using it for live work."
         ]
-      }
+      },
+      "audience": "Freelancers, consultants and small teams managing recurring client work.",
+      "benefits": [
+        "Keep client projects, meeting notes and delivery work connected.",
+        "Record requests and approvals before changing agreed scope.",
+        "Review finance follow-ups, renewals and reusable SOPs in one workspace."
+      ],
+      "guidePath": "guides/client-delivery-workflow-in-notion/",
+      "previewImages": [
+        {
+          "src": "assets/product-previews/client-delivery-os-1.svg",
+          "width": 1800,
+          "height": 1200,
+          "caption": "Included Notion workspace: overview and setup."
+        },
+        {
+          "src": "assets/product-previews/client-delivery-os-2.svg",
+          "width": 1800,
+          "height": 1200,
+          "caption": "Included project workspace with sample records."
+        },
+        {
+          "src": "assets/product-previews/client-delivery-os-3.svg",
+          "width": 1800,
+          "height": 1200,
+          "caption": "Included client workspace with sample records."
+        }
+      ],
+      "setupSteps": [
+        "Purchase through Gumroad and open the supplied workspace access link.",
+        "Sign in to your own Notion account and duplicate the template.",
+        "Read the included setup guide, replace sample records and start with one workflow."
+      ],
+      "seoTitle": "Client Delivery OS — Notion Template for Freelancers | DeekeBiz",
+      "shareImage": "https://deekeforbusiness.github.io/deekebiz-product-hub/assets/ChatGPT%20Image%20May%2021%2C%202026%2C%2011_44_50%20PM%20%281%29.png"
     },
     {
       "id": "compliance-architect",
@@ -215,7 +490,7 @@
       "contents": [
         "Compliance command center and requirements",
         "Documents, tasks, follow-ups, and weekly review",
-        "AI prompt engine and sample scenario"
+        "Reusable prompts for manual AI use and a sample scenario"
       ],
       "requirements": "Requires a Notion account. Confirm requirements with the relevant agency. Optional AI services have their own limits and costs.",
       "url": "https://deekebiz.gumroad.com/l/compliance-architect",
@@ -225,7 +500,41 @@
           "After duplicating this template into your own Notion workspace, you can edit the text, replace sample records, and adjust views and properties to suit your workflow.",
           "Keep an unchanged copy as a backup. If you change formulas or database relations, test the result before using it for live work."
         ]
-      }
+      },
+      "audience": "Small business operators coordinating permits, renewals and supporting paperwork.",
+      "benefits": [
+        "Record requirements, dates and the supporting documents you hold.",
+        "Connect next actions and follow-ups to the relevant requirement.",
+        "Review upcoming work while confirming official requirements with the relevant agency."
+      ],
+      "guidePath": "guides/notion-compliance-tracker/",
+      "previewImages": [
+        {
+          "src": "assets/product-previews/compliance-architect-1.svg",
+          "width": 1800,
+          "height": 1200,
+          "caption": "Included workspace: recurring requirements, renewals and document tracking."
+        },
+        {
+          "src": "assets/product-previews/compliance-architect-2.svg",
+          "width": 1800,
+          "height": 1200,
+          "caption": "Included requirements database with illustrative sample records."
+        },
+        {
+          "src": "assets/product-previews/compliance-architect-3.svg",
+          "width": 1800,
+          "height": 1200,
+          "caption": "Included weekly-review checklist and workflow."
+        }
+      ],
+      "setupSteps": [
+        "Purchase through Gumroad and open the supplied workspace access link.",
+        "Sign in to your own Notion account and duplicate the template.",
+        "Read the included setup guide, replace sample records and start with one workflow."
+      ],
+      "seoTitle": "Notion Compliance Tracker for Permits, Renewals & Documents",
+      "shareImage": "https://deekeforbusiness.github.io/deekebiz-product-hub/compliance-architect.webp"
     },
     {
       "id": "document-intake-system",
@@ -250,7 +559,41 @@
           "After duplicating this template into your own Notion workspace, you can edit the text, replace sample records, and adjust views and properties to suit your workflow.",
           "Keep an unchanged copy as a backup. If you change formulas or database relations, test the result before using it for live work."
         ]
-      }
+      },
+      "audience": "Teams and individuals receiving documents from clients, suppliers or other contributors.",
+      "benefits": [
+        "Record each incoming submission with its file or reference link.",
+        "Track missing items, review status and follow-up dates.",
+        "Maintain a clear record from intake through manual closeout."
+      ],
+      "guidePath": "guides/document-intake-tracker/",
+      "previewImages": [
+        {
+          "src": "assets/product-previews/document-intake-system-1.svg",
+          "width": 1800,
+          "height": 1200,
+          "caption": "Included workspace: overview and getting started."
+        },
+        {
+          "src": "assets/product-previews/document-intake-system-2.svg",
+          "width": 1800,
+          "height": 1200,
+          "caption": "Included intake queue with sample records and review views."
+        },
+        {
+          "src": "assets/product-previews/document-intake-system-3.svg",
+          "width": 1800,
+          "height": 1200,
+          "caption": "Included Review Center: manual verification and follow-up workflow."
+        }
+      ],
+      "setupSteps": [
+        "Purchase through Gumroad and open the supplied workspace access link.",
+        "Sign in to your own Notion account and duplicate the template.",
+        "Read the included setup guide, replace sample records and start with one workflow."
+      ],
+      "seoTitle": "Document Intake System | Notion Document Tracker Template",
+      "shareImage": "https://deekeforbusiness.github.io/deekebiz-product-hub/document-intake-system.webp"
     },
     {
       "id": "event-agency-command-center",
@@ -276,7 +619,41 @@
           "After duplicating this template into your own Notion workspace, you can edit the text, replace sample records, and adjust views and properties to suit your workflow.",
           "Keep an unchanged copy as a backup. If you change formulas or database relations, test the result before using it for live work."
         ]
-      }
+      },
+      "audience": "Event agencies and coordinators managing several moving parts for each event.",
+      "benefits": [
+        "Keep tasks, clients, bookings and vendors with the right event.",
+        "Review budgets, payments, materials and deliveries.",
+        "Prepare timelines, run sheets and promotional assets using the included sample event."
+      ],
+      "guidePath": "guides/event-agency-planning-workflow/",
+      "previewImages": [
+        {
+          "src": "assets/product-previews/event-agency-command-center-1.svg",
+          "width": 1800,
+          "height": 1200,
+          "caption": "Included Notion workspace: overview and setup."
+        },
+        {
+          "src": "assets/product-previews/event-agency-command-center-2.svg",
+          "width": 1800,
+          "height": 1200,
+          "caption": "Included task database with sample records."
+        },
+        {
+          "src": "assets/product-previews/event-agency-command-center-3.svg",
+          "width": 1800,
+          "height": 1200,
+          "caption": "Included event database with sample records."
+        }
+      ],
+      "setupSteps": [
+        "Purchase through Gumroad and open the supplied workspace access link.",
+        "Sign in to your own Notion account and duplicate the template.",
+        "Read the included setup guide, replace sample records and start with one workflow."
+      ],
+      "seoTitle": "Event Planning Notion Template for Agencies | DeekeBiz",
+      "shareImage": "https://deekeforbusiness.github.io/deekebiz-product-hub/assets/event-agency-command-center.webp"
     },
     {
       "id": "freelancer-tax-desk",
@@ -300,7 +677,41 @@
           "After duplicating this template into your own Notion workspace, you can edit the text, replace sample records, and adjust views and properties to suit your workflow.",
           "Keep an unchanged copy as a backup. If you change formulas or database relations, test the result before using it for live work."
         ]
-      }
+      },
+      "audience": "Freelancers who want income, expenses and tax-preparation notes organized for review.",
+      "benefits": [
+        "Maintain income and expense logs with supporting receipt records.",
+        "Review quarterly planning using the year and date views.",
+        "Keep questions and preparation notes together for your own review or accountant."
+      ],
+      "guidePath": "guides/freelancer-tax-tracker-notion/",
+      "previewImages": [
+        {
+          "src": "assets/product-previews/freelancer-tax-desk-1.svg",
+          "width": 1800,
+          "height": 1200,
+          "caption": "Included Notion workspace: organization, setup and use."
+        },
+        {
+          "src": "assets/product-previews/freelancer-tax-desk-2.svg",
+          "width": 1800,
+          "height": 1200,
+          "caption": "Included income log with illustrative sample records."
+        },
+        {
+          "src": "assets/product-previews/freelancer-tax-desk-3.svg",
+          "width": 1800,
+          "height": 1200,
+          "caption": "Included quarterly planner with illustrative sample figures."
+        }
+      ],
+      "setupSteps": [
+        "Purchase through Gumroad and open the supplied workspace access link.",
+        "Sign in to your own Notion account and duplicate the template.",
+        "Read the included setup guide, replace sample records and start with one workflow."
+      ],
+      "seoTitle": "Freelancer Tax Desk | Notion Income & Expense Tracker",
+      "shareImage": "https://deekeforbusiness.github.io/deekebiz-product-hub/freelancer-tax-desk.webp"
     },
     {
       "id": "how-to-turn-workflows-to-ai-ready-systems",
@@ -313,7 +724,7 @@
       "category": "AI workflows",
       "summary": "Learn to document one real workflow, write its SOP, and prepare a controlled pilot.",
       "contents": [
-        "12-module PDF course with a Notion reading version",
+        "36-page, 12-module PDF course with a Notion reading version",
         "Workflow selection, mapping, and SOP method",
         "AI task specs, prompts, quality checks, and pilot guidance"
       ],
@@ -325,7 +736,41 @@
           "Use the frameworks, exercises, and examples to create your own SOPs, prompts, review checklists, and workflow documents.",
           "The course PDF is designed for reading and printing; an editable source document is not included. The Notion reading version is provided for access to the course, and Workflow Builder OS is sold separately."
         ]
-      }
+      },
+      "audience": "Anyone who wants to learn a practical documentation method before adding AI to a workflow.",
+      "benefits": [
+        "Work through 12 modules on selection, mapping and SOP writing.",
+        "Define AI task specifications, prompts and quality checkpoints.",
+        "Prepare a controlled pilot using the course exercises and examples."
+      ],
+      "guidePath": "guides/workflow-sop-ai-ready-system/",
+      "previewImages": [
+        {
+          "src": "assets/product-previews/workflow-sop-ai-guide-1.svg",
+          "width": 1005,
+          "height": 670,
+          "caption": "Included PDF pages preview 1"
+        },
+        {
+          "src": "assets/product-previews/workflow-sop-ai-guide-2.svg",
+          "width": 1005,
+          "height": 670,
+          "caption": "Included PDF pages preview 2"
+        },
+        {
+          "src": "assets/product-previews/workflow-sop-ai-guide-3.svg",
+          "width": 1005,
+          "height": 670,
+          "caption": "Included PDF pages preview 3"
+        }
+      ],
+      "setupSteps": [
+        "Purchase through Gumroad and open your purchase content.",
+        "Download the PDF and read it on your device or print the pages you need.",
+        "Follow the exercises at your own pace and keep notes alongside the guide."
+      ],
+      "seoTitle": "Workflow SOP & AI Guide | Turn Workflows Into AI-Ready Systems",
+      "shareImage": "https://deekeforbusiness.github.io/deekebiz-product-hub/workflow-sop-ai-guide.webp"
     },
     {
       "id": "overdue-payments-agent-bundle",
@@ -338,11 +783,11 @@
       "category": "Business admin",
       "summary": "Track overdue invoices and organize reminder drafts and run history.",
       "contents": [
-        "Notion template link",
-        "Matching custom agent link",
-        "Setup instructions"
+        "Notion invoice-tracking template",
+        "Matching optional Custom Agent access link",
+        "Setup instructions for your own invoice and run-log databases"
       ],
-      "requirements": "A Notion account is needed for the template. Custom Agents require a Business or Enterprise plan and Notion credits, billed separately by Notion. Check eligibility before buying, test with sample data, and review reminders before sending.",
+      "requirements": "A Notion account is needed for the template. Custom Agents require a Business or Enterprise plan and Notion credits, billed separately by Notion. Check eligibility before buying, test with sample data, and review reminders before sending. The invoice tracker can be used manually. Optional agent drafting requires separate setup and sample testing. Automatic email sending and a scheduled reminder service are not included.",
       "url": "https://deekebiz.gumroad.com/l/overdue-payments-agent-bundle",
       "customization": {
         "heading": "Make it your own",
@@ -350,7 +795,41 @@
           "You can adapt invoice records, views, and follow-up notes in your duplicated Notion template to fit your process.",
           "Changes to the Custom Agent’s instructions, triggers, or database connections require separate setup and testing in Notion. Test with sample records and review reminder drafts before sending them."
         ]
-      }
+      },
+      "audience": "Freelancers, consultants, agencies and small business operators following up unpaid invoices.",
+      "benefits": [
+        "Review invoice status and keep reminder drafts with each invoice.",
+        "Manually maintain reminder counts, dates, notes and follow-up history.",
+        "Set up the optional Custom Agent in your own eligible workspace and test sample records before relying on it."
+      ],
+      "guidePath": "guides/follow-up-overdue-invoices-politely/",
+      "previewImages": [
+        {
+          "src": "assets/product-previews/overdue-payments-agent-bundle-1.svg",
+          "width": 1800,
+          "height": 1200,
+          "caption": "Included template: manual invoice tracking; optional Custom Agent has separate requirements."
+        },
+        {
+          "src": "assets/product-previews/overdue-payments-agent-bundle-2.svg",
+          "width": 1800,
+          "height": 1200,
+          "caption": "Included invoice database with demo records; review drafts before sending."
+        },
+        {
+          "src": "assets/product-previews/overdue-payments-agent-bundle-3.svg",
+          "width": 1800,
+          "height": 1200,
+          "caption": "Historical demo run-log examples; these do not verify an agent in your workspace."
+        }
+      ],
+      "setupSteps": [
+        "Purchase through Gumroad and open the supplied workspace access link.",
+        "Sign in to your own Notion account and duplicate the template.",
+        "Read the included setup guide, replace sample records and start with one workflow."
+      ],
+      "seoTitle": "Overdue Invoice Tracker for Notion | DeekeBiz",
+      "shareImage": "https://deekeforbusiness.github.io/deekebiz-product-hub/ChatGPT%20Image%20May%2021%2C%202026%2C%2011_44_50%20PM%20%282%29.png"
     },
     {
       "id": "the-recovery-desk",
@@ -375,7 +854,41 @@
           "After duplicating this template into your own Notion workspace, you can edit the text, replace sample records, and adjust views and properties to suit your workflow.",
           "Keep an unchanged copy as a backup. If you change formulas or database relations, test the result before using it for live work."
         ]
-      }
+      },
+      "audience": "People who need a calm, manageable workspace for overdue life admin.",
+      "benefits": [
+        "Capture loose ends in one inbox instead of keeping them in your head.",
+        "Review due dates, appointments and recurring obligations.",
+        "Choose a small next action and keep related files or reference links nearby."
+      ],
+      "guidePath": "guides/life-admin-reset-system/",
+      "previewImages": [
+        {
+          "src": "assets/product-previews/the-recovery-desk-1.svg",
+          "width": 1800,
+          "height": 1200,
+          "caption": "Included dashboard with illustrative task records."
+        },
+        {
+          "src": "assets/product-previews/the-recovery-desk-2.svg",
+          "width": 1800,
+          "height": 1200,
+          "caption": "Included Recovery Reset workflow and capture inbox."
+        },
+        {
+          "src": "assets/product-previews/the-recovery-desk-3.svg",
+          "width": 1800,
+          "height": 1200,
+          "caption": "Included Money and Renewals workspace with illustrative records."
+        }
+      ],
+      "setupSteps": [
+        "Purchase through Gumroad and open the supplied workspace access link.",
+        "Sign in to your own Notion account and duplicate the template.",
+        "Read the included setup guide, replace sample records and start with one workflow."
+      ],
+      "seoTitle": "The Recovery Desk | Notion Life Admin Template",
+      "shareImage": "https://deekeforbusiness.github.io/deekebiz-product-hub/recovery-desk.webp"
     },
     {
       "id": "weekly-reset-tracker",
@@ -400,7 +913,41 @@
           "After duplicating this template into your own Notion workspace, you can edit the text, replace sample records, and adjust views and properties to suit your workflow.",
           "Keep an unchanged copy as a backup. If you change formulas or database relations, test the result before using it for live work."
         ]
-      }
+      },
+      "audience": "People who prefer a lightweight weekly review over a large productivity system.",
+      "benefits": [
+        "Capture loose thoughts and choose one to three priorities.",
+        "Maintain weekly tasks, important items, bills and reset checklists.",
+        "Start a new week, carry forward unfinished work and keep past reflections."
+      ],
+      "guidePath": "guides/weekly-reset-planning-system/",
+      "previewImages": [
+        {
+          "src": "assets/product-previews/weekly-reset-tracker-1.svg",
+          "width": 1800,
+          "height": 1200,
+          "caption": "Included workspace: start here and choose weekly priorities."
+        },
+        {
+          "src": "assets/product-previews/weekly-reset-tracker-2.svg",
+          "width": 1800,
+          "height": 1200,
+          "caption": "Included task-priority view with sample records."
+        },
+        {
+          "src": "assets/product-previews/weekly-reset-tracker-3.svg",
+          "width": 1800,
+          "height": 1200,
+          "caption": "Included weekly reset checklist with sample records."
+        }
+      ],
+      "setupSteps": [
+        "Purchase through Gumroad and open the supplied workspace access link.",
+        "Sign in to your own Notion account and duplicate the template.",
+        "Read the included setup guide, replace sample records and start with one workflow."
+      ],
+      "seoTitle": "Weekly Reset Template for Notion | Priorities, Planning & Life Admin",
+      "shareImage": "https://deekeforbusiness.github.io/deekebiz-product-hub/weekly-reset-tracker.webp"
     }
   ],
   "featuredProducts": [
