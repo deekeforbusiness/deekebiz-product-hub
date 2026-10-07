@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Check static deployment routes, anchors, structured data and public catalog."""
+import base64
 import json
 import re
 import xml.etree.ElementTree as ET
@@ -91,6 +92,16 @@ for p in catalog:
         if not source.startswith('assets/product-previews/') or not (ROOT/source).is_file():errors.append(f'{p["id"]}: missing actual preview asset {source}')
         if source.removeprefix('assets/') not in text:errors.append(f'{p["id"]}: unused preview asset {source}')
         if preview.get('width',0)<=0 or preview.get('height',0)<=0 or not preview.get('caption'):errors.append(f'{p["id"]}: incomplete preview metadata')
+        if (ROOT/source).is_file() and source.endswith('.svg'):
+            try:
+                image=ET.parse(ROOT/source).find('{http://www.w3.org/2000/svg}image')
+                href=image.attrib['href']
+                if not href.startswith('data:image/webp;base64,'):raise ValueError('expected embedded WebP')
+                raster=base64.b64decode(href.split(',',1)[1],validate=True)
+                if len(raster)<12 or raster[:4]!=b'RIFF' or raster[8:12]!=b'WEBP':raise ValueError('missing or invalid image data')
+                if int.from_bytes(raster[4:8],'little')+8!=len(raster):raise ValueError('truncated image container')
+            except Exception as exc:
+                errors.append(f'{p["id"]}: invalid embedded preview {source}: {exc}')
     if not p.get('audience') or len(p.get('benefits',[]))!=3 or len(p.get('setupSteps',[]))!=3:errors.append(f'{p["id"]}: incomplete buyer information')
     if f'data-product="{p["id"]}"' not in (ROOT/'index.html').read_text():errors.append(f'{p["id"]}: absent from homepage catalog')
     meta=pages[ROOT/p['path']/'index.html'].meta
