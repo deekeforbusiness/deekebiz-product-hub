@@ -2,7 +2,7 @@
 
 ## October 8 — rental analyzer launch and fixed pricing
 
-This update supersedes the earlier catalog/pricing counts below. All 26 Gumroad products are published with fixed USD prices. The three newly available rental analyzers are Quick ($1.99), Core ($19) and Pro ($49). Their public storefront section orders them Quick → Core → Pro between business admin and life admin.
+This update supersedes the earlier catalog/pricing counts below. All 26 Gumroad products are published with fixed USD prices. The three newly available rental analyzers are Quick ($9), Core ($19) and Pro ($49). Their public storefront section orders them Quick → Core → Pro between business admin and life admin.
 
 Added a Rental analyzers catalog filter, three product pages with their nine actual Gumroad previews, a three-product comparison, purchase links, canonical/share metadata, Product/Offer schema and sitemap entries. All pay-what-you-want flags and remaining public price-plus labels were removed. The Guide/OS bundle comparison uses fixed separate prices of $15 and $39, with the $49 bundle saving $5.
 
