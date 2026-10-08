@@ -58,3 +58,6 @@ https://deekeforbusiness.github.io/deekebiz-product-hub/new-hire-training-desk/
 https://deekeforbusiness.github.io/deekebiz-product-hub/etsy-digital-seller-desk/
 https://deekeforbusiness.github.io/deekebiz-product-hub/stock-and-reorder-desk/
 https://deekeforbusiness.github.io/deekebiz-product-hub/tenant-turnover-evidence-kit/
+https://deekeforbusiness.github.io/deekebiz-product-hub/rental-deal-quick-analyzer/
+https://deekeforbusiness.github.io/deekebiz-product-hub/rental-deal-analyzer-core/
+https://deekeforbusiness.github.io/deekebiz-product-hub/rental-deal-analyzer-pro/

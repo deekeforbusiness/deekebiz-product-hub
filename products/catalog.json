@@ -1,5 +1,5 @@
 {
-  "verifiedAt": "2026-10-07",
+  "verifiedAt": "2026-10-08",
   "products": [
     {
       "id": "7-day-life-admin-reset",
@@ -66,7 +66,7 @@
       "name": "AI Operations Architect",
       "price": 24,
       "currency": "USD",
-      "payWhatYouWant": true,
+      "payWhatYouWant": false,
       "format": "Notion workspace",
       "category": "AI workflows",
       "summary": "Map business functions, workflows, SOPs, roles, and improvement opportunities.",
@@ -125,7 +125,7 @@
       "name": "AI Prompt Vault",
       "price": 9,
       "currency": "USD",
-      "payWhatYouWant": true,
+      "payWhatYouWant": false,
       "format": "Notion workspace",
       "category": "AI workflows",
       "summary": "Organize reusable prompts, workflow packs, and AI playbooks for recurring work.",
@@ -208,7 +208,7 @@
       "benefits": [
         "Learn the documentation method in a 12-module course.",
         "Apply the method in Workflow Builder OS, from selection to a controlled pilot plan.",
-        "Get the $15+ Guide and $39+ OS together for $49, saving $5 at their minimum prices."
+        "Get the $15 Guide and $39 OS together for $49, saving $5 compared with buying them separately."
       ],
       "guidePath": "guides/workflow-sop-ai-ready-system/",
       "previewImages": [
@@ -245,7 +245,7 @@
       "name": "Workflow Builder OS",
       "price": 39,
       "currency": "USD",
-      "payWhatYouWant": true,
+      "payWhatYouWant": false,
       "format": "Notion workspace",
       "category": "AI workflows",
       "summary": "Build one workflow package from selection and SOPs to quality checks and pilot.",
@@ -423,7 +423,7 @@
       "name": "Client Delivery OS — Notion Template",
       "price": 19,
       "currency": "USD",
-      "payWhatYouWant": true,
+      "payWhatYouWant": false,
       "format": "Notion workspace",
       "category": "Client work",
       "summary": "Keep client pipeline, projects, requests, approvals, meetings, and follow-ups together.",
@@ -483,7 +483,7 @@
       "name": "Compliance Architect",
       "price": 15,
       "currency": "USD",
-      "payWhatYouWant": true,
+      "payWhatYouWant": false,
       "format": "Notion workspace",
       "category": "Business admin",
       "summary": "Track permits, renewals, supporting documents, and next actions.",
@@ -542,7 +542,7 @@
       "name": "Document Intake System",
       "price": 9,
       "currency": "USD",
-      "payWhatYouWant": true,
+      "payWhatYouWant": false,
       "format": "Notion workspace",
       "category": "Business admin",
       "summary": "Track incoming documents through review, missing items, follow-up, and closeout.",
@@ -719,7 +719,7 @@
       "name": "Workflow SOP & AI Guide",
       "price": 15,
       "currency": "USD",
-      "payWhatYouWant": true,
+      "payWhatYouWant": false,
       "format": "PDF course + Notion reading version",
       "category": "AI workflows",
       "summary": "Learn to document one real workflow, write its SOP, and prepare a controlled pilot.",
@@ -896,7 +896,7 @@
       "name": "Weekly Reset Tracker",
       "price": 7,
       "currency": "USD",
-      "payWhatYouWant": true,
+      "payWhatYouWant": false,
       "format": "Notion workspace",
       "category": "Life admin",
       "summary": "Capture loose thoughts, choose one to three priorities, and reset your week.",
@@ -1376,6 +1376,190 @@
       "seoTitle": "Tenant Turnover Evidence Kit | Notion Template | DEEKE",
       "shareImage": "https://deekeforbusiness.github.io/deekebiz-product-hub/assets/tenant-turnover-evidence-kit.webp",
       "launchStatus": "available"
+    },
+    {
+      "id": "free-rental-deal-quick-analyzer",
+      "path": "rental-deal-quick-analyzer",
+      "name": "Rental Deal Quick Analyzer",
+      "price": 1.99,
+      "url": "https://deekebiz.gumroad.com/l/free-rental-deal-quick-analyzer",
+      "summary": "Run a first-pass rental screen using price, financing, rent and operating-cost assumptions.",
+      "contents": [
+        "Rental Deal Inputs database with editable assumptions",
+        "Monthly mortgage, effective rent and operating expense calculations",
+        "Monthly and annual cash flow plus an initial screening verdict",
+        "Setup guidance and a fictional sample property"
+      ],
+      "requirements": "Requires your own Notion account and property information. Models a fixed-rate amortizing loan or a cash purchase. Results are estimates for an initial screen; verify financing and operating-cost assumptions and complete due diligence before an investment decision.",
+      "audience": "Beginners and buy-and-hold investors who want a simple first screen before deeper underwriting.",
+      "benefits": [
+        "Enter purchase price, financing, rent and expense assumptions in one record.",
+        "Review modeled mortgage payments, effective rent and monthly and annual cash flow.",
+        "Use the initial verdict to identify which assumptions need a closer look."
+      ],
+      "seoTitle": "Rental Deal Quick Analyzer | Notion Rental Cash Flow Calculator | DEEKE",
+      "currency": "USD",
+      "payWhatYouWant": false,
+      "format": "Notion template",
+      "category": "Rental analyzers",
+      "launchStatus": "available",
+      "guidePath": null,
+      "customization": {
+        "heading": "Make it your own",
+        "paragraphs": [
+          "Duplicate the whole template into your own Notion workspace, read the setup guide and replace the fictional sample records with your property assumptions.",
+          "Keep an unchanged backup. Test changes to formulas, database relations and screening rules before relying on your copy."
+        ]
+      },
+      "setupSteps": [
+        "Purchase through Gumroad and open the Notion template link in your purchase content.",
+        "Sign in to your own Notion account, choose your workspace and duplicate the entire template.",
+        "Read the included setup guidance, replace the fictional inputs and verify the results against your own financing and cost information."
+      ],
+      "previewImages": [
+        {
+          "src": "assets/product-previews/rental-deal-quick-analyzer-1.webp",
+          "width": 1800,
+          "height": 1200,
+          "caption": "Included workspace for a first-pass rental screen."
+        },
+        {
+          "src": "assets/product-previews/rental-deal-quick-analyzer-2.webp",
+          "width": 1800,
+          "height": 1200,
+          "caption": "Fictional sample property: editable assumptions and inputs."
+        },
+        {
+          "src": "assets/product-previews/rental-deal-quick-analyzer-3.webp",
+          "width": 1800,
+          "height": 1200,
+          "caption": "Fictional sample outputs; estimates change when you replace the assumptions."
+        }
+      ],
+      "shareImage": "https://deekeforbusiness.github.io/deekebiz-product-hub/assets/product-previews/rental-deal-quick-analyzer-1.webp"
+    },
+    {
+      "id": "rental-deal-analyzer-3-step",
+      "path": "rental-deal-analyzer-core",
+      "name": "Rental Deal Analyzer Core",
+      "price": 19,
+      "url": "https://deekebiz.gumroad.com/l/rental-deal-analyzer-3-step",
+      "summary": "Review cash flow, cash-on-cash return and debt coverage through a guided three-step workflow.",
+      "contents": [
+        "Financial Model database with deal inputs and calculated results",
+        "Monthly and annual cash flow, cash-on-cash return and total cash invested",
+        "DSCR and explained screening tiers and verdicts",
+        "Three-step setup guidance and fictional sample assumptions"
+      ],
+      "requirements": "Requires your own Notion account and property information. Uses fixed-rate amortizing financing or a cash purchase. DSCR is blank without debt service; cash-on-cash return is blank when no cash is invested. Missing required or invalid inputs leave calculations blank. Fixed screening thresholds are explained in the guide. Appreciation, sale proceeds and taxes on investment returns are outside this model.",
+      "audience": "Investors who want a guided property screen with return and debt-coverage metrics.",
+      "benefits": [
+        "Follow three steps: enter deal numbers, review metrics and compare the explained screening thresholds.",
+        "See total cash invested, cash-on-cash return and DSCR alongside modeled cash flow.",
+        "Review blank or invalid-input results before making a decision or changing assumptions."
+      ],
+      "seoTitle": "Rental Deal Analyzer Core | Notion Cash Flow, CoC & DSCR Template | DEEKE",
+      "currency": "USD",
+      "payWhatYouWant": false,
+      "format": "Notion template",
+      "category": "Rental analyzers",
+      "launchStatus": "available",
+      "guidePath": null,
+      "customization": {
+        "heading": "Make it your own",
+        "paragraphs": [
+          "Duplicate the whole template into your own Notion workspace, read the setup guide and replace the fictional sample records with your property assumptions.",
+          "Keep an unchanged backup. Test changes to formulas, database relations and screening rules before relying on your copy."
+        ]
+      },
+      "setupSteps": [
+        "Purchase through Gumroad and open the Notion template link in your purchase content.",
+        "Sign in to your own Notion account, choose your workspace and duplicate the entire template.",
+        "Read the included setup guidance, replace the fictional inputs and verify the results against your own financing and cost information."
+      ],
+      "previewImages": [
+        {
+          "src": "assets/product-previews/rental-deal-analyzer-core-1.webp",
+          "width": 1800,
+          "height": 1200,
+          "caption": "Included Core workspace: setup and financial model."
+        },
+        {
+          "src": "assets/product-previews/rental-deal-analyzer-core-2.png",
+          "width": 1800,
+          "height": 1200,
+          "caption": "Core financial inputs with fictional sample data."
+        },
+        {
+          "src": "assets/product-previews/rental-deal-analyzer-core-3.webp",
+          "width": 1800,
+          "height": 1200,
+          "caption": "Core financial results with fictional sample data."
+        }
+      ],
+      "shareImage": "https://deekeforbusiness.github.io/deekebiz-product-hub/assets/product-previews/rental-deal-analyzer-core-1.webp"
+    },
+    {
+      "id": "rental-deal-analyzer-pro",
+      "path": "rental-deal-analyzer-pro",
+      "name": "Rental Deal Analyzer Pro",
+      "price": 49,
+      "url": "https://deekebiz.gumroad.com/l/rental-deal-analyzer-pro",
+      "summary": "Connect underwriting, financing scenarios, renovation, stress tests, diligence and decisions in nine databases.",
+      "contents": [
+        "Deal Pipeline and Underwriting Model",
+        "Loan Scenarios and Renovation Scope",
+        "Rental Strategy and Exit Strategy Scenarios",
+        "Risk Stress Tests, Due Diligence Checklist and Decision Journal",
+        "Dashboard, guided hubs, model definitions and fictional examples"
+      ],
+      "requirements": "Requires your own Notion account and basic database editing. Related Deal links organize records; transfer selected assumptions and budgets into the main model manually. Stress Input Score is a heuristic, not a probability of loss. Rental revenue comparisons omit several costs. Sale-only annualized return excludes interim rental cash flow and taxes. Refinance cash-out is borrowed money; the rate field does not calculate a new loan payment. Verify assumptions and read Model Definitions & Limits.",
+      "audience": "Buy-and-hold investors and small real estate operators who want a broader analysis and decision workflow.",
+      "benefits": [
+        "Keep the deal, underwriting record, diligence and decision journal connected.",
+        "Compare financing, renovation, rental and exit scenarios using explicit manual assumptions.",
+        "Review downside cash-flow scenarios and document open questions before recording a decision."
+      ],
+      "seoTitle": "Rental Deal Analyzer Pro | Notion Underwriting & Stress Test Template | DEEKE",
+      "currency": "USD",
+      "payWhatYouWant": false,
+      "format": "Notion template",
+      "category": "Rental analyzers",
+      "launchStatus": "available",
+      "guidePath": null,
+      "customization": {
+        "heading": "Make it your own",
+        "paragraphs": [
+          "Duplicate the whole template into your own Notion workspace, read the setup guide and replace the fictional sample records with your property assumptions.",
+          "Keep an unchanged backup. Test changes to formulas, database relations and screening rules before relying on your copy."
+        ]
+      },
+      "setupSteps": [
+        "Purchase through Gumroad and open the Notion template link in your purchase content.",
+        "Sign in to your own Notion account, choose your workspace and duplicate the entire template.",
+        "Read the included setup guidance, replace the fictional inputs and verify the results against your own financing and cost information."
+      ],
+      "previewImages": [
+        {
+          "src": "assets/product-previews/rental-deal-analyzer-pro-1.webp",
+          "width": 1800,
+          "height": 1200,
+          "caption": "Included Pro workspace: guided underwriting and decision hubs."
+        },
+        {
+          "src": "assets/product-previews/rental-deal-analyzer-pro-2.webp",
+          "width": 1800,
+          "height": 1200,
+          "caption": "Loan scenarios with fictional demo assumptions and calculated results."
+        },
+        {
+          "src": "assets/product-previews/rental-deal-analyzer-pro-3.webp",
+          "width": 1800,
+          "height": 1200,
+          "caption": "Downside stress tests with fictional demo data."
+        }
+      ],
+      "shareImage": "https://deekeforbusiness.github.io/deekebiz-product-hub/assets/product-previews/rental-deal-analyzer-pro-1.webp"
     }
   ],
   "featuredProducts": [
