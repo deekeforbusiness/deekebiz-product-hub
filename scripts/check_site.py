@@ -83,6 +83,11 @@ assert catalog and len({p['id'] for p in catalog}) == len(catalog), 'Catalog IDs
 if pages[ROOT/'index.html'].featured!=catalog_data['featuredProducts']:errors.append('homepage: featured products do not match catalog configuration')
 for p in catalog:
     text=(ROOT/p['path']/'index.html').read_text()
+    launch_status=p.get('launchStatus','available')
+    if launch_status not in ('available','coming_soon'):errors.append(f'{p["id"]}: invalid launch status')
+    if launch_status=='coming_soon':
+        if any(urlsplit(link)._replace(query='',fragment='').geturl()==p['url'] for link in pages[ROOT/p['path']/'index.html'].links):errors.append(f'{p["id"]}: coming-soon product exposes checkout')
+        if 'Coming soon' not in text:errors.append(f'{p["id"]}: missing coming-soon notice')
     if text.count('generated:offer:start')!=1:errors.append(f'{p["path"]}: missing/duplicate offer')
     previews=p.get('previewImages',[])
     if len(previews)!=3:errors.append(f'{p["id"]}: expected three actual product previews')
@@ -114,6 +119,9 @@ for p in catalog:
     for data in pages[ROOT/p['path']/'index.html'].schemas:nodes.extend(data.get('@graph',[data]))
     for node in nodes:
         if node.get('@type')=='Product' and (node['offers']['price']!=str(p['price']) or node['offers']['priceCurrency']!=p['currency']):errors.append(f'{p["id"]}: schema price mismatch')
+        if node.get('@type')=='Product':
+            expected_availability='https://schema.org/OutOfStock' if launch_status=='coming_soon' else 'https://schema.org/InStock'
+            if node['offers'].get('availability')!=expected_availability:errors.append(f'{p["id"]}: schema availability mismatch')
 for tool in (ROOT/'claritypack10/tools').glob('*/index.html'):
     text=tool.read_text()
     if 'data-result-upgrade' not in text or 'cp-report-credit' not in text:errors.append(f'{tool.parent.name}: missing contextual result path or attribution')

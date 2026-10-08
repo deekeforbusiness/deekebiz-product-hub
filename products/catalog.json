@@ -1010,6 +1010,372 @@
       ],
       "seoTitle": "Holiday Sale Profit Planner | Notion Discount & Margin Calculator | DEEKE",
       "shareImage": "https://deekeforbusiness.github.io/deekebiz-product-hub/assets/holiday-sale-profit-planner.webp"
+    },
+    {
+      "id": "creative-asset-license-vault",
+      "path": "creative-asset-license-vault",
+      "name": "Creative Asset License Vault — Notion Template",
+      "price": 15,
+      "currency": "USD",
+      "payWhatYouWant": false,
+      "format": "Notion workspace",
+      "category": "Business admin",
+      "summary": "Keep asset sources, license evidence and intended product uses together.",
+      "contents": [
+        "Two linked databases: Assets and Product Uses",
+        "License evidence, receipt, attribution and intended-use records",
+        "Evidence and expiry review queues",
+        "Start Here guide and fictional examples"
+      ],
+      "requirements": "Requires your own Notion account and basic database editing. Duplicate the entire root and replace fictional examples. Review flags organize records; they do not grant a license or determine legal permission.",
+      "url": "https://deekebiz.gumroad.com/l/creative-asset-license-vault",
+      "customization": {
+        "heading": "Make it your own",
+        "paragraphs": [
+          "Duplicate the whole product into your own workspace, read Start Here and replace the fictional examples. Keep its linked databases together.",
+          "Keep an unchanged backup. Test any formula or relation changes before using the copy for live work."
+        ]
+      },
+      "audience": "Creators and small sellers organizing the evidence behind licensed creative assets.",
+      "benefits": [
+        "Keep asset sources, original terms and receipts with each asset.",
+        "Connect each asset to its intended product edition and distribution format.",
+        "Review missing evidence, attribution and recorded expiry before a release."
+      ],
+      "guidePath": null,
+      "previewImages": [
+        {
+          "src": "assets/product-previews/creative-asset-license-vault-1.svg",
+          "width": 1800,
+          "height": 1200,
+          "caption": "Actual workspace home with fictional examples."
+        },
+        {
+          "src": "assets/product-previews/creative-asset-license-vault-2.svg",
+          "width": 1800,
+          "height": 1200,
+          "caption": "Assets: missing license evidence and expiry review remain visible."
+        },
+        {
+          "src": "assets/product-previews/creative-asset-license-vault-3.svg",
+          "width": 1800,
+          "height": 1200,
+          "caption": "Included guide: capture sources and check intended product uses."
+        }
+      ],
+      "setupSteps": [
+        "Purchase through Gumroad and open the Notion template link in your purchase content.",
+        "Sign in to your own Notion account and duplicate the entire product root.",
+        "Read Start Here, check the copied relations and replace fictional records before live use."
+      ],
+      "seoTitle": "Creative Asset License Vault | Notion Template | DEEKE",
+      "shareImage": "https://deekeforbusiness.github.io/deekebiz-product-hub/assets/creative-asset-license-vault.webp",
+      "launchStatus": "available"
+    },
+    {
+      "id": "pet-sitter-visit-desk",
+      "path": "pet-sitter-visit-desk",
+      "name": "Pet Sitter Visit Desk — Notion Template",
+      "price": 19,
+      "currency": "USD",
+      "payWhatYouWant": false,
+      "format": "Notion workspace",
+      "category": "Client work",
+      "summary": "Connect pet instructions, visits and owner follow-ups in one desk.",
+      "contents": [
+        "Three linked databases: Pet Profiles, Visits and Follow-ups",
+        "Pet-instruction, visit and follow-up review formulas",
+        "Visit calendar and open/overdue review views",
+        "Start Here guide and fictional examples"
+      ],
+      "requirements": "Requires your own Notion account and basic database editing. Duplicate the entire root and replace fictional examples. Records the owner’s instructions. Does not provide veterinary advice, monitor a pet or send messages. Keep access secrets outside the template.",
+      "url": "https://deekebiz.gumroad.com/l/pet-sitter-visit-desk",
+      "customization": {
+        "heading": "Make it your own",
+        "paragraphs": [
+          "Duplicate the whole product into your own workspace, read Start Here and replace the fictional examples. Keep its linked databases together.",
+          "Keep an unchanged backup. Test any formula or relation changes before using the copy for live work."
+        ]
+      },
+      "audience": "Independent pet sitters coordinating written instructions, visits and owner follow-ups.",
+      "benefits": [
+        "Prepare each visit using the linked pet profile and written owner instructions.",
+        "Schedule timed visits and record observations and owner updates.",
+        "Keep a follow-up open until its action and outcome are recorded."
+      ],
+      "guidePath": null,
+      "previewImages": [
+        {
+          "src": "assets/product-previews/pet-sitter-visit-desk-1.svg",
+          "width": 1800,
+          "height": 1200,
+          "caption": "Actual workspace home with fictional examples."
+        },
+        {
+          "src": "assets/product-previews/pet-sitter-visit-desk-2.svg",
+          "width": 1800,
+          "height": 1200,
+          "caption": "Visits: linked pet, assigned sitter and timed visit window."
+        },
+        {
+          "src": "assets/product-previews/pet-sitter-visit-desk-3.svg",
+          "width": 1800,
+          "height": 1200,
+          "caption": "Included guide: duplicate, confirm instructions and complete visit records."
+        }
+      ],
+      "setupSteps": [
+        "Purchase through Gumroad and open the Notion template link in your purchase content.",
+        "Sign in to your own Notion account and duplicate the entire product root.",
+        "Read Start Here, check the copied relations and replace fictional records before live use."
+      ],
+      "seoTitle": "Pet Sitter Visit Desk | Notion Template | DEEKE",
+      "shareImage": "https://deekeforbusiness.github.io/deekebiz-product-hub/assets/pet-sitter-visit-desk.webp",
+      "launchStatus": "available"
+    },
+    {
+      "id": "new-hire-training-desk",
+      "path": "new-hire-training-desk",
+      "name": "New Hire Training Desk — Notion Template",
+      "price": 19,
+      "currency": "USD",
+      "payWhatYouWant": false,
+      "format": "Notion workspace",
+      "category": "Business admin",
+      "summary": "Plan assigned learning and keep completion evidence beside each task.",
+      "contents": [
+        "Three linked databases: Trainees, Training Modules and Training Tasks",
+        "Completion-evidence checks and trainee progress formulas",
+        "Open and overdue task views plus a training calendar",
+        "Start Here guide and fictional examples"
+      ],
+      "requirements": "Requires your own Notion account and basic database editing. Duplicate the entire root and replace fictional examples. Manual planning and recordkeeping. Does not certify training, send messages or make employment decisions.",
+      "url": "https://deekebiz.gumroad.com/l/new-hire-training-desk",
+      "customization": {
+        "heading": "Make it your own",
+        "paragraphs": [
+          "Duplicate the whole product into your own workspace, read Start Here and replace the fictional examples. Keep its linked databases together.",
+          "Keep an unchanged backup. Test any formula or relation changes before using the copy for live work."
+        ]
+      },
+      "audience": "Team leads and training buddies planning assigned learning and reviewing completion records.",
+      "benefits": [
+        "Assign one task per trainee and reusable training module.",
+        "Keep due dates, completion evidence and reviewer notes together.",
+        "See open work and progress based on recorded completion details."
+      ],
+      "guidePath": null,
+      "previewImages": [
+        {
+          "src": "assets/product-previews/new-hire-training-desk-1.svg",
+          "width": 1800,
+          "height": 1200,
+          "caption": "Actual workspace home with fictional examples."
+        },
+        {
+          "src": "assets/product-previews/new-hire-training-desk-2.svg",
+          "width": 1800,
+          "height": 1200,
+          "caption": "Training tasks: linked trainee, module and completion review."
+        },
+        {
+          "src": "assets/product-previews/new-hire-training-desk-3.svg",
+          "width": 1800,
+          "height": 1200,
+          "caption": "Trainees: fictional completion records and progress."
+        }
+      ],
+      "setupSteps": [
+        "Purchase through Gumroad and open the Notion template link in your purchase content.",
+        "Sign in to your own Notion account and duplicate the entire product root.",
+        "Read Start Here, check the copied relations and replace fictional records before live use."
+      ],
+      "seoTitle": "New Hire Training Desk | Notion Template | DEEKE",
+      "shareImage": "https://deekeforbusiness.github.io/deekebiz-product-hub/assets/new-hire-training-desk.webp",
+      "launchStatus": "available"
+    },
+    {
+      "id": "etsy-digital-seller-desk",
+      "path": "etsy-digital-seller-desk",
+      "name": "Etsy Digital Seller Desk — Notion Template",
+      "price": 19,
+      "currency": "USD",
+      "payWhatYouWant": false,
+      "format": "Notion workspace",
+      "category": "Business admin",
+      "summary": "Keep digital listings, release checks and support outcomes connected.",
+      "contents": [
+        "Three linked databases: Listings, Release Checks and Support Follow-ups",
+        "Current-release, file-review and support-outcome checks",
+        "Listing, release and open/overdue support review queues",
+        "Start Here guide and fictional examples"
+      ],
+      "requirements": "Requires your own Notion account and basic database editing. Duplicate the entire root and replace fictional examples. Manual workflow. Does not connect to Etsy, publish listings or send customer messages. Rights and file checks require your own review.",
+      "url": "https://deekebiz.gumroad.com/l/etsy-digital-seller-desk",
+      "customization": {
+        "heading": "Make it your own",
+        "paragraphs": [
+          "Duplicate the whole product into your own workspace, read Start Here and replace the fictional examples. Keep its linked databases together.",
+          "Keep an unchanged backup. Test any formula or relation changes before using the copy for live work."
+        ]
+      },
+      "audience": "Digital-product sellers keeping manual Etsy listing preparation and support records together.",
+      "benefits": [
+        "Connect a listing to the exact release version you are preparing.",
+        "Record file tests, preview checks, rights-review notes and delivery instructions.",
+        "Track buyer questions and keep missing support outcomes visible."
+      ],
+      "guidePath": null,
+      "previewImages": [
+        {
+          "src": "assets/product-previews/etsy-digital-seller-desk-1.svg",
+          "width": 1800,
+          "height": 1200,
+          "caption": "Actual workspace home with fictional examples."
+        },
+        {
+          "src": "assets/product-previews/etsy-digital-seller-desk-2.svg",
+          "width": 1800,
+          "height": 1200,
+          "caption": "Release review: unfinished fictional checks stay visible."
+        },
+        {
+          "src": "assets/product-previews/etsy-digital-seller-desk-3.svg",
+          "width": 1800,
+          "height": 1200,
+          "caption": "Included guide: listings, release checks and support follow-ups."
+        }
+      ],
+      "setupSteps": [
+        "Purchase through Gumroad and open the Notion template link in your purchase content.",
+        "Sign in to your own Notion account and duplicate the entire product root.",
+        "Read Start Here, check the copied relations and replace fictional records before live use."
+      ],
+      "seoTitle": "Etsy Digital Seller Desk | Notion Template | DEEKE",
+      "shareImage": "https://deekeforbusiness.github.io/deekebiz-product-hub/assets/etsy-digital-seller-desk.webp",
+      "launchStatus": "coming_soon"
+    },
+    {
+      "id": "stock-and-reorder-desk",
+      "path": "stock-and-reorder-desk",
+      "name": "Stock & Reorder Desk — Notion Template",
+      "price": 19,
+      "currency": "USD",
+      "payWhatYouWant": false,
+      "format": "Notion workspace",
+      "category": "Business admin",
+      "summary": "Review available stock, incoming orders and suggested purchase quantities.",
+      "contents": [
+        "Two linked databases: Items and Purchase Orders",
+        "Available stock, valid incoming quantities and reorder suggestions",
+        "Confirmed-count and order-input review checks",
+        "Stock review and Purchase review queues, guide and fictional examples"
+      ],
+      "requirements": "Requires your own Notion account and basic database editing. Duplicate the entire root and replace fictional examples. Update physical stock counts manually after receipts. Does not purchase stock or synchronize inventory. Confirm quantities, units and targets before acting.",
+      "url": "https://deekebiz.gumroad.com/l/stock-and-reorder-desk",
+      "customization": {
+        "heading": "Make it your own",
+        "paragraphs": [
+          "Duplicate the whole product into your own workspace, read Start Here and replace the fictional examples. Keep its linked databases together.",
+          "Keep an unchanged backup. Test any formula or relation changes before using the copy for live work."
+        ]
+      },
+      "audience": "Small operators maintaining physical stock counts and reviewing purchase quantities.",
+      "benefits": [
+        "Review available units after reservations against confirmed thresholds.",
+        "Account for valid outstanding orders, partial receipts and documented cancellations.",
+        "Compare suggested quantities with your physical count before ordering manually."
+      ],
+      "guidePath": null,
+      "previewImages": [
+        {
+          "src": "assets/product-previews/stock-and-reorder-desk-1.svg",
+          "width": 1800,
+          "height": 1200,
+          "caption": "Actual workspace home with fictional examples."
+        },
+        {
+          "src": "assets/product-previews/stock-and-reorder-desk-2.svg",
+          "width": 1800,
+          "height": 1200,
+          "caption": "Stock review: unconfirmed fictional counts stay in review."
+        },
+        {
+          "src": "assets/product-previews/stock-and-reorder-desk-3.svg",
+          "width": 1800,
+          "height": 1200,
+          "caption": "Included guide: manual counts, incoming orders and reorder review."
+        }
+      ],
+      "setupSteps": [
+        "Purchase through Gumroad and open the Notion template link in your purchase content.",
+        "Sign in to your own Notion account and duplicate the entire product root.",
+        "Read Start Here, check the copied relations and replace fictional records before live use."
+      ],
+      "seoTitle": "Stock & Reorder Desk | Notion Template | DEEKE",
+      "shareImage": "https://deekeforbusiness.github.io/deekebiz-product-hub/assets/stock-and-reorder-desk.webp",
+      "launchStatus": "coming_soon"
+    },
+    {
+      "id": "tenant-turnover-evidence-kit",
+      "path": "tenant-turnover-evidence-kit",
+      "name": "Tenant Turnover Evidence Kit — Notion Template",
+      "price": 19,
+      "currency": "USD",
+      "payWhatYouWant": false,
+      "format": "Notion workspace",
+      "category": "Life admin",
+      "summary": "Keep condition, meter, key and follow-up records linked to each handover.",
+      "contents": [
+        "Three linked databases: Turnovers, Evidence Records and Follow-ups",
+        "Condition, meter and key evidence-category review",
+        "Handover and unresolved follow-up checks",
+        "Compact review queues, Start Here guide and fictional examples"
+      ],
+      "requirements": "Requires your own Notion account and basic database editing. Duplicate the entire root and replace fictional examples. Confirm inspection coverage and evidence permissions yourself. Does not authenticate evidence or decide liability or deposit deductions.",
+      "url": "https://deekebiz.gumroad.com/l/tenant-turnover-evidence-kit",
+      "customization": {
+        "heading": "Make it your own",
+        "paragraphs": [
+          "Duplicate the whole product into your own workspace, read Start Here and replace the fictional examples. Keep its linked databases together.",
+          "Keep an unchanged backup. Test any formula or relation changes before using the copy for live work."
+        ]
+      },
+      "audience": "Property managers and landlords organizing evidence and follow-ups for a manual turnover handover.",
+      "benefits": [
+        "Define the turnover scope and organize dated condition, meter and key references.",
+        "Give follow-ups an owner, deadline and recorded outcome.",
+        "Review missing evidence and handover notes before recording the handover outcome."
+      ],
+      "guidePath": null,
+      "previewImages": [
+        {
+          "src": "assets/product-previews/tenant-turnover-evidence-kit-1.svg",
+          "width": 1800,
+          "height": 1200,
+          "caption": "Actual workspace home with fictional examples."
+        },
+        {
+          "src": "assets/product-previews/tenant-turnover-evidence-kit-2.svg",
+          "width": 1800,
+          "height": 1200,
+          "caption": "Evidence records: condition, meter and key references."
+        },
+        {
+          "src": "assets/product-previews/tenant-turnover-evidence-kit-3.svg",
+          "width": 1800,
+          "height": 1200,
+          "caption": "Included guide: define scope, record evidence and review handover."
+        }
+      ],
+      "setupSteps": [
+        "Purchase through Gumroad and open the Notion template link in your purchase content.",
+        "Sign in to your own Notion account and duplicate the entire product root.",
+        "Read Start Here, check the copied relations and replace fictional records before live use."
+      ],
+      "seoTitle": "Tenant Turnover Evidence Kit | Notion Template | DEEKE",
+      "shareImage": "https://deekeforbusiness.github.io/deekebiz-product-hub/assets/tenant-turnover-evidence-kit.webp",
+      "launchStatus": "coming_soon"
     }
   ],
   "featuredProducts": [
