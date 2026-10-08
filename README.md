@@ -2,7 +2,7 @@
 
 Static HTML website deployed by GitHub Pages from `main`.
 
-`products/catalog.json` maintains the 16 published products. To regenerate their public offer blocks, catalog cards, schema prices, and campaign labels:
+`products/catalog.json` maintains published and coming-soon products. To regenerate their public offer blocks, catalog cards, schema prices, and campaign labels:
 
 ```
 python scripts/build_catalog.py

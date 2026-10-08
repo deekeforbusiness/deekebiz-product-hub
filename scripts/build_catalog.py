@@ -35,6 +35,19 @@ def buy_url(p, content):
     return p['url'] + '?' + urlencode(dict(utm_source='deekebiz_site', utm_medium='website', utm_campaign=CAMPAIGN, utm_content=content))
 
 
+def available(p):
+    status = p.get('launchStatus', 'available')
+    if status not in ('available', 'coming_soon'):
+        raise ValueError(f"Unknown launch status for {p['id']}: {status}")
+    return status == 'available'
+
+
+def checkout_control(p, content, classes, label):
+    if not available(p):
+        return f'<span class="{classes} db-coming-soon" aria-disabled="true">Coming soon · delivery being verified</span>'
+    return f'<a class="{classes}" href="{esc(buy_url(p, content))}">{esc(label)}</a>'
+
+
 def block(text, key, content):
     start, end = f'<!-- generated:{key}:start -->', f'<!-- generated:{key}:end -->'
     replacement = f'{start}\n{content}\n{end}'
@@ -83,7 +96,7 @@ def product_page(p):
     custom = ''.join(f'<p>{esc(value)}</p>' for value in customization['paragraphs'])
     more_info = (f'<p>Browse the actual previews above and read the related free guide. Preview sample records illustrate the workflow.</p><a class="db-link" href="{BASE}{p["guidePath"]}">Read the free guide</a>'
                  if p.get('guidePath') else '<p>Browse the actual workspace previews above and review the listed contents, requirements and model limits. The Gumroad listing contains the same purchase details.</p>')
-    price_note = 'One-time purchase · minimum price · pay more if you choose' if p['payWhatYouWant'] else 'One-time purchase · digital product'
+    price_note = ('One-time purchase · minimum price · pay more if you choose' if p['payWhatYouWant'] else 'One-time purchase · digital product') if available(p) else 'Coming soon · planned launch price · checkout unavailable'
     extras = ''
     if p['id'] == 'ai-ready-workflow-builder-bundle':
         extras = f'<p>Guide ($15 minimum) + OS ($39 minimum) = $54 separately. The $49 bundle saves $5.</p><p><a href="{BASE}workflow-sop-ai-guide/">Compare the Guide</a> · <a href="{BASE}ai-ready-workflow-builder-os/">Compare the OS</a></p>'
@@ -97,7 +110,7 @@ def product_page(p):
     if p['id'] == 'client-delivery-os':
         example = f'''<section class="section" id="example"><div class="wrap"><span class="db-kicker">A worked example</span><h2>Keep a scope change visible.</h2><div class="db-example"><p><strong>Illustrative project:</strong> a five-page website with one revision round.</p><p><strong>New request:</strong> three additional landing pages and another revision.</p><p>Record the request with the client project. Confirm the extra scope, fee and timing before updating delivery work. Keep the approval and follow-up records together.</p><a class="db-link" href="{BASE}claritypack10/tools/freelancer-scope-creep-checker/">Try the free scope-change worksheet</a></div></div></section>'''
     schema = {'@context':'https://schema.org','@graph':[
-        {'@type':'Product','name':p['name'],'description':p['summary'],'brand':{'@type':'Brand','name':'DEEKE'},'image':p['shareImage'], 'offers':{'@type':'Offer','price':str(p['price']),'priceCurrency':p['currency'],'availability':'https://schema.org/InStock','url':p['url']}},
+        {'@type':'Product','name':p['name'],'description':p['summary'],'brand':{'@type':'Brand','name':'DEEKE'},'image':p['shareImage'], 'offers':{'@type':'Offer','price':str(p['price']),'priceCurrency':p['currency'],'availability':'https://schema.org/InStock' if available(p) else 'https://schema.org/OutOfStock','url':p['url'] if available(p) else canonical_url(p['path'])}},
         {'@type':'BreadcrumbList','itemListElement':[{'@type':'ListItem','position':1,'name':'Products','item':BASE+'#catalog'},{'@type':'ListItem','position':2,'name':title,'item':canonical_url(p['path'])}]}]}
     return f'''<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
@@ -107,11 +120,11 @@ def product_page(p):
 <script type="application/ld+json">{json.dumps(schema,ensure_ascii=False,separators=(',',':'))}</script>
 </head><body class="deeke-product"><a class="skip" href="#main">Skip to content</a>
 <div class="wrap"><nav class="nav" aria-label="Main navigation"><a class="brand" href="{BASE}">DEEKE</a><div class="links"><a href="{BASE}#catalog">All products</a><a href="#product-previews">Previews</a><a href="#inside">What’s included</a></div></nav><nav class="db-breadcrumb" aria-label="Breadcrumb"><a href="{BASE}#catalog">Products</a><span aria-hidden="true">/</span><span>{esc(title)}</span></nav>
-<header class="db-hero"><div><span class="db-kicker">{esc(p['format'])}</span><h1>{esc(title)}</h1><p class="lead">{esc(p['summary'])}</p><p class="db-fit"><strong>Best for:</strong> {esc(p['audience'])}</p><p class="db-price">{price(p)}</p><p class="db-purchase-note">{price_note}</p><div class="db-actions"><a class="db-btn primary" href="{esc(buy_url(p,p['path']+'_hero'))}">Get it on Gumroad — {price(p)}</a><a class="db-btn" href="#inside">See what’s included</a></div><p class="db-purchase-note">{('A Notion account is required. See setup and software requirements below.' if 'Notion' in p['format'] else 'Download and use on your device. No Notion account required.')}</p></div><figure class="db-hero-image"><a href="#product-previews" aria-label="View all {esc(title)} previews"><img src="{BASE}{esc(first['src'])}" width="{first['width']}" height="{first['height']}" fetchpriority="high" alt="{esc(title)}: {esc(first['caption'])}"></a><figcaption>Actual product preview · three images below</figcaption></figure></header></div>
+<header class="db-hero"><div><span class="db-kicker">{esc(p['format'])}</span><h1>{esc(title)}</h1><p class="lead">{esc(p['summary'])}</p><p class="db-fit"><strong>Best for:</strong> {esc(p['audience'])}</p><p class="db-price">{price(p)}</p><p class="db-purchase-note">{price_note}</p><div class="db-actions">{checkout_control(p, p['path']+'_hero', 'db-btn primary', 'Get it on Gumroad — '+price(p))}<a class="db-btn" href="#inside">See what’s included</a></div><p class="db-purchase-note">{('A Notion account is required. See setup and software requirements below.' if 'Notion' in p['format'] else 'Download and use on your device. No Notion account required.')}</p></div><figure class="db-hero-image"><a href="#product-previews" aria-label="View all {esc(title)} previews"><img src="{BASE}{esc(first['src'])}" width="{first['width']}" height="{first['height']}" fetchpriority="high" alt="{esc(title)}: {esc(first['caption'])}"></a><figcaption>Actual product preview · three images below</figcaption></figure></header></div>
 <main id="main"><section class="section"><div class="wrap"><span class="db-kicker">Put it to work</span><h2>What you can do with it.</h2><div class="db-benefits">{benefits}</div></div></section>
 {preview_gallery(p)}
 <!-- generated:offer:start -->
-<section class="section" id="inside"><div class="wrap"><div class="db-offer" data-product="{esc(p['id'])}"><div><span class="db-kicker">Included with your purchase</span><h2>What you receive.</h2><ul>{contents}</ul></div><div class="db-checkout-panel"><p class="db-price">{price(p)}</p><p>{price_note}. Checkout may add applicable taxes.</p>{extras}<h3>Before you buy</h3><p class="db-muted">{esc(p['requirements'])}</p><div class="db-actions"><a class="db-link primary" href="{esc(buy_url(p,p['path']+'_offer'))}">Get {esc(title)} — {price(p)}</a><a class="db-link" href="{BASE}#catalog">Compare all products</a></div><p class="db-muted">Gumroad handles checkout and access to your purchase content.</p></div></div></div></section>
+<section class="section" id="inside"><div class="wrap"><div class="db-offer" data-product="{esc(p['id'])}"><div><span class="db-kicker">Included with your purchase</span><h2>What you receive.</h2><ul>{contents}</ul></div><div class="db-checkout-panel"><p class="db-price">{price(p)}</p><p>{price_note}. Checkout may add applicable taxes.</p>{extras}<h3>Before you buy</h3><p class="db-muted">{esc(p['requirements'])}</p><div class="db-actions">{checkout_control(p, p['path']+'_offer', 'db-link primary', 'Get '+title+' — '+price(p))}<a class="db-link" href="{BASE}#catalog">Compare all products</a></div><p class="db-muted">Gumroad handles checkout and access to your purchase content.</p></div></div></div></section>
 <!-- generated:offer:end -->
 <section class="section" id="setup"><div class="wrap"><span class="db-kicker">Get started</span><h2>Your first three steps.</h2><ol class="db-setup-list">{steps}</ol></div></section>
 {example}
@@ -131,13 +144,13 @@ def catalog():
             raise ValueError(f"Missing product preview for {p['id']}: {image['src']}")
         visual = f'<figure class="store-product-visual"><img src="{BASE}{esc(image["src"])}" width="{image["width"]}" height="{image["height"]}" loading="lazy" decoding="async" alt="{esc(p["name"].split(" — ")[0])} actual product preview"><figcaption>Actual product preview</figcaption></figure>'
         title = p['name'].split(' — ')[0]
-        cards.append(f'''<article class="db-product" data-product="{esc(p['id'])}" data-category="{key}" data-featured="{'true' if p['id'] in featured else 'false'}"><a class="store-product-link" href="{BASE}{p['path']}/" aria-labelledby="name-{p['id']}">{visual}<div class="store-product-copy"><p class="db-product-meta">{esc(p['format'])}</p><h3 id="name-{p['id']}">{esc(title)}</h3><p>{esc(p['summary'])}</p><div class="store-product-footer"><p class="db-price">{price(p)}</p><span>See contents <span aria-hidden="true">↗</span></span></div></div></a></article>''')
+        cards.append(f'''<article class="db-product" data-product="{esc(p['id'])}" data-category="{key}" data-featured="{'true' if p['id'] in featured else 'false'}"><a class="store-product-link" href="{BASE}{p['path']}/" aria-labelledby="name-{p['id']}">{visual}<div class="store-product-copy"><p class="db-product-meta">{esc(p['format'])}{' · Coming soon' if not available(p) else ''}</p><h3 id="name-{p['id']}">{esc(title)}</h3><p>{esc(p['summary'])}</p><div class="store-product-footer"><p class="db-price">{'Planned ' if not available(p) else ''}{price(p)}</p><span>See contents <span aria-hidden="true">↗</span></span></div></div></a></article>''')
     filters = ['<a href="#featured" class="store-filter" data-category-link="featured" aria-controls="product-grid">Start here</a>', f'<a href="#catalog" class="store-filter" data-category-link="all" aria-controls="product-grid">All {len(PRODUCTS)}</a>']
     for label, key in categories.items():
         count = sum(p['category'] == label for p in PRODUCTS)
         filters.append(f'<a href="#catalog-{key}" class="store-filter" data-category-link="{key}" aria-controls="product-grid">{label} <span>{count}</span></a>')
     markers = ''.join(f'<span id="catalog-{key}" class="store-anchor" aria-hidden="true"></span>' for key in categories.values())
-    return f'''<section id="catalog" class="section store-catalog"><div class="wrap"><span id="featured" class="store-anchor" aria-hidden="true"></span>{markers}<div class="store-section-heading"><div><span class="kicker">Find your fit</span><h2>Find the system<br>for the work in front of you.</h2></div><p>See the actual product.<br>Compare contents, requirements and price.</p></div><nav class="store-filters" aria-label="Filter products">{''.join(filters)}</nav><div class="store-catalog-search" data-product-search-wrap hidden><label for="product-search">Find a product</label><input id="product-search" type="search" placeholder="Try invoices, clients, prompts or weekly" data-product-search autocomplete="off"></div><p class="store-count" data-product-count role="status" aria-live="polite">{len(PRODUCTS)} products · prices in USD</p><div id="product-grid" class="db-products">{''.join(cards)}</div><p class="store-empty" data-product-empty hidden>No products match that search. Clear the search or choose All {len(PRODUCTS)} to see more.</p><div class="store-catalog-note"><p>“+” means you may pay more than the listed minimum. All products are one-time purchases; software requirements are listed on each product page.</p><p>Images show included Notion workspaces or PDF pages in DEEKE frames. Sample records are illustrative. Open a product to see its three full-size previews.</p></div><noscript><p>All {len(PRODUCTS)} products are shown. Select a product to see its contents and requirements.</p></noscript></div></section>'''
+    return f'''<section id="catalog" class="section store-catalog"><div class="wrap"><span id="featured" class="store-anchor" aria-hidden="true"></span>{markers}<div class="store-section-heading"><div><span class="kicker">Find your fit</span><h2>Find the system<br>for the work in front of you.</h2></div><p>See the actual product.<br>Compare contents, requirements and price.</p></div><nav class="store-filters" aria-label="Filter products">{''.join(filters)}</nav><div class="store-catalog-search" data-product-search-wrap hidden><label for="product-search">Find a product</label><input id="product-search" type="search" placeholder="Try invoices, clients, prompts or weekly" data-product-search autocomplete="off"></div><p class="store-count" data-product-count role="status" aria-live="polite">{len(PRODUCTS)} products · {sum(available(p) for p in PRODUCTS)} available · prices in USD</p><div id="product-grid" class="db-products">{''.join(cards)}</div><p class="store-empty" data-product-empty hidden>No products match that search. Clear the search or choose All {len(PRODUCTS)} to see more.</p><div class="store-catalog-note"><p>“+” means you may pay more than the listed minimum. Available products are one-time purchases; software requirements are listed on each product page. Coming-soon products have no checkout link until delivery is verified.</p><p>Images show included Notion workspaces or PDF pages in DEEKE frames. Sample records are illustrative. Open a product to see its three full-size previews.</p></div><noscript><p>All {len(PRODUCTS)} products are shown. Select a product to see its contents and requirements.</p></noscript></div></section>'''
 
 
 def localize_match(match, page):
@@ -212,7 +225,7 @@ for page in sorted(ROOT.rglob('*.html')):
                     node['name'] = p['name']
                     node['description'] = p['summary']
                     node['image'] = p['shareImage']
-                    node['offers'].update(price=str(p['price']), priceCurrency=p['currency'], url=p['url'])
+                    node['offers'].update(price=str(p['price']), priceCurrency=p['currency'], url=p['url'] if available(p) else canonical_url(p['path']), availability='https://schema.org/InStock' if available(p) else 'https://schema.org/OutOfStock')
             return '<script type="application/ld+json">' + json.dumps(data,ensure_ascii=False,separators=(',', ':')) + '</script>'
         text = re.sub(r'<script type="application/ld\+json">(.*?)</script>', schema, text, flags=re.S)
         text = product_sharing(text, p)
