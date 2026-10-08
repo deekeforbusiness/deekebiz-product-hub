@@ -1,5 +1,15 @@
 # Website repair and first-sales test
 
+## October 8 — rental analyzer launch and fixed pricing
+
+This update supersedes the earlier catalog/pricing counts below. All 26 Gumroad products are published with fixed USD prices. The three newly available rental analyzers are Quick ($1.99), Core ($19) and Pro ($49). Their public storefront section orders them Quick → Core → Pro between business admin and life admin.
+
+Added a Rental analyzers catalog filter, three product pages with their nine actual Gumroad previews, a three-product comparison, purchase links, canonical/share metadata, Product/Offer schema and sitemap entries. All pay-what-you-want flags and remaining public price-plus labels were removed. The Guide/OS bundle comparison uses fixed separate prices of $15 and $39, with the $49 bundle saving $5.
+
+Validation: static checker passed 67 pages, 1,204 internal links/assets/anchors, 63 canonical sitemap URLs, 26 catalog offers and 10 tool paths. All 15 existing Node tests passed; `git diff --check` passed. The catalog build was repeated after the comparison addition and all checks passed.
+
+Gumroad account audit reread all 26 saved descriptions, previews, thumbnails and configured purchase content. Native Workflow Builder Bundle includes Guide and OS. Rental configured delivery links point to the correct repaired source roots. This is launch/listing verification, not a new formula audit, paid purchase or receipt/email fulfillment test. Seller, Stock and Tenant public independent-copy QA remains separately open unless recorded in the current launch checkpoint. Optional Payments Custom Agent execution still requires a separate eligible Notion plan, available credits, connections and buyer setup testing.
+
 ## DEEKE catalog and sales presentation October 7
 
 The public catalog contains the sixteen published Gumroad products. The three rental analyzers remain unpublished and are excluded from public catalog cards and offers. All existing base prices, pay-what-you-want flags, purchase destinations, tracking links and canonical page paths are retained.

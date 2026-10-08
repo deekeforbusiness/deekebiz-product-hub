@@ -60,7 +60,7 @@ def offer(p):
     pricing = 'One-time purchase. You may pay above the stated minimum.' if p['payWhatYouWant'] else 'One-time purchase. No DeekeBiz subscription.'
     extra = ''
     if p['id'] == 'ai-ready-workflow-builder-bundle':
-        extra = '<p>Guide ($15 minimum) + workspace ($39 minimum) = $54 separately. The $49 bundle saves $5 at the current minimum prices.</p>'
+        extra = '<p>Guide ($15) + workspace ($39) = $54 separately. The $49 bundle saves $5.</p>'
     if p['id'] == 'overdue-payments-agent-bundle':
         extra = '<p class="db-muted">Notion Custom Agents use Notion credits, billed separately by Notion. <a href="https://www.notion.com/help/buy-and-track-notion-credits-for-custom-agents">Check current Notion requirements and pricing</a>.</p>'
     contents = ''.join(f'<li>{esc(v)}</li>' for v in p['contents'])
@@ -88,7 +88,7 @@ def preview_gallery(p):
 def product_page(p):
     title = p['name'].split(' — ')[0]
     first = p['previewImages'][0]
-    categories = {'Client work':'client-work', 'Business admin':'business-admin', 'AI workflows':'ai-workflows', 'Life admin':'life-admin', 'Decision kits':'decision-kits'}
+    categories = {'Client work':'client-work', 'Business admin':'business-admin', 'AI workflows':'ai-workflows', 'Life admin':'life-admin', 'Decision kits':'decision-kits', 'Rental analyzers':'rental-analyzers'}
     benefits = ''.join(f'<article class="db-benefit"><span>0{i}</span>{esc(value)}</article>' for i,value in enumerate(p['benefits'],1))
     contents = ''.join(f'<li>{esc(value)}</li>' for value in p['contents'])
     steps = ''.join(f'<li>{esc(value)}</li>' for value in p['setupSteps'])
@@ -99,7 +99,7 @@ def product_page(p):
     price_note = ('One-time purchase · minimum price · pay more if you choose' if p['payWhatYouWant'] else 'One-time purchase · digital product') if available(p) else 'Coming soon · planned launch price · checkout unavailable'
     extras = ''
     if p['id'] == 'ai-ready-workflow-builder-bundle':
-        extras = f'<p>Guide ($15 minimum) + OS ($39 minimum) = $54 separately. The $49 bundle saves $5.</p><p><a href="{BASE}workflow-sop-ai-guide/">Compare the Guide</a> · <a href="{BASE}ai-ready-workflow-builder-os/">Compare the OS</a></p>'
+        extras = f'<p>Guide ($15) + OS ($39) = $54 separately. The $49 bundle saves $5.</p><p><a href="{BASE}workflow-sop-ai-guide/">Compare the Guide</a> · <a href="{BASE}ai-ready-workflow-builder-os/">Compare the OS</a></p>'
     if p['id'] == 'overdue-payments-agent-bundle':
         extras = '<p><a href="https://www.notion.com/help/buy-and-track-notion-credits-for-custom-agents">Check current Notion Custom Agent requirements and pricing</a>.</p>'
     if p['id'] == 'ai-ready-workflow-builder-os':
@@ -107,6 +107,11 @@ def product_page(p):
     if p['id'] == 'how-to-turn-workflows-to-ai-ready-systems':
         extras = f'<p>The companion OS is sold separately. <a href="{BASE}workflow-builder-bundle/">Get the Guide and OS in the $49 bundle</a>.</p>'
     example = ''
+    if p['category'] == 'Rental analyzers':
+        rental_products = [item for item in PRODUCTS if item['category'] == 'Rental analyzers']
+        scope = ['First-pass cash-flow screen', 'Guided cash flow, cash-on-cash return and DSCR', 'Nine-database underwriting and decision workflow']
+        rows = ''.join(f'<tr><th scope="row"><a href="{BASE}{item["path"]}/">{esc(item["name"])}</a></th><td>{price(item)}</td><td>{esc(fit)}</td></tr>' for item, fit in zip(rental_products, scope))
+        example = f'''<section class="section" id="compare-rental-analyzers"><div class="wrap"><span class="db-kicker">Choose your level</span><h2>Compare the three rental analyzers.</h2><p>Each is a separate purchase. Start with the workflow that matches the depth of analysis you need.</p><div class="db-comparison-wrap"><table class="db-comparison"><caption>Rental analyzer contents and fixed USD prices</caption><thead><tr><th scope="col">Template</th><th scope="col">Price</th><th scope="col">Best fit</th></tr></thead><tbody>{rows}</tbody></table></div></div></section>'''
     if p['id'] == 'client-delivery-os':
         example = f'''<section class="section" id="example"><div class="wrap"><span class="db-kicker">A worked example</span><h2>Keep a scope change visible.</h2><div class="db-example"><p><strong>Illustrative project:</strong> a five-page website with one revision round.</p><p><strong>New request:</strong> three additional landing pages and another revision.</p><p>Record the request with the client project. Confirm the extra scope, fee and timing before updating delivery work. Keep the approval and follow-up records together.</p><a class="db-link" href="{BASE}claritypack10/tools/freelancer-scope-creep-checker/">Try the free scope-change worksheet</a></div></div></section>'''
     schema = {'@context':'https://schema.org','@graph':[
@@ -133,7 +138,7 @@ def product_page(p):
 
 
 def catalog():
-    categories = {'Client work': 'client-work', 'Business admin': 'business-admin', 'AI workflows': 'ai-workflows', 'Life admin': 'life-admin', 'Decision kits': 'decision-kits'}
+    categories = {'Client work': 'client-work', 'Business admin': 'business-admin', 'AI workflows': 'ai-workflows', 'Rental analyzers': 'rental-analyzers', 'Life admin': 'life-admin', 'Decision kits': 'decision-kits'}
     featured = CATALOG['featuredProducts']
     cards = []
     ordered = sorted(PRODUCTS, key=lambda p: (featured.index(p['id']) if p['id'] in featured else 3, PRODUCTS.index(p)))
@@ -150,7 +155,7 @@ def catalog():
         count = sum(p['category'] == label for p in PRODUCTS)
         filters.append(f'<a href="#catalog-{key}" class="store-filter" data-category-link="{key}" aria-controls="product-grid">{label} <span>{count}</span></a>')
     markers = ''.join(f'<span id="catalog-{key}" class="store-anchor" aria-hidden="true"></span>' for key in categories.values())
-    return f'''<section id="catalog" class="section store-catalog"><div class="wrap"><span id="featured" class="store-anchor" aria-hidden="true"></span>{markers}<div class="store-section-heading"><div><span class="kicker">Find your fit</span><h2>Find the system<br>for the work in front of you.</h2></div><p>See the actual product.<br>Compare contents, requirements and price.</p></div><nav class="store-filters" aria-label="Filter products">{''.join(filters)}</nav><div class="store-catalog-search" data-product-search-wrap hidden><label for="product-search">Find a product</label><input id="product-search" type="search" placeholder="Try invoices, clients, prompts or weekly" data-product-search autocomplete="off"></div><p class="store-count" data-product-count role="status" aria-live="polite">{len(PRODUCTS)} products · {sum(available(p) for p in PRODUCTS)} available · prices in USD</p><div id="product-grid" class="db-products">{''.join(cards)}</div><p class="store-empty" data-product-empty hidden>No products match that search. Clear the search or choose All {len(PRODUCTS)} to see more.</p><div class="store-catalog-note"><p>“+” means you may pay more than the listed minimum. Available products are one-time purchases; software requirements are listed on each product page. Coming-soon products have no checkout link until delivery is verified.</p><p>Images show included Notion workspaces or PDF pages in DEEKE frames. Sample records are illustrative. Open a product to see its three full-size previews.</p></div><noscript><p>All {len(PRODUCTS)} products are shown. Select a product to see its contents and requirements.</p></noscript></div></section>'''
+    return f'''<section id="catalog" class="section store-catalog"><div class="wrap"><span id="featured" class="store-anchor" aria-hidden="true"></span>{markers}<div class="store-section-heading"><div><span class="kicker">Find your fit</span><h2>Find the system<br>for the work in front of you.</h2></div><p>See the actual product.<br>Compare contents, requirements and price.</p></div><nav class="store-filters" aria-label="Filter products">{''.join(filters)}</nav><div class="store-catalog-search" data-product-search-wrap hidden><label for="product-search">Find a product</label><input id="product-search" type="search" placeholder="Try invoices, clients, rental or weekly" data-product-search autocomplete="off"></div><p class="store-count" data-product-count role="status" aria-live="polite">{len(PRODUCTS)} products · {sum(available(p) for p in PRODUCTS)} available · prices in USD</p><div id="product-grid" class="db-products">{''.join(cards)}</div><p class="store-empty" data-product-empty hidden>No products match that search. Clear the search or choose All {len(PRODUCTS)} to see more.</p><div class="store-catalog-note"><p>All products have fixed USD prices and are one-time purchases. Checkout may add applicable taxes. Software requirements are listed on each product page.</p><p>Images show included Notion workspaces or PDF pages in DEEKE frames. Sample records are illustrative. Open a product to see its three full-size previews.</p></div><noscript><p>All {len(PRODUCTS)} products are shown. Select a product to see its contents and requirements.</p></noscript></div></section>'''
 
 
 def localize_match(match, page):

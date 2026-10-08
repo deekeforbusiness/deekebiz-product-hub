@@ -97,6 +97,14 @@ for p in catalog:
         if not source.startswith('assets/product-previews/') or not (ROOT/source).is_file():errors.append(f'{p["id"]}: missing actual preview asset {source}')
         if source.removeprefix('assets/') not in text:errors.append(f'{p["id"]}: unused preview asset {source}')
         if preview.get('width',0)<=0 or preview.get('height',0)<=0 or not preview.get('caption'):errors.append(f'{p["id"]}: incomplete preview metadata')
+        if (ROOT/source).is_file() and source.endswith(('.webp', '.png')):
+            raster = (ROOT/source).read_bytes()
+            valid = bool(raster)
+            if source.endswith('.webp'):
+                valid = len(raster) >= 12 and raster[:4] == b'RIFF' and raster[8:12] == b'WEBP' and int.from_bytes(raster[4:8], 'little') + 8 == len(raster)
+            elif source.endswith('.png'):
+                valid = raster.startswith(b'\x89PNG\r\n\x1a\n') and raster.endswith(b'IEND\xaeB`\x82')
+            if not valid:errors.append(f'{p["id"]}: empty or invalid raster preview {source}')
         if (ROOT/source).is_file() and source.endswith('.svg'):
             try:
                 image=ET.parse(ROOT/source).find('{http://www.w3.org/2000/svg}image')

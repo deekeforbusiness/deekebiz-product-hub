@@ -1,7 +1,5 @@
-# DeekeBiz public catalog
+# Product catalog
 
-The maintained source is `products/catalog.json`, verified against the public Gumroad catalog on October 1, 2026. It contains all 16 published products, including ClarityPack10 Pro Bundle, with current USD prices, pay-what-you-want status, formats, contents, requirements, and checkout destinations.
+The maintained source is `products/catalog.json`, verified against Gumroad on October 8, 2026. All 26 products are published at fixed USD prices. Quick, Core and Pro are listed in the Rental analyzers category at $1.99, $19 and $49.
 
-Run `python scripts/build_catalog.py` after changing that file. It regenerates the homepage catalog, all product offer blocks, schema prices, and site campaign labels. Existing explanatory copy should also be reviewed when a product changes.
-
-Archived rental analyzers are not in the published catalog and must stay hidden until their live status is verified.
+The catalog supplies contents, requirements, purchase destinations, actual previews, availability and search/share metadata. Edit it, run `python scripts/build_catalog.py`, then `python scripts/check_site.py` and `node --test tests/*.test.cjs` before deploying. Never commit paid delivery files or private template access links.
