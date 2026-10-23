@@ -1,4 +1,4 @@
-# DeekeBiz product hub
+# Made by DEEKE product hub
 
 Static HTML website deployed by GitHub Pages from `main`.
 

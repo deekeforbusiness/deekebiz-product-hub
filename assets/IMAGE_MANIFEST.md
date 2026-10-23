@@ -1,4 +1,4 @@
-# DeekeBiz site image assets
+# Made by DEEKE site image assets
 
 These images were renamed and normalized for the product hub website.
 
